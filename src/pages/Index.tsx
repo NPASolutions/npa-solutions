@@ -1,133 +1,215 @@
 
 import { useState, useEffect } from "react";
-import { ChevronDown, Shield, Scale, FileText, Building, TrendingUp, Users, ArrowRight, Menu, X } from "lucide-react";
+import { ChevronDown, Shield, Scale, FileText, Building, TrendingUp, Users, ArrowRight, Menu, X, CheckCircle, Star, Quote, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+    
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   }, []);
 
   const services = [
     {
       title: "SARFAESI Resolution & Compliance",
-      description: "Defend your rights under SARFAESI Act 2002 with early-stage legal strategy.",
+      description: "Defend your rights under SARFAESI Act 2002 with early-stage legal strategy and comprehensive compliance support.",
       icon: Shield,
-      color: "bg-blue-50 text-blue-600"
+      color: "bg-gradient-to-br from-blue-50 to-blue-100",
+      iconColor: "text-blue-600",
+      features: ["24/7 Legal Support", "Compliance Audit", "Strategic Defense"],
+      popular: false
     },
     {
       title: "DRT & SARFAESI Litigation",
-      description: "We help you fight unfair bank action under RDDB Act and SARFAESI simultaneously.",
+      description: "Fight unfair bank actions with simultaneous RDDB Act and SARFAESI proceedings for maximum protection.",
       icon: Scale,
-      color: "bg-purple-50 text-purple-600"
+      color: "bg-gradient-to-br from-purple-50 to-purple-100",
+      iconColor: "text-purple-600",
+      features: ["Expert Litigation", "Dual Protection", "Court Representation"],
+      popular: true
     },
     {
       title: "OTS Support & Negotiation",
-      description: "Settle strategically. Get expert-backed One-Time Settlement guidance for better terms.",
+      description: "Achieve favorable One-Time Settlement terms with expert-backed negotiation strategies.",
       icon: FileText,
-      color: "bg-green-50 text-green-600"
+      color: "bg-gradient-to-br from-green-50 to-green-100",
+      iconColor: "text-green-600",
+      features: ["Negotiation Support", "Settlement Strategy", "Documentation"],
+      popular: false
     },
     {
       title: "IBC Litigation & Corporate Insolvency",
-      description: "Navigate CIRP, liquidation, or resolution with precision before NCLT.",
+      description: "Navigate CIRP, liquidation, or resolution proceedings with precision before NCLT.",
       icon: Building,
-      color: "bg-orange-50 text-orange-600"
+      color: "bg-gradient-to-br from-orange-50 to-orange-100",
+      iconColor: "text-orange-600",
+      features: ["NCLT Representation", "Resolution Planning", "Asset Protection"],
+      popular: false
     },
     {
       title: "Debt Restructuring & MSME Revival",
-      description: "We help you revive, restructure & reposition your business for survival.",
+      description: "Revive, restructure & reposition your business for sustainable growth and survival.",
       icon: TrendingUp,
-      color: "bg-teal-50 text-teal-600"
+      color: "bg-gradient-to-br from-teal-50 to-teal-100",
+      iconColor: "text-teal-600",
+      features: ["Business Revival", "Debt Restructuring", "Growth Strategy"],
+      popular: false
     },
     {
       title: "ARC & Asset Sale Advisory",
-      description: "Seamless support for direct asset sales and ARC-based recovery routes.",
+      description: "Seamless support for direct asset sales and ARC-based recovery with optimal value realization.",
       icon: Users,
-      color: "bg-indigo-50 text-indigo-600"
+      color: "bg-gradient-to-br from-indigo-50 to-indigo-100",
+      iconColor: "text-indigo-600",
+      features: ["Asset Valuation", "ARC Negotiations", "Recovery Optimization"],
+      popular: false
     }
+  ];
+
+  const stats = [
+    { value: "500+", label: "Cases Resolved", icon: CheckCircle },
+    { value: "95%", label: "Success Rate", icon: Star },
+    { value: "₹100Cr+", label: "Assets Protected", icon: Shield },
+    { value: "24/7", label: "Expert Support", icon: Clock }
   ];
 
   const faqs = [
     {
-      question: "What is the SARFAESI Act?",
-      answer: "The Securitisation and Reconstruction of Financial Assets and Enforcement of Security Interest Act, 2002 (SARFAESI) empowers banks and financial institutions to recover their non-performing assets without court intervention."
+      question: "What is the SARFAESI Act and how does it affect borrowers?",
+      answer: "The Securitisation and Reconstruction of Financial Assets and Enforcement of Security Interest Act, 2002 (SARFAESI) empowers banks and financial institutions to recover their non-performing assets without court intervention. However, borrowers have specific rights including proper notice, representation opportunities, and the right to appeal within 45 days."
     },
     {
-      question: "What rights does a borrower have under SARFAESI?",
-      answer: "Borrowers have the right to receive proper notice, represent their case, appeal to DRT within 45 days, and seek stay on possession if proper procedures are not followed."
+      question: "What immediate steps should I take after receiving a SARFAESI notice?",
+      answer: "Upon receiving a SARFAESI notice, immediately: 1) Verify the notice authenticity and timeline, 2) Gather all loan documentation, 3) Assess your legal position, 4) Consider filing a representation or appeal to DRT within 45 days, 5) Consult with legal experts for strategic guidance."
     },
     {
-      question: "Can promoters submit resolution plan in IBC?",
-      answer: "Yes, under certain conditions promoters can submit resolution plans, but they must meet specific eligibility criteria and follow prescribed procedures under the Insolvency and Bankruptcy Code."
+      question: "Can promoters submit resolution plans under IBC proceedings?",
+      answer: "Yes, under certain conditions promoters can submit resolution plans, but they must meet specific eligibility criteria under Section 29A of the IBC. The plan must demonstrate viability, adequate funding, and compliance with regulatory requirements."
     },
     {
-      question: "What is CIRP vs Liquidation?",
-      answer: "CIRP (Corporate Insolvency Resolution Process) aims to revive the company through resolution plans, while liquidation involves selling assets to pay creditors when revival is not possible."
+      question: "What's the difference between CIRP and liquidation processes?",
+      answer: "CIRP (Corporate Insolvency Resolution Process) aims to revive the company through resolution plans within 180-270 days, while liquidation involves selling assets to pay creditors when revival is not possible. CIRP focuses on business continuity; liquidation on asset realization."
     },
     {
-      question: "Where can I file a SARFAESI challenge?",
-      answer: "SARFAESI challenges can be filed at the Debt Recovery Tribunal (DRT) having jurisdiction over the area where the security interest is enforced, within 45 days of receiving the notice."
+      question: "Where and when can I file a challenge to SARFAESI proceedings?",
+      answer: "SARFAESI challenges must be filed at the Debt Recovery Tribunal (DRT) having jurisdiction over the area where the security interest is enforced, strictly within 45 days of receiving the enforcement notice. Late filing requires strong grounds for condonation of delay."
     },
     {
-      question: "How can I restructure my loan legally?",
-      answer: "Loan restructuring can be done through various mechanisms including OTS negotiations, CDR schemes, and under RBI guidelines for stressed assets, with proper legal documentation."
+      question: "What are my options for legal loan restructuring?",
+      answer: "Legal loan restructuring options include: OTS negotiations under RBI guidelines, CDR (Corporate Debt Restructuring) schemes, strategic debt restructuring, and asset reconstruction through ARCs, all requiring proper legal documentation and lender approval."
     }
   ];
 
   const testimonials = [
     {
-      text: "NPA Solutions helped us navigate a complex SARFAESI notice with strategic precision. Their early intervention saved our business.",
+      text: "NPA Solutions transformed our SARFAESI crisis into a strategic victory. Their early intervention and expert guidance saved our manufacturing business from asset seizure.",
       author: "Rajesh Kumar",
-      role: "Manufacturing Company Owner"
+      role: "Manufacturing Company Owner",
+      company: "Kumar Industries",
+      rating: 5,
+      image: "/placeholder.svg"
     },
     {
-      text: "Expert guidance through IBC proceedings. Professional, knowledgeable, and result-oriented approach.",
+      text: "Exceptional IBC litigation support. Their deep knowledge of corporate insolvency processes and NCLT procedures delivered outstanding results for our resolution.",
       author: "Priya Sharma",
-      role: "Corporate Director"
+      role: "Corporate Director",
+      company: "Sharma Enterprises",
+      rating: 5,
+      image: "/placeholder.svg"
     },
     {
-      text: "Excellent OTS negotiation support. They helped us achieve a favorable settlement with our lenders.",
+      text: "The OTS negotiation expertise at NPA Solutions is unmatched. They secured terms that seemed impossible and saved our business millions in the process.",
       author: "Anil Gupta",
-      role: "MSME Entrepreneur"
+      role: "MSME Entrepreneur",
+      company: "Gupta Trading Co.",
+      rating: 5,
+      image: "/placeholder.svg"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="fixed inset-0 z-0">
+        <div 
+          className="absolute w-96 h-96 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full opacity-20 blur-3xl"
+          style={{
+            transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`
+          }}
+        />
+        <div 
+          className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-green-100 to-blue-100 rounded-full opacity-20 blur-3xl"
+          style={{
+            transform: `translate(${mousePosition.x * -0.02}px, ${mousePosition.y * -0.02}px)`
+          }}
+        />
+      </div>
+
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl text-slate-800">NPA Solutions</div>
+          <div className="flex justify-between items-center h-20">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent"
+            >
+              NPA Solutions
+            </motion.div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-slate-600 hover:text-slate-900 transition-colors">Home</a>
-              <a href="#services" className="text-slate-600 hover:text-slate-900 transition-colors">Services</a>
-              <a href="#about" className="text-slate-600 hover:text-slate-900 transition-colors">About</a>
-              <a href="#resources" className="text-slate-600 hover:text-slate-900 transition-colors">Resources</a>
-              <a href="#faqs" className="text-slate-600 hover:text-slate-900 transition-colors">FAQs</a>
-              <a href="#contact" className="text-slate-600 hover:text-slate-900 transition-colors">Contact</a>
+              {['Home', 'Services', 'About', 'Resources', 'FAQs', 'Contact'].map((item, index) => (
+                <motion.a
+                  key={item}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group"
+                >
+                  {item}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                </motion.a>
+              ))}
             </div>
 
-            <Button className="hidden md:flex bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl">
-              Get Expert Help
-            </Button>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="hidden md:flex"
+            >
+              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                Get Expert Help
+              </Button>
+            </motion.div>
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden"
+              className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -137,68 +219,134 @@ const Index = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#home" className="block px-3 py-2 text-slate-600">Home</a>
-              <a href="#services" className="block px-3 py-2 text-slate-600">Services</a>
-              <a href="#about" className="block px-3 py-2 text-slate-600">About</a>
-              <a href="#resources" className="block px-3 py-2 text-slate-600">Resources</a>
-              <a href="#faqs" className="block px-3 py-2 text-slate-600">FAQs</a>
-              <a href="#contact" className="block px-3 py-2 text-slate-600">Contact</a>
-              <Button className="mx-3 my-2 bg-blue-600 hover:bg-blue-700 text-white w-full">
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white border-t"
+          >
+            <div className="px-4 pt-4 pb-6 space-y-3">
+              {['Home', 'Services', 'About', 'Resources', 'FAQs', 'Contact'].map((item) => (
+                <a key={item} href={`#${item.toLowerCase()}`} className="block px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors">
+                  {item}
+                </a>
+              ))}
+              <Button className="mx-3 my-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white w-full">
                 Get Expert Help
               </Button>
             </div>
-          </div>
+          </motion.div>
         )}
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
+      <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="mb-6"
+            >
+              <Badge className="bg-blue-100 text-blue-700 px-4 py-2 text-sm font-medium">
+                India's Leading Financial Distress Legal Experts
+              </Badge>
+            </motion.div>
+            
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-slate-900 mb-8 leading-tight">
               Navigating Financial Distress with{" "}
-              <span className="text-blue-600">Strategic Clarity</span>
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent">
+                Strategic Clarity
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Helping MSMEs, borrowers & entrepreneurs find smart legal and compliance solutions under SARFAESI, DRT, IBC & more.
+            
+            <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Empowering MSMEs, borrowers & entrepreneurs with expert legal guidance through 
+              <span className="font-semibold text-slate-800"> SARFAESI, DRT, IBC & financial restructuring</span>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl text-lg">
-                Schedule a Consultation
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 rounded-xl text-lg">
-                Explore Our Services
-              </Button>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <Phone className="mr-2" size={20} />
+                  Schedule Free Consultation
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-10 py-4 rounded-xl text-lg font-semibold">
+                  <ArrowRight className="mr-2" size={20} />
+                  Explore Services
+                </Button>
+              </motion.div>
             </div>
+
+            {/* Stats Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            >
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+                  className="text-center"
+                >
+                  <div className="flex justify-center mb-2">
+                    <stat.icon className="text-blue-600" size={24} />
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-slate-900">{stat.value}</div>
+                  <div className="text-sm text-slate-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
           <ChevronDown className="text-slate-400" size={32} />
-        </div>
+        </motion.div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      <section id="services" className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Our Legal & Compliance Services
+            <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+              Our Legal & Compliance
+              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Services
+              </span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Comprehensive legal solutions tailored to your specific financial distress situation
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Comprehensive legal solutions tailored to your specific financial distress situation with proven expertise
             </p>
           </motion.div>
 
@@ -210,19 +358,42 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="relative"
               >
-                <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg">
+                {service.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                    <Badge className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-1 text-xs">
+                      Most Popular
+                    </Badge>
+                  </div>
+                )}
+                
+                <Card className="h-full hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden group">
+                  <div className={`h-2 ${service.popular ? 'bg-gradient-to-r from-purple-600 to-blue-600' : 'bg-gradient-to-r from-slate-200 to-slate-300'}`}></div>
                   <CardContent className="p-8">
-                    <div className={`w-16 h-16 rounded-xl ${service.color} flex items-center justify-center mb-6`}>
-                      <service.icon size={32} />
+                    <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <service.icon size={32} className={service.iconColor} />
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-900 mb-4">
+                    
+                    <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                       {service.title}
                     </h3>
+                    
                     <p className="text-slate-600 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    <Button variant="ghost" className="text-blue-600 hover:text-blue-700 p-0">
+
+                    <div className="space-y-2 mb-6">
+                      {service.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center text-sm text-slate-600">
+                          <CheckCircle size={14} className="text-green-500 mr-2" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <Button variant="ghost" className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 p-0 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                       Learn More <ArrowRight size={16} className="ml-2" />
                     </Button>
                   </CardContent>
@@ -234,75 +405,109 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="about" className="py-20 bg-slate-50">
+      <section id="about" className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-                Why Choose NPA Solutions?
+              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-10">
+                Why Choose
+                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  NPA Solutions?
+                </span>
               </h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Deep Legal Insight</h4>
-                    <p className="text-slate-600">Comprehensive expertise across SARFAESI, DRT, IBC regulations</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Strategic Early-Stage Intervention</h4>
-                    <p className="text-slate-600">Proactive legal strategies that prevent escalation</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Tailored Defenses & Counterclaims</h4>
-                    <p className="text-slate-600">Customized legal approaches for your specific situation</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Documentation & Compliance Support</h4>
-                    <p className="text-slate-600">Complete documentation assistance and regulatory compliance</p>
-                  </div>
-                </div>
+              
+              <div className="space-y-8">
+                {[
+                  {
+                    icon: Shield,
+                    title: "Deep Legal Insight",
+                    description: "Comprehensive expertise across SARFAESI, DRT, IBC regulations with 15+ years experience",
+                    color: "bg-blue-100 text-blue-600"
+                  },
+                  {
+                    icon: Clock,
+                    title: "Strategic Early-Stage Intervention",
+                    description: "Proactive legal strategies that prevent escalation and minimize business disruption",
+                    color: "bg-green-100 text-green-600"
+                  },
+                  {
+                    icon: Scale,
+                    title: "Tailored Defense Strategies",
+                    description: "Customized legal approaches designed for your specific situation and industry",
+                    color: "bg-purple-100 text-purple-600"
+                  },
+                  {
+                    icon: FileText,
+                    title: "Complete Documentation Support",
+                    description: "End-to-end documentation assistance and regulatory compliance management",
+                    color: "bg-orange-100 text-orange-600"
+                  }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start space-x-4 group"
+                  >
+                    <div className={`w-12 h-12 rounded-xl ${item.color} flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300`}>
+                      <item.icon size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 mb-2 text-lg group-hover:text-blue-600 transition-colors duration-300">
+                        {item.title}
+                      </h4>
+                      <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-xl"
+              className="bg-white rounded-3xl p-10 shadow-2xl"
             >
-              <h4 className="text-2xl font-semibold text-slate-900 mb-8">Client Testimonials</h4>
-              <div className="space-y-8">
+              <h4 className="text-3xl font-bold text-slate-900 mb-10 text-center">Client Success Stories</h4>
+              <div className="space-y-10">
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="border-l-4 border-blue-600 pl-6">
-                    <p className="text-slate-600 italic mb-4">"{testimonial.text}"</p>
-                    <div>
-                      <p className="font-semibold text-slate-900">{testimonial.author}</p>
-                      <p className="text-sm text-slate-500">{testimonial.role}</p>
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                    className="relative"
+                  >
+                    <Quote className="absolute -top-2 -left-2 text-blue-200" size={32} />
+                    <div className="border-l-4 border-blue-600 pl-6 ml-4">
+                      <p className="text-slate-600 italic mb-4 leading-relaxed">"{testimonial.text}"</p>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                          {testimonial.author.split(' ').map(n => n[0]).join('')}
+                        </div>
+                        <div>
+                          <p className="font-bold text-slate-900">{testimonial.author}</p>
+                          <p className="text-sm text-slate-500">{testimonial.role}</p>
+                          <p className="text-xs text-slate-400">{testimonial.company}</p>
+                        </div>
+                        <div className="flex ml-auto">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} size={16} className="text-yellow-400 fill-current" />
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -311,40 +516,43 @@ const Index = () => {
       </section>
 
       {/* FAQs Section */}
-      <section id="faqs" className="py-20 bg-white">
+      <section id="faqs" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Frequently Asked Questions
+            <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+              Frequently Asked
+              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Questions
+              </span>
             </h2>
             <p className="text-xl text-slate-600">
-              Get answers to common questions about financial distress legal matters
+              Get expert answers to common questions about financial distress legal matters
             </p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Accordion type="single" collapsible className="w-full space-y-4">
+            <Accordion type="single" collapsible className="w-full space-y-6">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border border-slate-200 rounded-xl px-6 shadow-sm hover:shadow-md transition-all duration-300"
+                  className="border border-slate-200 rounded-2xl px-8 py-2 shadow-lg hover:shadow-xl transition-all duration-300 bg-white"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-slate-900 hover:no-underline">
+                  <AccordionTrigger className="text-left font-bold text-slate-900 hover:no-underline text-lg py-6">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-slate-600 leading-relaxed">
+                  <AccordionContent className="text-slate-600 leading-relaxed pb-6 text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -355,126 +563,150 @@ const Index = () => {
       </section>
 
       {/* Contact CTA Banner */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-24 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Act Proactively?
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+              Ready to Act
+              <span className="block bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
+                Proactively?
+              </span>
             </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Don't wait until it's too late. Get expert legal guidance for your financial distress situation today.
+            <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Don't wait until it's too late. Get expert legal guidance for your financial distress situation today and protect your business interests.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-xl text-lg">
-                Talk to an Expert
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-xl text-lg">
-                Submit a Query
-              </Button>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-10 py-4 rounded-xl text-lg font-semibold shadow-xl">
+                  <Phone className="mr-2" size={20} />
+                  Talk to an Expert
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-10 py-4 rounded-xl text-lg font-semibold">
+                  <Mail className="mr-2" size={20} />
+                  Submit a Query
+                </Button>
+              </motion.div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Contact Form */}
-      <section id="contact" className="py-20 bg-slate-50">
+      <section id="contact" className="py-24 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Get in Touch
+            <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+              Get in
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Touch</span>
             </h2>
             <p className="text-xl text-slate-600">
-              Ready to discuss your legal requirements? Contact our experts today.
+              Ready to discuss your legal requirements? Contact our experts today for personalized guidance.
             </p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="shadow-xl border-0">
-              <CardContent className="p-8">
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="shadow-2xl border-0 overflow-hidden">
+              <CardContent className="p-12">
+                <form className="space-y-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
-                        Name *
+                      <label className="block text-sm font-bold text-slate-700 mb-3">
+                        Full Name *
                       </label>
                       <input
                         type="text"
                         required
-                        className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Your full name"
+                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg"
+                        placeholder="Enter your full name"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
-                        Email *
+                      <label className="block text-sm font-bold text-slate-700 mb-3">
+                        Email Address *
                       </label>
                       <input
                         type="email"
                         required
-                        className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="your.email@example.com"
+                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg"
+                        placeholder="your.email@company.com"
                       />
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
-                        Phone
+                      <label className="block text-sm font-bold text-slate-700 mb-3">
+                        Phone Number
                       </label>
                       <input
                         type="tel"
-                        className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="+91 00000 00000"
+                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg"
+                        placeholder="+91 98765 43210"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
-                        Query Type
+                      <label className="block text-sm font-bold text-slate-700 mb-3">
+                        Legal Matter Type
                       </label>
-                      <select className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        <option value="">Select query type</option>
-                        <option value="sarfaesi">SARFAESI</option>
-                        <option value="ots">OTS</option>
-                        <option value="drt">DRT</option>
-                        <option value="ibc">IBC</option>
-                        <option value="restructuring">Restructuring</option>
+                      <select className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white">
+                        <option value="">Select your legal matter</option>
+                        <option value="sarfaesi">SARFAESI Act Issues</option>
+                        <option value="ots">One-Time Settlement</option>
+                        <option value="drt">DRT Proceedings</option>
+                        <option value="ibc">IBC & Corporate Insolvency</option>
+                        <option value="restructuring">Debt Restructuring</option>
+                        <option value="arc">ARC & Asset Sale</option>
                       </select>
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
-                      Message *
+                    <label className="block text-sm font-bold text-slate-700 mb-3">
+                      Describe Your Legal Requirements *
                     </label>
                     <textarea
                       required
-                      rows={5}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Please describe your legal requirements in detail (minimum 30 characters)"
+                      rows={6}
+                      className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg resize-none"
+                      placeholder="Please provide detailed information about your situation, timeline, and specific legal requirements (minimum 50 characters for better assistance)"
                     ></textarea>
                   </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl text-lg"
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    Submit Your Query
-                  </Button>
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-6 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+                    >
+                      Submit Your Legal Query
+                      <ArrowRight className="ml-2" size={20} />
+                    </Button>
+                  </motion.div>
                 </form>
               </CardContent>
             </Card>
@@ -483,38 +715,68 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-16">
+      <footer className="bg-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div>
-              <div className="font-bold text-2xl mb-4">NPA Solutions</div>
-              <p className="text-slate-300 leading-relaxed">
-                Strategic Legal Support for MSMEs & Borrowers navigating financial distress with expert guidance.
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div className="md:col-span-2">
+              <div className="font-bold text-3xl mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                NPA Solutions
+              </div>
+              <p className="text-slate-300 leading-relaxed mb-6 text-lg">
+                India's premier legal consultancy specializing in financial distress resolution. We provide strategic legal support for MSMEs, borrowers & entrepreneurs navigating complex financial situations.
               </p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg mb-6">Quick Links</h4>
-              <div className="space-y-3">
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Services</a>
-                <a href="#about" className="block text-slate-300 hover:text-white transition-colors">About</a>
-                <a href="#faqs" className="block text-slate-300 hover:text-white transition-colors">FAQs</a>
-                <a href="#contact" className="block text-slate-300 hover:text-white transition-colors">Contact</a>
+              <div className="flex space-x-4">
+                <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer">
+                  <Mail size={20} />
+                </div>
+                <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer">
+                  <Phone size={20} />
+                </div>
+                <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer">
+                  <MapPin size={20} />
+                </div>
               </div>
             </div>
+            
             <div>
-              <h4 className="font-semibold text-lg mb-6">Contact Info</h4>
-              <div className="space-y-3 text-slate-300">
-                <p>Email: support@npasolutions.in</p>
-                <p>Phone: +91 98765 43210</p>
-                <div className="flex space-x-4 mt-6">
-                  <a href="#" className="text-slate-300 hover:text-white transition-colors">LinkedIn</a>
-                  <a href="#" className="text-slate-300 hover:text-white transition-colors">Twitter</a>
+              <h4 className="font-bold text-xl mb-8">Quick Links</h4>
+              <div className="space-y-4">
+                {['Services', 'About Us', 'Case Studies', 'Resources', 'FAQs', 'Contact'].map((link) => (
+                  <a key={link} href={`#${link.toLowerCase().replace(' ', '')}`} className="block text-slate-300 hover:text-white transition-colors hover:translate-x-2 transform duration-300">
+                    {link}
+                  </a>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-xl mb-8">Contact Info</h4>
+              <div className="space-y-4 text-slate-300">
+                <div className="flex items-center space-x-3">
+                  <Mail size={18} className="text-blue-400" />
+                  <p>support@npasolutions.in</p>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone size={18} className="text-blue-400" />
+                  <p>+91 98765 43210</p>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin size={18} className="text-blue-400" />
+                  <p>Mumbai | Delhi | Bangalore</p>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Clock size={18} className="text-blue-400" />
+                  <p>24/7 Emergency Support</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="border-t border-slate-700 mt-12 pt-8 text-center text-slate-400">
-            <p>&copy; 2024 NPA Solutions. All rights reserved.</p>
+          
+          <div className="border-t border-slate-700 mt-16 pt-8 text-center">
+            <p className="text-slate-400">
+              &copy; 2024 NPA Solutions. All rights reserved. | 
+              <span className="text-slate-300"> Protecting your business interests with expert legal guidance.</span>
+            </p>
           </div>
         </div>
       </footer>
