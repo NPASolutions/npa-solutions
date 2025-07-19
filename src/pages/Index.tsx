@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Index = () => {
@@ -419,9 +420,74 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                       ))}
                     </div>
                     
-                    <Button variant="ghost" className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 p-0 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                      Learn More <ArrowRight size={16} className="ml-2" />
-                    </Button>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="ghost" className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 p-0 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                          More <ArrowRight size={16} className="ml-2" />
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl font-bold text-slate-900 mb-4">
+                            {service.title}
+                          </DialogTitle>
+                        </DialogHeader>
+                        <div className="space-y-6 pr-4">
+                          {service.fullDescription && (
+                            <div>
+                              <h4 className="text-xl font-semibold text-slate-800 mb-3">Overview</h4>
+                              <div className="text-slate-600 leading-relaxed whitespace-pre-line">
+                                {service.fullDescription}
+                              </div>
+                            </div>
+                          )}
+                          
+                          {service.whyChooseUs && (
+                            <div>
+                              <h4 className="text-xl font-semibold text-slate-800 mb-3">Why Choose NPA Solutions</h4>
+                              <div className="text-slate-600 leading-relaxed whitespace-pre-line">
+                                {service.whyChooseUs}
+                              </div>
+                            </div>
+                          )}
+                          
+                          {service.approach && (
+                            <div>
+                              <h4 className="text-xl font-semibold text-slate-800 mb-3">Our Approach</h4>
+                              <div className="text-slate-600 leading-relaxed whitespace-pre-line">
+                                {service.approach}
+                              </div>
+                            </div>
+                          )}
+                          
+                          {service.callToAction && (
+                            <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-600">
+                              <h4 className="text-xl font-semibold text-blue-800 mb-3">Take Action Now</h4>
+                              <p className="text-blue-700 leading-relaxed mb-4">{service.callToAction}</p>
+                              <div className="flex gap-4">
+                                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                                  <Phone className="mr-2" size={16} />
+                                  Schedule Consultation
+                                </Button>
+                                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                                  <Mail className="mr-2" size={16} />
+                                  Send Query
+                                </Button>
+                              </div>
+                            </div>
+                          )}
+                          
+                          {service.conclusion && (
+                            <div>
+                              <h4 className="text-xl font-semibold text-slate-800 mb-3">Conclusion</h4>
+                              <div className="text-slate-600 leading-relaxed whitespace-pre-line">
+                                {service.conclusion}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   </CardContent>
                 </Card>
               </motion.div>
