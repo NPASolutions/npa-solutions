@@ -34,13 +34,39 @@ const Index = () => {
 
   const services = [
     {
-      title: "SARFAESI Resolution & Compliance",
-      description: "Defend your rights under SARFAESI Act 2002 with early-stage legal strategy and comprehensive compliance support.",
+      title: "NPA Resolution & SARFAESI Compliance",
+      description: "Early Legal Intervention for NPA Stress & SARFAESI Notices",
+      fullDescription: `When financial strain sets in, borrowers—whether MSMEs, companies, or individuals—often find themselves racing against time. Under the RBI's Prudential Norms, a loan account is classified as a Non-Performing Asset (NPA) when repayments are overdue for more than 90 days. Once this classification is made, banks may initiate recovery actions under the SARFAESI Act 2002, starting with the issuance of a demand notice under Section 13(2).
+
+From that point, the process may escalate swiftly—leading to symbolic possession under Section 13(4), and in many cases, auction of the secured asset—all without approaching the court. Unfortunately, many borrowers remain unaware that they still have rights at every stage, and that the SARFAESI process must comply with specific procedures laid down in law and governed by regulatory bodies.
+
+The key lies in timing. If the borrower takes steps early—ideally before NPA classification, or soon after receiving the SARFAESI Notice—the matter can often be resolved without litigation. Even if the case has reached possession or auction stages, options still exist, though the strategy and urgency differ.`,
+      whyChooseUs: `At NPA Solutions, we understand the practical challenges borrowers face when dealing with default and bank recovery action. Over the years, we've worked closely with MSMEs, companies, LLPs, and individual borrowers, and we've seen one consistent issue: borrowers are blamed without examining whether the bank followed its own obligations under law.
+
+There is a common myth that borrowers are entirely at fault once they default—but banks too are bound by compliance responsibilities under RBI guidelines, SARFAESI procedures, and government-mandated policies. We bring this balance into focus and examine:
+• Whether proper process was followed before declaring the account as NPA
+• Whether the SARFAESI Notice complies with legal requirements
+• Whether any procedural violations or regulatory gaps exist in the bank's action
+
+By intervening at the right time, we help borrowers explore effective alternatives—often without needing to rush to court.`,
+      approach: `Our approach is never one-size-fits-all. Each borrower—whether an MSME, individual, or company—comes with unique challenges and strengths. We assess these factors in detail before recommending any strategy.
+
+Wherever possible, we aim to resolve the matter through structured legal correspondence, rather than pushing the borrower into litigation. However, if the borrower comes to us at a later stage—such as after possession notice or before auction—we are fully prepared to defend the case through DRT proceedings, if necessary.
+
+All our strategies are built on:
+• RBI compliance checks
+• SARFAESI Act procedural scrutiny
+• Relevant government policies and circulars
+• A borrower-centric, practical, and time-sensitive approach`,
+      callToAction: "If your loan account is under stress, or you've received a SARFAESI Notice or fear enforcement action—don't delay. Call us today, or Book a virtual or face-to-face consultation to understand your legal position and possible remedies.",
+      conclusion: `Being in default doesn't mean being without options. The SARFAESI Act gives banks power—but that power must be exercised within the boundaries of law, procedure, and policy. At NPA Solutions, we help borrowers identify gaps in bank compliance, protect their rights, and work toward resolution—not just defence.
+
+If you're struggling with a Non-Performing Asset, our team is here to help you move forward with confidence, clarity, and legal strength.`,
       icon: Shield,
       color: "bg-gradient-to-br from-blue-50 to-blue-100",
       iconColor: "text-blue-600",
-      features: ["24/7 Legal Support", "Compliance Audit", "Strategic Defense"],
-      popular: false
+      features: ["Early Intervention", "Compliance Audit", "Strategic Defense", "RBI Guidelines Review"],
+      popular: true
     },
     {
       title: "DRT & SARFAESI Litigation",
