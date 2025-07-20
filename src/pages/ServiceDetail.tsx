@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-
 const ServiceDetail = () => {
-  const { serviceId } = useParams();
-
+  const {
+    serviceId
+  } = useParams();
   const services = {
     "npa-resolution-sarfaesi-compliance": {
       title: "NPA Resolution & SARFAESI Compliance",
@@ -115,12 +115,9 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       conclusion: "Professional asset recovery support for optimal value realization and financial recovery."
     }
   };
-
   const service = services[serviceId as keyof typeof services];
-
   if (!service) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
+    return <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-slate-900 mb-4">Service Not Found</h1>
           <p className="text-slate-600 mb-8">The requested service could not be found.</p>
@@ -131,14 +128,10 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             </Button>
           </Link>
         </div>
-      </div>
-    );
+      </div>;
   }
-
   const ServiceIcon = service.icon;
-
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="bg-white shadow-sm border-b border-slate-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,12 +152,15 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} className="text-center">
             <div className={`w-20 h-20 rounded-3xl ${service.color} flex items-center justify-center mb-8 mx-auto`}>
               <ServiceIcon size={40} className={service.iconColor} />
             </div>
@@ -173,9 +169,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               {service.title}
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto">
-              {service.subtitle}
-            </p>
+            
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className={`bg-gradient-to-r ${service.gradient} text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg`}>
@@ -196,44 +190,56 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.2
+          }}>
               <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Key Features</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {service.features.map((feature, index) => (
-                  <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+                {service.features.map((feature, index) => <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                     <CardContent className="p-0">
                       <CheckCircle className={`${service.iconColor} mx-auto mb-3`} size={24} />
                       <p className="text-sm font-medium text-slate-700">{feature}</p>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
             </motion.div>
 
             {/* Full Description */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="prose prose-lg max-w-none"
-            >
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Overview</h2>
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.3
+          }} className="prose prose-lg max-w-none">
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">Early Legal Intervention for NPA Stress & SARFAESI Notices
+            </h2>
               <div className="text-slate-600 leading-relaxed whitespace-pre-line text-lg">
                 {service.fullDescription}
               </div>
             </motion.div>
 
             {/* Why Choose Us */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.4
+          }} className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose NPA Solutions</h2>
               <div className="text-slate-600 leading-relaxed whitespace-pre-line text-lg">
                 {service.whyChooseUs}
@@ -241,11 +247,16 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             </motion.div>
 
             {/* Our Approach */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.5
+          }}>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Approach</h2>
               <div className="text-slate-600 leading-relaxed whitespace-pre-line text-lg">
                 {service.approach}
@@ -253,12 +264,16 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             </motion.div>
 
             {/* Call to Action */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className={`bg-gradient-to-r ${service.gradient} rounded-2xl p-8 text-white text-center`}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.6
+          }} className={`bg-gradient-to-r ${service.gradient} rounded-2xl p-8 text-white text-center`}>
               <h2 className="text-3xl font-bold mb-6">Take Action Now</h2>
               <p className="text-lg leading-relaxed mb-8 opacity-90">{service.callToAction}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -274,12 +289,16 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             </motion.div>
 
             {/* Conclusion */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-center"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.7
+          }} className="text-center">
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Moving Forward</h2>
               <div className="text-slate-600 leading-relaxed whitespace-pre-line text-lg mb-8">
                 {service.conclusion}
@@ -294,8 +313,6 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default ServiceDetail;
