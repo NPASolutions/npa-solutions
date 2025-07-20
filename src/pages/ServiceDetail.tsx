@@ -9,7 +9,7 @@ const ServiceDetail = () => {
   const { serviceId } = useParams();
 
   const services = {
-    "npa-resolution-sarfaesi": {
+    "npa-resolution-sarfaesi-compliance": {
       title: "NPA Resolution & SARFAESI Compliance",
       subtitle: "Early Legal Intervention for NPA Stress & SARFAESI Notices",
       icon: Shield,
