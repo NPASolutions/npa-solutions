@@ -169,8 +169,8 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
   }, {
     text: "Outstanding debt recovery and NPA management services. Their strategic approach and legal expertise helped us navigate complex financial challenges with remarkable success.",
     author: "S Srinivas",
-    role: "Financial Consultant",
-    company: "Srinivas Advisory",
+    role: "Managing Partner",
+    company: "SBS Paper Mill",
     rating: 5,
     image: "/placeholder.svg"
   }];
