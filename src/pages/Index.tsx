@@ -66,6 +66,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     icon: Shield,
     color: "bg-gradient-to-br from-blue-50 to-blue-100",
     iconColor: "text-blue-600",
+    gradient: "from-blue-500 to-blue-600",
     features: ["Early Intervention", "Compliance Audit", "Strategic Defense", "RBI Guidelines Review"],
     popular: true
   }, {
@@ -74,6 +75,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     icon: Scale,
     color: "bg-gradient-to-br from-purple-50 to-purple-100",
     iconColor: "text-purple-600",
+    gradient: "from-purple-500 to-purple-600",
     features: ["Expert Litigation", "Dual Protection", "Court Representation"],
     popular: true
   }, {
@@ -82,6 +84,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     icon: FileText,
     color: "bg-gradient-to-br from-green-50 to-green-100",
     iconColor: "text-green-600",
+    gradient: "from-green-500 to-green-600",
     features: ["Negotiation Support", "Settlement Strategy", "Documentation"],
     popular: false
   }, {
@@ -90,6 +93,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     icon: Building,
     color: "bg-gradient-to-br from-orange-50 to-orange-100",
     iconColor: "text-orange-600",
+    gradient: "from-orange-500 to-orange-600",
     features: ["NCLT Representation", "Resolution Planning", "Asset Protection"],
     popular: false
   }, {
@@ -98,6 +102,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     icon: TrendingUp,
     color: "bg-gradient-to-br from-teal-50 to-teal-100",
     iconColor: "text-teal-600",
+    gradient: "from-teal-500 to-teal-600",
     features: ["Business Revival", "Debt Restructuring", "Growth Strategy"],
     popular: false
   }, {
@@ -106,6 +111,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     icon: Users,
     color: "bg-gradient-to-br from-indigo-50 to-indigo-100",
     iconColor: "text-indigo-600",
+    gradient: "from-indigo-500 to-indigo-600",
     features: ["Asset Valuation", "ARC Negotiations", "Recovery Optimization"],
     popular: false
   }];
@@ -405,7 +411,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                   </div>}
                 
                 <Card className="h-full hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden group">
-                  <div className={`h-2 ${service.popular ? 'bg-gradient-to-r from-purple-600 to-blue-600' : 'bg-gradient-to-r from-slate-200 to-slate-300'}`}></div>
+                  <div className={`h-2 bg-gradient-to-r ${service.gradient}`}></div>
                   <CardContent className="p-8">
                     <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <service.icon size={32} className={service.iconColor} />

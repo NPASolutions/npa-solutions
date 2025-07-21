@@ -16,6 +16,7 @@ const ServiceDetail = () => {
       color: "bg-gradient-to-br from-blue-50 to-blue-100",
       iconColor: "text-blue-600",
       gradient: "from-blue-600 to-blue-700",
+      buttonGradient: "from-blue-500 to-blue-600",
       features: ["Early Intervention", "Compliance Audit", "Strategic Defense", "RBI Guidelines Review"],
       fullDescription: `When financial strain sets in, borrowers—whether MSMEs, companies, or individuals—often find themselves racing against time. Under the RBI's Prudential Norms, a loan account is classified as a Non-Performing Asset (NPA) when repayments are overdue for more than 90 days. Once this classification is made, banks may initiate recovery actions under the SARFAESI Act 2002, starting with the issuance of a demand notice under Section 13(2).
 
@@ -51,6 +52,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       color: "bg-gradient-to-br from-purple-50 to-purple-100",
       iconColor: "text-purple-600",
       gradient: "from-purple-600 to-purple-700",
+      buttonGradient: "from-purple-500 to-purple-600",
       features: ["Expert Litigation", "Dual Protection", "Court Representation", "Strategic Defense"],
       fullDescription: `When borrowers face legal action from banks, they are often drawn into proceedings before the Debt Recovery Tribunal (DRT). Under the SARFAESI Act 2002, banks can bypass the courts and directly enforce recovery through SARFAESI proceedings, such as taking physical possession and initiating auction of secured assets. Borrowers, however, have the right to defend themselves by filing a Securitisation Application (SA) before the DRT under Section 17 of the Act.
 
@@ -73,6 +75,7 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
       color: "bg-gradient-to-br from-green-50 to-green-100",
       iconColor: "text-green-600",
       gradient: "from-green-600 to-green-700",
+      buttonGradient: "from-green-500 to-green-600",
       features: ["Negotiation Support", "Settlement Strategy", "Documentation", "Expert Guidance"],
       fullDescription: "Expert-backed One-Time Settlement negotiations for favorable terms and debt resolution.",
       whyChooseUs: "Our negotiation expertise helps achieve optimal settlement terms with financial institutions.",
@@ -87,6 +90,7 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
       color: "bg-gradient-to-br from-orange-50 to-orange-100",
       iconColor: "text-orange-600",
       gradient: "from-orange-600 to-orange-700",
+      buttonGradient: "from-orange-500 to-orange-600",
       features: ["NCLT Representation", "Resolution Planning", "Asset Protection", "CIRP Support"],
       fullDescription: "Expert guidance through CIRP, liquidation, and resolution proceedings before NCLT.",
       whyChooseUs: "Deep expertise in corporate insolvency processes and NCLT procedures.",
@@ -101,6 +105,7 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
       color: "bg-gradient-to-br from-teal-50 to-teal-100",
       iconColor: "text-teal-600",
       gradient: "from-teal-600 to-teal-700",
+      buttonGradient: "from-teal-500 to-teal-600",
       features: ["Business Revival", "Debt Restructuring", "Growth Strategy", "Financial Planning"],
       fullDescription: "Comprehensive debt restructuring solutions for MSME revival and sustainable growth.",
       whyChooseUs: "Specialized expertise in MSME challenges and business restructuring strategies.",
@@ -115,6 +120,7 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
       color: "bg-gradient-to-br from-indigo-50 to-indigo-100",
       iconColor: "text-indigo-600",
       gradient: "from-indigo-600 to-indigo-700",
+      buttonGradient: "from-indigo-500 to-indigo-600",
       features: ["Asset Valuation", "ARC Negotiations", "Recovery Optimization", "Sale Advisory"],
       fullDescription: "Seamless support for direct asset sales and ARC-based recovery with optimal value realization.",
       whyChooseUs: "Expert guidance in asset reconstruction and recovery optimization strategies.",
@@ -240,7 +246,7 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
             duration: 0.8,
             delay: 0.3
           }} className="prose prose-lg max-w-none">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Early Legal Intervention for NPA Stress & SARFAESI Notices
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">{service.subtitle}
             </h2>
               <div className="text-slate-600 leading-relaxed whitespace-pre-line text-lg">
                 {service.fullDescription}
@@ -291,7 +297,7 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
           }} transition={{
             duration: 0.8,
             delay: 0.6
-          }} className="bg-gradient-to-r from-green-600 to-emerald-700 rounded-2xl p-8 text-white text-center">
+          }} className={`bg-gradient-to-r ${service.buttonGradient} rounded-2xl p-8 text-white text-center`}>
               <h2 className="text-3xl font-bold mb-6">Take Action Now</h2>
               <p className="text-lg leading-relaxed mb-8 opacity-90">{service.callToAction}</p>
               <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-xl text-lg font-semibold">
