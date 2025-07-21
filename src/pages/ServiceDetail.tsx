@@ -46,17 +46,25 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     },
     "drt-sarfaesi-litigation": {
       title: "DRT & SARFAESI Litigation",
-      subtitle: "Expert Legal Representation for Recovery Proceedings",
+      subtitle: "Legal Defence & Strategy in DRT & SARFAESI Proceedings",
       icon: Scale,
       color: "bg-gradient-to-br from-purple-50 to-purple-100",
       iconColor: "text-purple-600",
       gradient: "from-purple-600 to-purple-700",
-      features: ["Expert Litigation", "Dual Protection", "Court Representation", "Strategic Defense"],
-      fullDescription: "Comprehensive litigation support for DRT and SARFAESI proceedings with expert legal representation.",
-      whyChooseUs: "Our experienced legal team provides strategic defense against unfair bank actions.",
-      approach: "We employ dual protection strategies under RDDB Act and SARFAESI for maximum legal coverage.",
-      callToAction: "Contact us for expert litigation support and court representation.",
-      conclusion: "Professional legal representation that protects your interests in recovery proceedings."
+      features: ["Securitisation Applications", "Counter Claims", "Procedural Scrutiny", "Strategic Defense"],
+      fullDescription: `When borrowers face legal action from banks, they are often drawn into proceedings before the Debt Recovery Tribunal (DRT). Under the SARFAESI Act 2002, banks can bypass the courts and directly enforce recovery through SARFAESI proceedings, such as taking physical possession and initiating auction of secured assets. Borrowers, however, have the right to defend themselves by filing a Securitisation Application (SA) before the DRT under Section 17 of the Act.
+
+Simultaneously, banks also initiate Original Applications (OA) under the RDDB Act, 1993 to recover dues through a judicial process. These parallel proceedings require careful strategy, especially when banks overstep legal procedures or when borrower assets are at risk. Timely intervention and legal scrutiny play a critical role in safeguarding borrower rights.`,
+      whyChooseUs: `At NPA Solutions, we specialize in handling complex DRT and SARFAESI matters. Our clients—be they individuals, MSMEs, or corporate entities—often approach us at a stage when banks have either taken possession of assets or initiated legal proceedings. We excel in identifying procedural violations, statutory non-compliance under SARFAESI, and opportunities to file Counter Claims in OA proceedings.
+
+Our team ensures that borrowers are not left vulnerable due to lack of awareness or delay. With deep insight into the SARFAESI Act, RDDB Act, RBI norms, and DRT practices, we bring a proactive, rights-based legal approach to every case.`,
+      approach: `At NPA Solutions, we recognize that borrowers often face dual pressure: recovery suits (Original Applications) under the RDDB Act and enforcement actions under the SARFAESI Act. Our first step is to carefully assess the stage and legality of SARFAESI proceedings. If a 13(4) Possession Notice has been issued without proper compliance, we help borrowers file a Securitisation Application (SA) before the DRT under Section 17 — to challenge the action and protect their assets.
+
+In parallel, if the bank has filed an OA in DRT, we examine whether there are grounds for a Counter Claim based on damages, illegal recovery measures, or documentation gaps. We guide borrowers—whether individuals, MSMEs, or companies—through each step, ensuring their side is put forward effectively with supporting records and procedural scrutiny.
+
+Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and to neutralize the OA with a strong defence or justified counterclaim, wherever applicable. Every case is fact-driven, and we tailor our approach to ensure the borrower's rights are protected under law while opening avenues for meaningful resolution.`,
+      callToAction: "If you're facing SARFAESI enforcement or DRT proceedings, don't wait for the situation to escalate. Reach out to NPA Solutions for timely legal support, strategy, and compliance assistance.",
+      conclusion: `Navigating DRT and SARFAESI actions demands a strong legal understanding, procedural vigilance, and borrower-specific strategy. At NPA Solutions, we stand by borrowers every step of the way—ensuring their voice is heard, their rights are upheld, and their financial future is protected.`
     },
     "ots-negotiation": {
       title: "OTS Support & Negotiation",
