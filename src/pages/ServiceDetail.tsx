@@ -51,7 +51,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       color: "bg-gradient-to-br from-purple-50 to-purple-100",
       iconColor: "text-purple-600",
       gradient: "from-purple-600 to-purple-700",
-      features: ["SA (Securitisation Application)", "OA (Original Application)", "Counter Claims in OA", "SARFAESI Compliance Review", "DRT Proceedings Defense"],
+      features: ["Expert Litigation", "Dual Protection", "Court Representation", "Strategic Defense"],
       fullDescription: `When borrowers face legal action from banks, they are often drawn into proceedings before the Debt Recovery Tribunal (DRT). Under the SARFAESI Act 2002, banks can bypass the courts and directly enforce recovery through SARFAESI proceedings, such as taking physical possession and initiating auction of secured assets. Borrowers, however, have the right to defend themselves by filing a Securitisation Application (SA) before the DRT under Section 17 of the Act.
 
 Simultaneously, banks also initiate Original Applications (OA) under the RDDB Act, 1993 to recover dues through a judicial process. These parallel proceedings require careful strategy, especially when banks overstep legal procedures or when borrower assets are at risk. Timely intervention and legal scrutiny play a critical role in safeguarding borrower rights.`,
