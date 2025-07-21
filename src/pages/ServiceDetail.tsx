@@ -291,19 +291,13 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
           }} transition={{
             duration: 0.8,
             delay: 0.6
-          }} className={`bg-gradient-to-r ${service.gradient} rounded-2xl p-8 text-white text-center`}>
+          }} className="bg-gradient-to-r from-green-600 to-emerald-700 rounded-2xl p-8 text-white text-center">
               <h2 className="text-3xl font-bold mb-6">Take Action Now</h2>
               <p className="text-lg leading-relaxed mb-8 opacity-90">{service.callToAction}</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-xl text-lg font-semibold">
-                  <Phone className="mr-2" size={20} />
-                  Call Now
-                </Button>
-                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-xl text-lg font-semibold">
-                  <Mail className="mr-2" size={20} />
-                  Get Started
-                </Button>
-              </div>
+              <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-xl text-lg font-semibold">
+                <Phone className="mr-2" size={20} />
+                Contact Us
+              </Button>
             </motion.div>
 
             {/* Conclusion */}
