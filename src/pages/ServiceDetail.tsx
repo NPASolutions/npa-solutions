@@ -70,18 +70,38 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
     },
     "ots-negotiation": {
       title: "OTS Support & Negotiation",
-      subtitle: "Strategic One-Time Settlement Solutions",
+      subtitle: "Strategic Guidance for Fair & Legally Sound One-Time Settlements",
       icon: FileText,
       color: "bg-gradient-to-br from-green-50 to-green-100",
       iconColor: "text-green-600",
       gradient: "from-green-600 to-green-700",
       buttonGradient: "from-green-500 to-green-600",
-      features: ["Negotiation Support", "Settlement Strategy", "Documentation", "Expert Guidance"],
-      fullDescription: "Expert-backed One-Time Settlement negotiations for favorable terms and debt resolution.",
-      whyChooseUs: "Our negotiation expertise helps achieve optimal settlement terms with financial institutions.",
-      approach: "Strategic approach to OTS negotiations with comprehensive documentation support.",
-      callToAction: "Let us help you achieve favorable settlement terms through expert negotiation.",
-      conclusion: "Professional OTS support that delivers optimal outcomes for debt resolution."
+      features: ["Strategic OTS Guidance", "Legal Review", "Negotiation Leverage", "Fair Settlement Terms"],
+      fullDescription: `A One Time Settlement (OTS) is not something a bank readily offers—it's something you earn the right to negotiate. For borrowers under financial distress, especially those facing SARFAESI enforcement or legal notices, the idea of "settling the loan" may seem like a relief. But in reality, OTS is a legal and strategic outcome, not a shortcut.
+
+At NPA Solutions, we help borrowers understand when, why, and how an OTS becomes a real option—and how to avoid rushing into one under pressure without proper leverage.`,
+      whyChooseUs: `Most borrowers approach us when restructuring was denied, the loan is declared NPA, or the bank is threatening possession or auction. We understand the urgency—but more importantly, we know how to turn that urgency into opportunity.
+
+Our strength lies in helping you:
+• Decide if OTS is suitable for your profile (MSME, individual, or company).
+• Understand if the bank has prematurely denied revival or violated process.
+• Use the right tools to build legal and negotiation advantage.
+
+Unlike agents who simply "submit" OTS letters, we work to create the conditions where banks are compelled to consider a reasonable settlement—without compromising your future.`,
+      approach: `Every borrower's case is different. That's why we never treat OTS as the default option.
+
+We begin with a legal and financial review—whether you're still at the SARFAESI notice stage, facing DRT recovery proceedings, or have received an IBC-related threat. We identify if your case has technical violations, RBI non-compliance, or procedural irregularities—and whether these can be used to open up OTS discussions on better terms.
+
+When the timing is right, we assist in:
+• Strategically initiating OTS representations.
+• Responding to pressure tactics with well-supported legal positions.
+• Avoiding settlements that might weaken your legal standing or future eligibility.
+
+OTS is not always advisable—but when it is, we ensure you enter with clarity, confidence, and control.`,
+      callToAction: "Facing pressure to settle? Don't go in blind. Book a face-to-face or virtual consultation with our legal team to assess if an OTS is right for you—factually, financially, and legally. We help you understand your real position and whether better alternatives exist before taking any irreversible step.",
+      conclusion: `A One Time Settlement is not about desperation—it's about timing, facts, and leverage. Whether you're dealing with a harsh bank stance or are considering an OTS as a last resort, we'll help you make an informed, strategic move.
+
+At NPA Solutions, we stand with borrowers—not just to close a loan, but to close it right.`
     },
     "ibc-litigation": {
       title: "IBC Litigation & Corporate Insolvency",
@@ -100,18 +120,42 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
     },
     "debt-restructuring": {
       title: "Debt Restructuring & MSME Revival",
-      subtitle: "Business Revival and Growth Strategy",
+      subtitle: "Revival-Focused Legal Support for MSMEs & Distressed Borrowers",
       icon: TrendingUp,
       color: "bg-gradient-to-br from-teal-50 to-teal-100",
       iconColor: "text-teal-600",
       gradient: "from-teal-600 to-teal-700",
       buttonGradient: "from-teal-500 to-teal-600",
-      features: ["Business Revival", "Debt Restructuring", "Growth Strategy", "Financial Planning"],
-      fullDescription: "Comprehensive debt restructuring solutions for MSME revival and sustainable growth.",
-      whyChooseUs: "Specialized expertise in MSME challenges and business restructuring strategies.",
-      approach: "Holistic approach to debt restructuring with focus on long-term sustainability.",
-      callToAction: "Revive your business with our expert debt restructuring and revival strategies.",
-      conclusion: "Professional support for MSME revival and sustainable business growth."
+      features: ["MSME Revival Support", "RBI Framework Compliance", "Strategic Restructuring", "Legal Advocacy"],
+      fullDescription: `Financial stress in a business doesn't always mean failure—it often just means timely restructuring is needed. For MSMEs in particular, the Reserve Bank of India (RBI) has issued several guidelines that allow for restructuring of viable accounts without waiting for the account to become an NPA.
+
+Unfortunately, many borrowers either don't know about these schemes, or approach too late—after receiving legal notices or facing recovery proceedings. At NPA Solutions, we help you act before it's too late, with a clear strategy toward revival and compliance-based restructuring.`,
+      whyChooseUs: `Unlike general consultants or bank recovery agents, we represent your legal and financial interests as a distressed borrower.
+
+Here's how we're different:
+• We assess whether your account was illegally pushed into NPA without offering a proper restructuring route.
+• We understand the differences between individual, company, and MSME borrowers—and the benefits each one may claim.
+• We act before litigation, using RBI guidelines, policy norms, and compliance leverage to request restructuring or revival.
+• We recommend restructuring or OTS only when it's in your long-term interest—not because the bank wants a quick closure.
+
+Whether you're a standard account under pressure, or already facing a SARFAESI demand notice, we help you assess your position and move strategically.`,
+      approach: `Every case begins with one critical question: Was restructuring ever considered before marking the loan as NPA?
+
+If not, and if you're a viable MSME borrower, we act immediately to:
+• Verify MSME registration (Udyam/Udyog Aadhaar) and status on the date of default.
+• Evaluate your loan under the RBI Framework for Resolution of MSME Stress (2023).
+• Draft and submit a bank-compliant restructuring proposal supported by legal rights, RBI circulars, and documentation.
+• Escalate to higher authorities if banks violate restructuring norms or fail to respond.
+
+If you're already classified as NPA or SARFAESI proceedings have begun, we examine whether restructuring should still have been considered—and use that failure to legally push back and explore revival options or stronger negotiation points.
+
+We also guide you through the choice between debt restructuring and OTS, depending on your repayment ability, asset situation, and overall legal exposure.`,
+      callToAction: "Are you under financial stress or facing the risk of being declared NPA? Don't wait for legal notices or recovery agents. You may be entitled to restructuring support—especially if you're an MSME. Book a virtual or in-person consultation today to understand your rights, assess your bank's actions, and explore your options for revival.",
+      conclusion: `MSMEs are the backbone of our economy—but in many cases, banks skip over mandatory revival opportunities and rush to enforce recovery.
+
+At NPA Solutions, we ensure your business gets the fair chance it deserves. We stand by your side from early-stage advisory to policy-based legal action—ensuring you don't just respond to recovery, but proactively reclaim control of your financial future.
+
+Let's work together to rebuild—strategically, lawfully, and on your terms.`
     },
     "arc-asset-advisory": {
       title: "ARC & Asset Sale Advisory",
