@@ -68,7 +68,7 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
       callToAction: "If you're facing SARFAESI enforcement or DRT proceedings, don't wait for the situation to escalate. Reach out to NPA Solutions for timely legal support, strategy, and compliance assistance.",
       conclusion: `Navigating DRT and SARFAESI actions demands a strong legal understanding, procedural vigilance, and borrower-specific strategy. At NPA Solutions, we stand by borrowers every step of the way—ensuring their voice is heard, their rights are upheld, and their financial future is protected.`
     },
-    "ots-negotiation": {
+    "ots-support-negotiation": {
       title: "OTS Support & Negotiation",
       subtitle: "Strategic Guidance for Fair & Legally Sound One-Time Settlements",
       icon: FileText,
@@ -118,7 +118,7 @@ At NPA Solutions, we stand with borrowers—not just to close a loan, but to clo
       callToAction: "Navigate IBC proceedings with confidence through our expert legal support.",
       conclusion: "Professional IBC litigation support for optimal corporate insolvency outcomes."
     },
-    "debt-restructuring": {
+    "debt-restructuring-msme-revival": {
       title: "Debt Restructuring & MSME Revival",
       subtitle: "Revival-Focused Legal Support for MSMEs & Distressed Borrowers",
       icon: TrendingUp,
