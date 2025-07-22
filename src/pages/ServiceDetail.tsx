@@ -191,16 +191,52 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
   const ServiceIcon = service.icon;
   return <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b border-slate-100 sticky top-0 z-50">
+      <nav className="bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link to="/" className="font-bold text-xl text-slate-900">
+          <div className="flex justify-between items-center h-20">
+            <Link to="/" className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               NPA Solutions
             </Link>
-            <Link to="/">
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
+              <Link to="/" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+                Home
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <a href="/#services" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+                Services
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a href="/#about" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+                About
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a href="/#resources" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+                Resources
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a href="/#faqs" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+                FAQs
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a href="/#contact" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+                Contact
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </a>
+            </div>
+
+            <div className="hidden md:flex">
+              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                Get Expert Help
+              </Button>
+            </div>
+
+            {/* Back to Services for mobile */}
+            <Link to="/" className="md:hidden">
               <Button variant="ghost" className="text-slate-600 hover:text-slate-900">
                 <ArrowLeft className="mr-2" size={16} />
-                Back to Services
+                Back
               </Button>
             </Link>
           </div>
