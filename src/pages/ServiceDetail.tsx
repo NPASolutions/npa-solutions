@@ -164,21 +164,6 @@ We also guide you through the choice between debt restructuring and OTS, dependi
 At NPA Solutions, we ensure your business gets the fair chance it deserves. We stand by your side from early-stage advisory to policy-based legal action—ensuring you don't just respond to recovery, but proactively reclaim control of your financial future.
 
 Let's work together to rebuild—strategically, lawfully, and on your terms.`
-    },
-    "arc-asset-advisory": {
-      title: "ARC & Asset Sale Advisory",
-      subtitle: "Asset Recovery and Optimization Solutions",
-      icon: Users,
-      color: "bg-gradient-to-br from-indigo-50 to-indigo-100",
-      iconColor: "text-indigo-600",
-      gradient: "from-indigo-600 to-indigo-700",
-      buttonGradient: "from-indigo-500 to-indigo-600",
-      features: ["Asset Valuation", "ARC Negotiations", "Recovery Optimization", "Sale Advisory"],
-      fullDescription: "Seamless support for direct asset sales and ARC-based recovery with optimal value realization.",
-      whyChooseUs: "Expert guidance in asset reconstruction and recovery optimization strategies.",
-      approach: "Strategic approach to asset sales and ARC negotiations for maximum value recovery.",
-      callToAction: "Optimize your asset recovery with our expert ARC and asset sale advisory services.",
-      conclusion: "Professional asset recovery support for optimal value realization and financial recovery."
     }
   };
   const service = services[serviceId as keyof typeof services];

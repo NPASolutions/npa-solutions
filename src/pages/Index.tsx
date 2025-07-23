@@ -88,7 +88,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     features: ["Negotiation Support", "Settlement Strategy", "Documentation"],
     popular: false
   }, {
-    title: "IBC Litigation & Corporate Insolvency",
+    title: "NCLT / IBC Litigation & Corporate Insolvency",
     description: "Navigate CIRP, liquidation, or resolution proceedings with precision before NCLT.",
     icon: Building,
     color: "bg-gradient-to-br from-orange-50 to-orange-100",
@@ -104,15 +104,6 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     iconColor: "text-teal-600",
     gradient: "from-teal-500 to-teal-600",
     features: ["Business Revival", "Debt Restructuring", "Growth Strategy"],
-    popular: false
-  }, {
-    title: "ARC & Asset Sale Advisory",
-    description: "Seamless support for direct asset sales and ARC-based recovery with optimal value realization.",
-    icon: Users,
-    color: "bg-gradient-to-br from-indigo-50 to-indigo-100",
-    iconColor: "text-indigo-600",
-    gradient: "from-indigo-500 to-indigo-600",
-    features: ["Asset Valuation", "ARC Negotiations", "Recovery Optimization"],
     popular: false
   }];
   const stats = [{
