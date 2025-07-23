@@ -4,10 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 const ServiceDetail = () => {
   const {
     serviceId
   } = useParams();
+
+  // Scroll to top when component loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [serviceId]);
   const services = {
     "npa-resolution-sarfaesi-compliance": {
       title: "NPA Resolution & SARFAESI Compliance",
@@ -104,7 +110,7 @@ OTS is not always advisable—but when it is, we ensure you enter with clarity, 
 At NPA Solutions, we stand with borrowers—not just to close a loan, but to close it right.`
     },
     "ibc-litigation": {
-      title: "IBC Litigation & Corporate Insolvency",
+      title: "NCLT / IBC Litigation & Corporate Insolvency",
       subtitle: "NCLT Proceedings and Resolution Planning",
       icon: Building,
       color: "bg-gradient-to-br from-orange-50 to-orange-100",
@@ -112,11 +118,13 @@ At NPA Solutions, we stand with borrowers—not just to close a loan, but to clo
       gradient: "from-orange-600 to-orange-700",
       buttonGradient: "from-orange-500 to-orange-600",
       features: ["NCLT Representation", "Resolution Planning", "Asset Protection", "CIRP Support"],
-      fullDescription: "Expert guidance through CIRP, liquidation, and resolution proceedings before NCLT.",
-      whyChooseUs: "Deep expertise in corporate insolvency processes and NCLT procedures.",
-      approach: "Comprehensive approach to IBC proceedings with focus on business revival.",
-      callToAction: "Navigate IBC proceedings with confidence through our expert legal support.",
-      conclusion: "Professional IBC litigation support for optimal corporate insolvency outcomes."
+      fullDescription: `The Insolvency and Bankruptcy Code (IBC) is India's primary law for resolving corporate financial distress. Proceedings under IBC are adjudicated by the National Company Law Tribunal (NCLT), a quasi-judicial body dedicated to corporate law and insolvency matters. IBC allows initiation of insolvency proceedings by financial creditors, operational creditors, or even the company itself—provided the default amount exceeds ₹1 crore. This threshold applies across Section 7 (financial creditors), Section 9 (operational creditors), and Section 10 (corporate applicants).
+
+Often, companies approach us when they've received a demand notice from a creditor, or when a petition has already been filed before the NCLT. Timely legal action at this stage can make a significant difference to the outcome.`,
+      whyChooseUs: `We understand the complexities of insolvency—not just in legal terms, but also in how they affect your operations, stakeholders, and business continuity. Our team has experience representing both corporate applicants and creditors across varied industries. With a sensitive and solution-oriented approach, we assist clients in protecting their rights, avoiding procedural pitfalls, and exploring resolution options within the IBC framework.`,
+      approach: `At NPA Solutions, we believe that a thoughtful and technically sound strategy is key to insolvency litigation. We focus on legal accuracy, adherence to statutory requirements, and an understanding of relevant RBI guidelines and policy frameworks. Rather than rushing into adversarial processes, we assess the situation in full—considering viability, resolution possibilities, and long-term impact—before acting.`,
+      callToAction: "📞 If your company is under financial stress, has received a legal notice under IBC, or anticipates NCLT proceedings—don't delay. Call us today, or book a virtual or face-to-face consultation to understand your legal position and explore the most effective course of action.",
+      conclusion: `Insolvency need not mean the end of the road. Whether you're trying to recover your dues or protect your company's future, a structured legal response can change the outcome. At NPA Solutions, we stand by businesses navigating IBC proceedings with clarity, confidence, and a calm legal hand. Let's work together to find a way forward.`
     },
     "debt-restructuring-msme-revival": {
       title: "Debt Restructuring & MSME Revival",
