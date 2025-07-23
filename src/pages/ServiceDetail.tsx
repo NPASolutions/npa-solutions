@@ -118,9 +118,36 @@ At NPA Solutions, we stand with borrowers—not just to close a loan, but to clo
       gradient: "from-orange-600 to-orange-700",
       buttonGradient: "from-orange-500 to-orange-600",
       features: ["NCLT Representation", "Resolution Planning", "Asset Protection", "CIRP Support"],
-      fullDescription: `The Insolvency and Bankruptcy Code (IBC) is India's primary law for resolving corporate financial distress. Proceedings under IBC are adjudicated by the National Company Law Tribunal (NCLT), a quasi-judicial body dedicated to corporate law and insolvency matters. IBC allows initiation of insolvency proceedings by financial creditors, operational creditors, or even the company itself—provided the default amount exceeds ₹1 crore. This threshold applies across Section 7 (financial creditors), Section 9 (operational creditors), and Section 10 (corporate applicants).
+      fullDescription: `IBC Proceedings Before NCLT: Legal Remedies for Distressed Corporates
 
-Often, companies approach us when they've received a demand notice from a creditor, or when a petition has already been filed before the NCLT. Timely legal action at this stage can make a significant difference to the outcome.`,
+The Insolvency and Bankruptcy Code (IBC) is India's primary law for resolving corporate financial distress. Proceedings under IBC are adjudicated by the National Company Law Tribunal (NCLT), a quasi-judicial body dedicated to corporate law and insolvency matters. IBC allows initiation of insolvency proceedings by financial creditors, operational creditors, or even the company itself—provided the default amount exceeds ₹1 crore. This threshold applies across Section 7 (financial creditors), Section 9 (operational creditors), and Section 10 (corporate applicants).
+
+Often, companies approach us when they've received a demand notice from a creditor, or when a petition has already been filed before the NCLT. Timely legal action at this stage can make a significant difference to the outcome.
+
+Understanding IBC Proceedings
+
+IBC proceedings are initiated before the National Company Law Tribunal (NCLT) when a corporate debtor defaults on dues exceeding ₹1 crore. The process involves:
+• Admission of application and moratorium declaration
+• Appointment of Interim/Resolution Professional
+• Committee of Creditors formation
+• Resolution plan submission and approval
+• Liquidation (if resolution fails)
+
+Our IBC Expertise
+
+We represent clients across the entire spectrum of IBC proceedings:
+• Financial Creditors: Section 7 applications and recovery strategies
+• Operational Creditors: Section 9 proceedings and claim substantiation
+• Corporate Debtors: Section 10 voluntary proceedings and defense strategies
+• Resolution Professionals: Procedural compliance and stakeholder management
+
+Strategic Approach
+
+Our methodology combines legal expertise with business acumen:
+• Pre-litigation assessment and risk analysis
+• Compliance with statutory timelines and requirements
+• Coordination with resolution professionals and creditors
+• Protection of stakeholder interests throughout the process`,
       whyChooseUs: `We understand the complexities of insolvency—not just in legal terms, but also in how they affect your operations, stakeholders, and business continuity. Our team has experience representing both corporate applicants and creditors across varied industries. With a sensitive and solution-oriented approach, we assist clients in protecting their rights, avoiding procedural pitfalls, and exploring resolution options within the IBC framework.`,
       approach: `At NPA Solutions, we believe that a thoughtful and technically sound strategy is key to insolvency litigation. We focus on legal accuracy, adherence to statutory requirements, and an understanding of relevant RBI guidelines and policy frameworks. Rather than rushing into adversarial processes, we assess the situation in full—considering viability, resolution possibilities, and long-term impact—before acting.`,
       callToAction: "📞 If your company is under financial stress, has received a legal notice under IBC, or anticipates NCLT proceedings—don't delay. Call us today, or book a virtual or face-to-face consultation to understand your legal position and explore the most effective course of action.",
