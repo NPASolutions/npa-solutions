@@ -109,7 +109,7 @@ OTS is not always advisable—but when it is, we ensure you enter with clarity, 
 
 At NPA Solutions, we stand with borrowers—not just to close a loan, but to close it right.`
     },
-    "ibc-litigation": {
+    "nclt-ibc-litigation-corporate-insolvency": {
       title: "NCLT / IBC Litigation & Corporate Insolvency",
       subtitle: "NCLT Proceedings and Resolution Planning",
       icon: Building,
