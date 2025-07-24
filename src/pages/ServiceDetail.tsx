@@ -157,10 +157,10 @@ Our methodology combines legal expertise with business acumen:
       title: "Debt Restructuring & MSME Revival",
       subtitle: "Revival-Focused Legal Support for MSMEs & Distressed Borrowers",
       icon: TrendingUp,
-      color: "bg-gradient-to-br from-teal-50 to-teal-100",
-      iconColor: "text-teal-600",
-      gradient: "from-teal-600 to-teal-700",
-      buttonGradient: "from-teal-500 to-teal-600",
+      color: "bg-gradient-to-br from-yellow-50 to-yellow-100",
+      iconColor: "text-yellow-600",
+      gradient: "from-yellow-600 to-yellow-700",
+      buttonGradient: "from-yellow-500 to-yellow-600",
       features: ["MSME Revival Support", "RBI Framework Compliance", "Strategic Restructuring", "Legal Advocacy"],
       fullDescription: `Financial stress in a business doesn't always mean failure—it often just means timely restructuring is needed. For MSMEs in particular, the Reserve Bank of India (RBI) has issued several guidelines that allow for restructuring of viable accounts without waiting for the account to become an NPA.
 
@@ -224,26 +224,18 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
                 Home
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
-              <a href="/#services" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+              <Link to="/services" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
                 Services
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </a>
-              <a href="/#about" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
-                About
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </a>
-              <a href="/#resources" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
-                Resources
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </a>
-              <a href="/#faqs" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+              </Link>
+              <Link to="/faqs" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
                 FAQs
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </a>
-              <a href="/#contact" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+              </Link>
+              <Link to="/contact" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
                 Contact
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </Link>
             </div>
 
             <div className="hidden md:flex">
@@ -421,7 +413,7 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
               <div className="text-slate-600 leading-relaxed whitespace-pre-line text-lg mb-8">
                 {service.conclusion}
               </div>
-              <Link to="/">
+              <Link to="/services">
                 <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50">
                   <ArrowLeft className="mr-2" size={16} />
                   View All Services

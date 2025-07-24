@@ -100,9 +100,9 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     title: "Debt Restructuring & MSME Revival",
     description: "Revive, restructure & reposition your business for sustainable growth and survival.",
     icon: TrendingUp,
-    color: "bg-gradient-to-br from-teal-50 to-teal-100",
-    iconColor: "text-teal-600",
-    gradient: "from-teal-500 to-teal-600",
+    color: "bg-gradient-to-br from-yellow-50 to-yellow-100",
+    iconColor: "text-yellow-600",
+    gradient: "from-yellow-500 to-yellow-600",
     features: ["Business Revival", "Debt Restructuring", "Growth Strategy"],
     popular: false
   }];
@@ -198,18 +198,27 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              {['Home', 'Services', 'About', 'Resources', 'FAQs', 'Contact'].map((item, index) => <motion.a key={item} initial={{
-              opacity: 0,
-              y: -10
-            }} animate={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              delay: index * 0.1
-            }} href={`#${item.toLowerCase()}`} className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-                </motion.a>)}
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'Services', href: '/services' },
+                { name: 'FAQs', href: '/faqs' },
+                { name: 'Contact', href: '/contact' }
+              ].map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Link 
+                    to={item.href} 
+                    className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group"
+                  >
+                    {item.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                  </Link>
+                </motion.div>
+              ))}
             </div>
 
             <motion.div initial={{
@@ -243,9 +252,20 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
         height: 0
       }} className="md:hidden bg-white border-t">
             <div className="px-4 pt-4 pb-6 space-y-3">
-              {['Home', 'Services', 'About', 'Resources', 'FAQs', 'Contact'].map(item => <a key={item} href={`#${item.toLowerCase()}`} className="block px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors">
-                  {item}
-                </a>)}
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'Services', href: '/services' },
+                { name: 'FAQs', href: '/faqs' },
+                { name: 'Contact', href: '/contact' }
+              ].map(item => (
+                <Link 
+                  key={item.name} 
+                  to={item.href} 
+                  className="block px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
               <Button className="mx-3 my-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white w-full">
                 Get Expert Help
               </Button>
@@ -356,252 +376,8 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
         </motion.div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8
-        }} viewport={{
-          once: true
-        }} className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-              Our Legal & Compliance
-              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Services
-              </span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive legal solutions tailored to your specific financial distress situation with proven expertise
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => <motion.div key={index} initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.6,
-            delay: index * 0.1
-          }} viewport={{
-            once: true
-          }} whileHover={{
-            y: -10,
-            scale: 1.02
-          }} className="relative">
-                {service.popular && <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                    
-                  </div>}
-                
-                <Card className="h-full hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden group">
-                  <div className={`h-2 bg-gradient-to-r ${service.gradient}`}></div>
-                  <CardContent className="p-8">
-                    <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon size={32} className={service.iconColor} />
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    
-                    <p className="text-slate-600 mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
 
-                    <div className="space-y-2 mb-6">
-                      {service.features.map((feature, idx) => <div key={idx} className="flex items-center text-sm text-slate-600">
-                          <CheckCircle size={14} className="text-green-500 mr-2" />
-                          {feature}
-                        </div>)}
-                    </div>
-                    
-                    <Link to={`/service/${service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} className="inline-flex items-center">
-                      <Button variant="ghost" className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 p-0 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                        More <ArrowRight size={16} className="ml-2" />
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              </motion.div>)}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section id="about" className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <motion.div initial={{
-            opacity: 0,
-            x: -50
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-10">
-                Why Choose
-                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  NPA Solutions?
-                </span>
-              </h3>
-              
-              <div className="space-y-8">
-                {[{
-                icon: Shield,
-                title: "Deep Legal Insight",
-                description: "Comprehensive expertise across SARFAESI, DRT, IBC regulations with 15+ years experience",
-                color: "bg-blue-100 text-blue-600"
-              }, {
-                icon: Clock,
-                title: "Strategic Early-Stage Intervention",
-                description: "Proactive legal strategies that prevent escalation and minimize business disruption",
-                color: "bg-green-100 text-green-600"
-              }, {
-                icon: Scale,
-                title: "Tailored Defense Strategies",
-                description: "Customized legal approaches designed for your specific situation and industry",
-                color: "bg-purple-100 text-purple-600"
-              }, {
-                icon: FileText,
-                title: "Complete Documentation Support",
-                description: "End-to-end documentation assistance and regulatory compliance management",
-                color: "bg-orange-100 text-orange-600"
-              }].map((item, index) => <motion.div key={index} initial={{
-                opacity: 0,
-                x: -30
-              }} whileInView={{
-                opacity: 1,
-                x: 0
-              }} transition={{
-                duration: 0.6,
-                delay: index * 0.1
-              }} viewport={{
-                once: true
-              }} className="flex items-start space-x-4 group">
-                    <div className={`w-12 h-12 rounded-xl ${item.color} flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300`}>
-                      <item.icon size={20} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900 mb-2 text-lg group-hover:text-blue-600 transition-colors duration-300">
-                        {item.title}
-                      </h4>
-                      <p className="text-slate-600 leading-relaxed">{item.description}</p>
-                    </div>
-                  </motion.div>)}
-              </div>
-            </motion.div>
-
-            <motion.div initial={{
-            opacity: 0,
-            x: 50
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }} className="bg-white rounded-3xl p-10 shadow-2xl">
-              <h4 className="text-3xl font-bold text-slate-900 mb-10 text-center">Client Success Stories</h4>
-              <div className="space-y-10">
-                {testimonials.map((testimonial, index) => <motion.div key={index} initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6,
-                delay: index * 0.2
-              }} viewport={{
-                once: true
-              }} className="relative">
-                    <Quote className="absolute -top-2 -left-2 text-blue-200" size={32} />
-                    <div className="border-l-4 border-blue-600 pl-6 ml-4">
-                      <p className="text-slate-600 italic mb-4 leading-relaxed">"{testimonial.text}"</p>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                          {testimonial.author.split(' ').map(n => n[0]).join('')}
-                        </div>
-                        <div>
-                          <p className="font-bold text-slate-900">{testimonial.author}</p>
-                          <p className="text-sm text-slate-500">{testimonial.role}</p>
-                          <p className="text-xs text-slate-400">{testimonial.company}</p>
-                        </div>
-                        <div className="flex ml-auto">
-                          {[...Array(testimonial.rating)].map((_, i) => <Star key={i} size={16} className="text-yellow-400 fill-current" />)}
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>)}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs Section */}
-      <section id="faqs" className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8
-        }} viewport={{
-          once: true
-        }} className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-              Frequently Asked
-              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Questions
-              </span>
-            </h2>
-            <p className="text-xl text-slate-600">
-              Get expert answers to common questions about financial distress legal matters
-            </p>
-          </motion.div>
-
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8,
-          delay: 0.2
-        }} viewport={{
-          once: true
-        }}>
-            <Accordion type="single" collapsible className="w-full space-y-6">
-              {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="border border-slate-200 rounded-2xl px-8 py-2 shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
-                  <AccordionTrigger className="text-left font-bold text-slate-900 hover:no-underline text-lg py-6">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-slate-600 leading-relaxed pb-6 text-base">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>)}
-            </Accordion>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Contact CTA Banner */}
       <section className="py-24 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
@@ -653,102 +429,6 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section id="contact" className="py-24 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8
-        }} viewport={{
-          once: true
-        }} className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-              Get in
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Touch</span>
-            </h2>
-            <p className="text-xl text-slate-600">
-              Ready to discuss your legal requirements? Contact our experts today for personalized guidance.
-            </p>
-          </motion.div>
-
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8,
-          delay: 0.2
-        }} viewport={{
-          once: true
-        }}>
-            <Card className="shadow-2xl border-0 overflow-hidden">
-              <CardContent className="p-12">
-                <form className="space-y-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-3">
-                        Full Name *
-                      </label>
-                      <input type="text" required className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" placeholder="Enter your full name" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-3">
-                        Email Address *
-                      </label>
-                      <input type="email" required className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" placeholder="your.email@company.com" />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-3">
-                        Phone Number
-                      </label>
-                      <input type="tel" className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" placeholder="+91 98765 43210" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-3">
-                        Legal Matter Type
-                      </label>
-                      <select className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white">
-                        <option value="">Select your legal matter</option>
-                        <option value="sarfaesi">SARFAESI Act Issues</option>
-                        <option value="ots">One-Time Settlement</option>
-                        <option value="drt">DRT Proceedings</option>
-                        <option value="ibc">IBC & Corporate Insolvency</option>
-                        <option value="restructuring">Debt Restructuring</option>
-                        <option value="arc">ARC & Asset Sale</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-slate-700 mb-3">
-                      Describe Your Legal Requirements *
-                    </label>
-                    <textarea required rows={6} className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg resize-none" placeholder="Please provide detailed information about your situation, timeline, and specific legal requirements (minimum 50 characters for better assistance)"></textarea>
-                  </div>
-                  <motion.div whileHover={{
-                  scale: 1.02
-                }} whileTap={{
-                  scale: 0.98
-                }}>
-                    <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-6 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300">
-                      Submit Your Legal Query
-                      <ArrowRight className="ml-2" size={20} />
-                    </Button>
-                  </motion.div>
-                </form>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-20">
@@ -777,9 +457,19 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             <div>
               <h4 className="font-bold text-xl mb-8">Quick Links</h4>
               <div className="space-y-4">
-                {['Services', 'About Us', 'Case Studies', 'Resources', 'FAQs', 'Contact'].map(link => <a key={link} href={`#${link.toLowerCase().replace(' ', '')}`} className="block text-slate-300 hover:text-white transition-colors hover:translate-x-2 transform duration-300">
-                    {link}
-                  </a>)}
+                {[
+                  { name: 'Services', href: '/services' },
+                  { name: 'FAQs', href: '/faqs' },
+                  { name: 'Contact', href: '/contact' }
+                ].map(link => (
+                  <Link 
+                    key={link.name} 
+                    to={link.href} 
+                    className="block text-slate-300 hover:text-white transition-colors hover:translate-x-2 transform duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
               </div>
             </div>
             
