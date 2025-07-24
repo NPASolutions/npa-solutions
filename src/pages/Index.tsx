@@ -379,6 +379,147 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
 
 
 
+      {/* Why Choose Us Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              transition={{ duration: 0.8 }} 
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
+                Why Choose
+                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  NPA Solutions?
+                </span>
+              </h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <Users className="text-blue-600" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Expert Legal Team</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Specialized lawyers with deep expertise in financial distress, SARFAESI, and corporate insolvency matters.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                    <Shield className="text-green-600" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Proven Track Record</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Successfully resolved 500+ cases with a 95% success rate in protecting client assets and interests.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                    <Clock className="text-purple-600" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Timely Intervention</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Early legal intervention strategies that prevent escalation and protect your business interests.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              transition={{ duration: 0.8 }} 
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="text-blue-600" size={32} />
+                  </div>
+                  <h3 className="text-3xl font-bold text-slate-900 mb-2">{stat.value}</h3>
+                  <p className="text-slate-600 font-medium">{stat.label}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Testimonials */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+              Client Success
+              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Stories
+              </span>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Real feedback from clients who successfully resolved their financial distress situations with our expert legal guidance
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-white to-slate-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="text-yellow-400 fill-current" size={20} />
+                  ))}
+                </div>
+                <div className="mb-6">
+                  <Quote className="text-slate-300 mb-4" size={32} />
+                  <p className="text-slate-700 leading-relaxed italic text-lg">
+                    "{testimonial.text}"
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-blue-600 font-bold text-lg">
+                      {testimonial.author.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900">{testimonial.author}</h4>
+                    <p className="text-slate-600 text-sm">{testimonial.role}</p>
+                    <p className="text-slate-500 text-sm">{testimonial.company}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact CTA Banner */}
       <section className="py-24 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
