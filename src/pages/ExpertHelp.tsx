@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { CheckCircle, Scale, Users, BookOpen, ArrowRight, Phone, Mail } from "lucide-react";
+import { CheckCircle, Scale, Users, BookOpen, ArrowRight, Phone, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -177,6 +177,33 @@ const ExpertHelp = () => {
         </div>
       </section>
 
+      {/* Guidance Note */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                Need Help Choosing the Right Consultation?
+              </h3>
+              <p className="text-lg text-slate-600 mb-6">
+                If you need any clarification or guidance to choose the type of consultation that best fits your needs, submit a query or reach us on WhatsApp for instant assistance.
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <MessageCircle className="mr-2" size={20} />
+                Chat on WhatsApp
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -195,6 +222,10 @@ const ExpertHelp = () => {
               <Button size="lg" variant="outline" className="bg-white text-blue-600 border-white hover:bg-blue-50">
                 <Phone className="mr-2" size={20} />
                 Call Us Now
+              </Button>
+              <Button size="lg" variant="outline" className="bg-green-500 text-white border-green-500 hover:bg-green-600">
+                <MessageCircle className="mr-2" size={20} />
+                WhatsApp
               </Button>
               <Button size="lg" variant="outline" className="bg-white text-blue-600 border-white hover:bg-blue-50">
                 <Mail className="mr-2" size={20} />
