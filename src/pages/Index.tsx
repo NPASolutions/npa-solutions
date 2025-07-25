@@ -312,8 +312,8 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Empowering MSMEs, borrowers & entrepreneurs with expert legal guidance through 
-              <span className="font-semibold text-slate-800"> SARFAESI, DRT, IBC & financial restructuring</span>
+              Empowering MSME, Entrepreneurs & Borrowers with Expert Legal guidance through 
+              <span className="font-semibold text-slate-800"> SARFAESI, DRT, IBC & Financial Restructuring</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
