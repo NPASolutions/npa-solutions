@@ -55,11 +55,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-blue-400" />
-                <p>+91 98765 43210</p>
+                <p>+91 9666993228</p>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={18} className="text-blue-400" />
-                <p>Rajahundry, Visakhapatnam, Amaravati</p>
+                <p>Rajahumdry | Visakhapatnam | Amaravati</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock size={18} className="text-blue-400" />
