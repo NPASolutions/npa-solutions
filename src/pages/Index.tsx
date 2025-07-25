@@ -228,9 +228,11 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             opacity: 1,
             x: 0
           }} className="hidden md:flex">
-              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
-                Get Expert Help
-              </Button>
+              <Link to="/expert-help">
+                <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                  Get Expert Help
+                </Button>
+              </Link>
             </motion.div>
 
             {/* Mobile menu button */}
@@ -330,10 +332,12 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             }} whileTap={{
               scale: 0.95
             }}>
-                <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-10 py-4 rounded-xl text-lg font-semibold">
-                  <ArrowRight className="mr-2" size={20} />
-                  Explore Services
-                </Button>
+                <Link to="/services">
+                  <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-10 py-4 rounded-xl text-lg font-semibold">
+                    <ArrowRight className="mr-2" size={20} />
+                    Explore Services
+                  </Button>
+                </Link>
               </motion.div>
             </div>
 
