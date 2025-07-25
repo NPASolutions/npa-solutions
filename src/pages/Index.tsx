@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Footer from "@/components/Footer";
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -268,9 +269,11 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                   {item.name}
                 </Link>
               ))}
-              <Button className="mx-3 my-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white w-full">
-                Get Expert Help
-              </Button>
+              <Link to="/expert-help">
+                <Button className="mx-3 my-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white w-full">
+                  Get Expert Help
+                </Button>
+              </Link>
             </div>
           </motion.div>}
       </nav>
@@ -322,10 +325,12 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             }} whileTap={{
               scale: 0.95
             }}>
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300">
-                  <Phone className="mr-2" size={20} />
-                  Schedule Consultation
-                </Button>
+                <Link to="/expert-help">
+                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <Phone className="mr-2" size={20} />
+                    Schedule Consultation
+                  </Button>
+                </Link>
               </motion.div>
               <motion.div whileHover={{
               scale: 1.05
@@ -480,11 +485,6 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                         <p className="text-sm text-slate-400">{testimonial.company}</p>
                       </div>
                     </div>
-                    <div className="flex">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="text-yellow-400 fill-current" size={16} />
-                      ))}
-                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -493,65 +493,6 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
         </div>
       </section>
 
-      {/* Client Testimonials */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8 }} 
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Client Success
-              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Stories
-              </span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Real feedback from clients who successfully resolved their financial distress situations with our expert legal guidance
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-white to-slate-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="text-yellow-400 fill-current" size={20} />
-                  ))}
-                </div>
-                <div className="mb-6">
-                  <Quote className="text-slate-300 mb-4" size={32} />
-                  <p className="text-slate-700 leading-relaxed italic text-lg">
-                    "{testimonial.text}"
-                  </p>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-blue-600 font-bold text-lg">
-                      {testimonial.author.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900">{testimonial.author}</h4>
-                    <p className="text-slate-600 text-sm">{testimonial.role}</p>
-                    <p className="text-slate-500 text-sm">{testimonial.company}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Contact CTA Banner */}
       <section className="py-24 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
@@ -604,80 +545,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       </section>
 
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div className="md:col-span-2">
-              <div className="font-bold text-3xl mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                NPA Solutions
-              </div>
-              <p className="text-slate-300 leading-relaxed mb-6 text-lg">
-                India's premier legal consultancy specializing in financial distress resolution. We provide strategic legal support for MSMEs, borrowers & entrepreneurs navigating complex financial situations.
-              </p>
-              <div className="flex space-x-4">
-                <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer">
-                  <Mail size={20} />
-                </div>
-                <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer">
-                  <Phone size={20} />
-                </div>
-                <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer">
-                  <MapPin size={20} />
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-xl mb-8">Quick Links</h4>
-              <div className="space-y-4">
-                {[
-                  { name: 'Services', href: '/services' },
-                  { name: 'FAQs', href: '/faqs' },
-                  { name: 'Contact', href: '/contact' }
-                ].map(link => (
-                  <Link 
-                    key={link.name} 
-                    to={link.href} 
-                    className="block text-slate-300 hover:text-white transition-colors hover:translate-x-2 transform duration-300"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-xl mb-8">Contact Info</h4>
-              <div className="space-y-4 text-slate-300">
-                <div className="flex items-center space-x-3">
-                  <Mail size={18} className="text-blue-400" />
-                  <p>support@npasolutions.in</p>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone size={18} className="text-blue-400" />
-                  <p>+91 98765 43210</p>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin size={18} className="text-blue-400" />
-                  <p>Mumbai | Delhi | Bangalore</p>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Clock size={18} className="text-blue-400" />
-                  <p>24/7 Emergency Support</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-slate-700 mt-16 pt-8 text-center">
-            <p className="text-slate-400">
-              &copy; 2024 NPA Solutions. All rights reserved. | 
-              <span className="text-slate-300"> Protecting your business interests with expert legal guidance.</span>
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>;
 };
 export default Index;

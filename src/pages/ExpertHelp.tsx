@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { CheckCircle, Scale, Users, BookOpen, ArrowRight, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -204,21 +205,7 @@ const ExpertHelp = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="font-bold text-2xl mb-4">NPA Solutions</div>
-            <p className="text-slate-400 mb-8">Your trusted partner in financial legal matters</p>
-            <div className="flex justify-center space-x-8">
-              <Link to="/" className="text-slate-400 hover:text-white transition-colors">Home</Link>
-              <Link to="/services" className="text-slate-400 hover:text-white transition-colors">Services</Link>
-              <Link to="/faqs" className="text-slate-400 hover:text-white transition-colors">FAQs</Link>
-              <Link to="/contact" className="text-slate-400 hover:text-white transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

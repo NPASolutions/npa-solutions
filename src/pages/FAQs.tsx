@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -108,6 +109,7 @@ const FAQs = () => {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

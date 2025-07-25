@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -147,6 +148,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

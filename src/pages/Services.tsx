@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Shield, Scale, FileText, Building, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -184,6 +185,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

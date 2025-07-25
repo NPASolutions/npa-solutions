@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 import { ArrowLeft, Phone, Mail, CheckCircle, Shield, Scale, FileText, Building, TrendingUp, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -421,7 +422,8 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
               </Link>
             </motion.div>
           </div>
-        </div>
+      <Footer />
+    </div>
       </section>
     </div>;
 };
