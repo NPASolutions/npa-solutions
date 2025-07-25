@@ -386,50 +386,61 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       {/* Why Choose Us Section */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             <motion.div 
               initial={{ opacity: 0, x: -50 }} 
               whileInView={{ opacity: 1, x: 0 }} 
               transition={{ duration: 0.8 }} 
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-12">
                 Why Choose
                 <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   NPA Solutions?
                 </span>
               </h2>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <Users className="text-blue-600" size={24} />
+                    <Shield className="text-blue-600" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Expert Legal Team</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Deep Legal Insight</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      Specialized lawyers with deep expertise in financial distress, SARFAESI, and corporate insolvency matters.
+                      Comprehensive expertise across SARFAESI, DRT, IBC regulations with 15+ years experience
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                    <Shield className="text-green-600" size={24} />
+                    <Clock className="text-green-600" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Proven Track Record</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Strategic Early-Stage Intervention</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      Successfully resolved 500+ cases with a 95% success rate in protecting client assets and interests.
+                      Proactive legal strategies that prevent escalation and minimize business disruption
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                    <Clock className="text-purple-600" size={24} />
+                    <Scale className="text-purple-600" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Timely Intervention</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Tailored Defense Strategies</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      Early legal intervention strategies that prevent escalation and protect your business interests.
+                      Customized legal approaches designed for your specific situation and industry
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
+                    <FileText className="text-orange-600" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Complete Documentation Support</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      End-to-end documentation assistance and regulatory compliance management
                     </p>
                   </div>
                 </div>
@@ -441,22 +452,40 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               whileInView={{ opacity: 1, x: 0 }} 
               transition={{ duration: 0.8 }} 
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              className="space-y-6"
             >
-              {stats.map((stat, index) => (
+              {testimonials.slice(0, 4).map((testimonial, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+                  className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="text-blue-600" size={32} />
+                  <div className="flex items-start space-x-3 mb-4">
+                    <Quote className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                    <p className="text-slate-600 italic leading-relaxed">
+                      "{testimonial.text}"
+                    </p>
                   </div>
-                  <h3 className="text-3xl font-bold text-slate-900 mb-2">{stat.value}</h3>
-                  <p className="text-slate-600 font-medium">{stat.label}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        {testimonial.author.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-900">{testimonial.author}</h4>
+                        <p className="text-sm text-slate-500">{testimonial.role}</p>
+                        <p className="text-sm text-slate-400">{testimonial.company}</p>
+                      </div>
+                    </div>
+                    <div className="flex">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="text-yellow-400 fill-current" size={16} />
+                      ))}
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
