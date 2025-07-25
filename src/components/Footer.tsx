@@ -59,7 +59,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={18} className="text-blue-400" />
-                <p>Rajahumdry | Visakhapatnam | Amaravati</p>
+                <p>Andhra Pradesh</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock size={18} className="text-blue-400" />
