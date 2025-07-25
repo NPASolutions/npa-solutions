@@ -19,9 +19,9 @@ const ExpertHelp = () => {
         "Strategic recommendations"
       ],
       icon: Scale,
-      color: "bg-gradient-to-br from-slate-100 to-slate-200",
-      iconColor: "text-slate-600",
-      gradient: "from-slate-500 to-slate-600"
+      color: "bg-gradient-to-br from-gray-50 to-blue-50",
+      iconColor: "text-gray-600",
+      gradient: "from-gray-400 to-blue-500"
     },
     {
       title: "Virtual Consultation",
