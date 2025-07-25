@@ -42,13 +42,13 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     features: ["Expert Litigation", "Dual Protection", "Court Representation"],
     popular: true
   }, {
-    title: "OTS Support & Negotiation",
-    description: "Achieve favorable One-Time Settlement terms with expert-backed negotiation strategies.",
-    icon: FileText,
-    color: "bg-gradient-to-br from-green-50 to-green-100",
-    iconColor: "text-green-600",
-    gradient: "from-green-500 to-green-600",
-    features: ["Negotiation Support", "Settlement Strategy", "Documentation"],
+    title: "Debt Restructuring & MSME Revival",
+    description: "Revive, restructure & reposition your business for sustainable growth and survival.",
+    icon: TrendingUp,
+    color: "bg-gradient-to-br from-yellow-50 to-yellow-100",
+    iconColor: "text-yellow-600",
+    gradient: "from-yellow-500 to-yellow-600",
+    features: ["Business Revival", "Debt Restructuring", "Growth Strategy"],
     popular: false
   }, {
     title: "NCLT / IBC Litigation & Corporate Insolvency",
@@ -60,13 +60,13 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     features: ["NCLT Representation", "Resolution Planning", "Asset Protection"],
     popular: false
   }, {
-    title: "Debt Restructuring & MSME Revival",
-    description: "Revive, restructure & reposition your business for sustainable growth and survival.",
-    icon: TrendingUp,
-    color: "bg-gradient-to-br from-yellow-50 to-yellow-100",
-    iconColor: "text-yellow-600",
-    gradient: "from-yellow-500 to-yellow-600",
-    features: ["Business Revival", "Debt Restructuring", "Growth Strategy"],
+    title: "OTS Support & Negotiation",
+    description: "Achieve favorable One-Time Settlement terms with expert-backed negotiation strategies.",
+    icon: FileText,
+    color: "bg-gradient-to-br from-green-50 to-green-100",
+    iconColor: "text-green-600",
+    gradient: "from-green-500 to-green-600",
+    features: ["Negotiation Support", "Settlement Strategy", "Documentation"],
     popular: false
   }];
 
