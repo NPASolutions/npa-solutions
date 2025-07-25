@@ -59,11 +59,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={18} className="text-blue-400" />
-                <p>Mumbai | Delhi | Bangalore</p>
+                <p>Rajahundry, Visakhapatnam, Amaravati</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock size={18} className="text-blue-400" />
-                <p>24/7 Emergency Support</p>
+                <p>09:00 AM - 05:00 PM</p>
               </div>
             </div>
           </div>
