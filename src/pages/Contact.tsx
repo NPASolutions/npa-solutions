@@ -130,16 +130,6 @@ const Contact = () => {
                         <option value="guarantor">Guarantor</option>
                         <option value="other">Other</option>
                       </select>
-                      {borrowerType === "other" && (
-                        <input 
-                          type="text" 
-                          value={otherBorrowerType}
-                          onChange={(e) => setOtherBorrowerType(e.target.value)}
-                          required
-                          className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg mt-3" 
-                          placeholder="Please specify borrower type" 
-                        />
-                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-slate-700 mb-3">
@@ -152,6 +142,58 @@ const Contact = () => {
                         placeholder="Enter loan amount (₹)" 
                       />
                     </div>
+                  </div>
+                  
+                  {/* Conditional fields */}
+                  {borrowerType === "other" && (
+                    <div>
+                      <label className="block text-sm font-bold text-slate-700 mb-3">
+                        Specify Borrower Type *
+                      </label>
+                      <input 
+                        type="text" 
+                        value={otherBorrowerType}
+                        onChange={(e) => setOtherBorrowerType(e.target.value)}
+                        required
+                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
+                        placeholder="Please specify borrower type" 
+                      />
+                    </div>
+                  )}
+                  
+                  {(borrowerType === "msme" || borrowerType === "company" || borrowerType === "llp") && (
+                    <div>
+                      <label className="block text-sm font-bold text-slate-700 mb-3">
+                        Name of the Enterprise *
+                      </label>
+                      <input 
+                        type="text" 
+                        required
+                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
+                        placeholder="Enter enterprise name" 
+                      />
+                    </div>
+                  )}
+                  
+                  <div>
+                    <label className="block text-sm font-bold text-slate-700 mb-3">
+                      Choose the Service *
+                    </label>
+                    <select 
+                      required
+                      className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="guide-suitable">Guide Suitable Service</option>
+                      <option value="sarfaesi">SARFAESI Act Legal Services</option>
+                      <option value="ots">One-Time Settlement (OTS)</option>
+                      <option value="drt">DRT Proceedings</option>
+                      <option value="nclt">NCLT & Corporate Insolvency</option>
+                      <option value="restructuring">Debt Restructuring</option>
+                      <option value="settlement">Loan Settlement Services</option>
+                      <option value="recovery">Asset Recovery</option>
+                      <option value="consultation">Legal Consultation</option>
+                    </select>
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-3">
