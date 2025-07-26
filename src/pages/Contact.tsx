@@ -4,8 +4,12 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
 
 const Contact = () => {
+  const [borrowerType, setBorrowerType] = useState("");
+  const [otherBorrowerType, setOtherBorrowerType] = useState("");
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -96,40 +100,68 @@ const Contact = () => {
                       />
                     </div>
                   </div>
+                  <div>
+                    <label className="block text-sm font-bold text-slate-700 mb-3">
+                      Phone Number (WhatsApp) *
+                    </label>
+                    <input 
+                      type="tel" 
+                      required
+                      className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
+                      placeholder="+91 98765 43210" 
+                    />
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-sm font-bold text-slate-700 mb-3">
-                        Phone Number
+                        Borrower Type *
                       </label>
-                      <input 
-                        type="tel" 
-                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
-                        placeholder="+91 98765 43210" 
-                      />
+                      <select 
+                        value={borrowerType}
+                        onChange={(e) => setBorrowerType(e.target.value)}
+                        required
+                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white"
+                      >
+                        <option value="">Select borrower type</option>
+                        <option value="individual">Individual</option>
+                        <option value="msme">MSME</option>
+                        <option value="company">Company</option>
+                        <option value="llp">LLP</option>
+                        <option value="guarantor">Guarantor</option>
+                        <option value="other">Other</option>
+                      </select>
+                      {borrowerType === "other" && (
+                        <input 
+                          type="text" 
+                          value={otherBorrowerType}
+                          onChange={(e) => setOtherBorrowerType(e.target.value)}
+                          required
+                          className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg mt-3" 
+                          placeholder="Please specify borrower type" 
+                        />
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-slate-700 mb-3">
-                        Legal Matter Type
+                        Value of Loan *
                       </label>
-                      <select className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white">
-                        <option value="">Select your legal matter</option>
-                        <option value="sarfaesi">SARFAESI Act Issues</option>
-                        <option value="ots">One-Time Settlement</option>
-                        <option value="drt">DRT Proceedings</option>
-                        <option value="ibc">IBC & Corporate Insolvency</option>
-                        <option value="restructuring">Debt Restructuring</option>
-                      </select>
+                      <input 
+                        type="number" 
+                        required
+                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
+                        placeholder="Enter loan amount (₹)" 
+                      />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-3">
-                      Describe Your Legal Requirements *
+                      Describe your Legal Query / Requirements *
                     </label>
                     <textarea 
                       required 
                       rows={6} 
                       className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg resize-none" 
-                      placeholder="Please provide detailed information about your situation, timeline, and specific legal requirements (minimum 50 characters for better assistance)"
+                      placeholder="Please provide detailed information about your legal query, situation, timeline, and specific requirements"
                     ></textarea>
                   </div>
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
