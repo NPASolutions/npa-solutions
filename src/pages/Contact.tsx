@@ -5,10 +5,61 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [borrowerType, setBorrowerType] = useState("");
   const [otherBorrowerType, setOtherBorrowerType] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const templateParams = {
+      fullName: formData.get('fullName'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      borrowerType: borrowerType === 'other' ? otherBorrowerType : borrowerType,
+      enterpriseName: formData.get('enterpriseName') || 'N/A',
+      loanValue: formData.get('loanValue'),
+      service: formData.get('service'),
+      query: formData.get('query'),
+      to_email: 'npasolutions.in@gmail.com'
+    };
+
+    try {
+      // You'll need to set up EmailJS with your service ID, template ID, and public key
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        templateParams,
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+
+      toast({
+        title: "Query Submitted Successfully!",
+        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      e.currentTarget.reset();
+      setBorrowerType("");
+      setOtherBorrowerType("");
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your query. Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -75,7 +126,7 @@ const Contact = () => {
           >
             <Card className="shadow-2xl border-0 overflow-hidden">
               <CardContent className="p-12">
-                <form className="space-y-8">
+                <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-sm font-bold text-slate-700 mb-3">
@@ -83,6 +134,7 @@ const Contact = () => {
                       </label>
                       <input 
                         type="text" 
+                        name="fullName"
                         required 
                         className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
                         placeholder="Enter your full name" 
@@ -94,6 +146,7 @@ const Contact = () => {
                       </label>
                       <input 
                         type="email" 
+                        name="email"
                         required 
                         className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
                         placeholder="your.email@company.com" 
@@ -106,6 +159,7 @@ const Contact = () => {
                     </label>
                     <input 
                       type="tel" 
+                      name="phone"
                       required
                       className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
                       placeholder="+91 98765 43210" 
@@ -117,6 +171,7 @@ const Contact = () => {
                         Borrower Type *
                       </label>
                       <select 
+                        name="borrowerType"
                         value={borrowerType}
                         onChange={(e) => setBorrowerType(e.target.value)}
                         required
@@ -137,6 +192,7 @@ const Contact = () => {
                       </label>
                       <input 
                         type="number" 
+                        name="loanValue"
                         required
                         className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
                         placeholder="Enter loan amount (₹)" 
@@ -152,6 +208,7 @@ const Contact = () => {
                       </label>
                       <input 
                         type="text" 
+                        name="otherBorrowerType"
                         value={otherBorrowerType}
                         onChange={(e) => setOtherBorrowerType(e.target.value)}
                         required
@@ -168,6 +225,7 @@ const Contact = () => {
                       </label>
                       <input 
                         type="text" 
+                        name="enterpriseName"
                         required
                         className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
                         placeholder="Enter enterprise name" 
@@ -180,19 +238,17 @@ const Contact = () => {
                       Choose the Service *
                     </label>
                     <select 
+                      name="service"
                       required
                       className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white"
                     >
                       <option value="">Select a service</option>
-                      <option value="guide-suitable">Guide Suitable Service</option>
-                      <option value="sarfaesi">SARFAESI Act Legal Services</option>
-                      <option value="ots">One-Time Settlement (OTS)</option>
-                      <option value="drt">DRT Proceedings</option>
-                      <option value="nclt">NCLT & Corporate Insolvency</option>
-                      <option value="restructuring">Debt Restructuring</option>
-                      <option value="settlement">Loan Settlement Services</option>
-                      <option value="recovery">Asset Recovery</option>
-                      <option value="consultation">Legal Consultation</option>
+                      <option value="360-analysis">360° Analysis</option>
+                      <option value="npa-sarfaesi">NPA Resolution & SARFAESI Compliance</option>
+                      <option value="drt-litigation">DRT & SARFAESI Litigation</option>
+                      <option value="debt-restructuring">Debt Restructuring & MSME Revival</option>
+                      <option value="nclt-ibc">NCLT / IBC Litigation & Corporate Insolvency</option>
+                      <option value="ots-support">OTS Support & Negotiation</option>
                     </select>
                   </div>
                   <div>
@@ -200,6 +256,7 @@ const Contact = () => {
                       Describe your Legal Query / Requirements *
                     </label>
                     <textarea 
+                      name="query"
                       required 
                       rows={6} 
                       className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg resize-none" 
@@ -210,9 +267,10 @@ const Contact = () => {
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-6 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+                      disabled={isSubmitting}
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-6 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 disabled:opacity-50"
                     >
-                      Submit Your Legal Query
+                      {isSubmitting ? "Submitting..." : "Submit Your Legal Query"}
                       <ArrowRight className="ml-2" size={20} />
                     </Button>
                   </motion.div>
