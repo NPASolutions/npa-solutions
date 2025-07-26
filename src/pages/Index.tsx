@@ -475,7 +475,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                       <div>
                         <h4 className="font-bold text-slate-900">{testimonial.author}</h4>
                         <p className="text-sm text-slate-500">{testimonial.role}</p>
-                        <p className="text-sm text-slate-400">{testimonial.company}</p>
+                        <p className="text-sm text-slate-400">SBS Paper Boards</p>
                       </div>
                     </div>
                   </div>
