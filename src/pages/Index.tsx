@@ -159,9 +159,9 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     image: "/placeholder.svg"
   }, {
     text: "The OTS negotiation expertise at NPA Solutions is unmatched. They secured terms that seemed impossible and saved our business millions in the process.",
-    author: "Anil Gupta",
-    role: "MSME Entrepreneur",
-    company: "Gupta Trading Co.",
+    author: "S Srinivas",
+    role: "Managing Director",
+    company: "SBS Paper Boards",
     rating: 5,
     image: "/placeholder.svg"
   }];
