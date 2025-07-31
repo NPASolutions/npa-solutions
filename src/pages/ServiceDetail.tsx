@@ -295,10 +295,6 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
                 Services
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
-              <a href="#faqs" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
-                FAQs
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </a>
               <Link to="/contact" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
                 Contact
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
