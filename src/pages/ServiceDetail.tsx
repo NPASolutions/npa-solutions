@@ -210,7 +210,8 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
       </div>;
   }
   const ServiceIcon = service.icon;
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -422,9 +423,10 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
       <Footer />
     </div>
-      </section>
-    </div>;
+  );
 };
 export default ServiceDetail;
