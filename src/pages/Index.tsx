@@ -358,9 +358,11 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               delay: 0.8 + index * 0.1,
               duration: 0.5
             }} className="text-center">
-                  
-                  
-                  
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <stat.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                    <div className="text-3xl font-bold text-slate-900 mb-2">{stat.value}</div>
+                    <div className="text-slate-600 font-medium">{stat.label}</div>
+                  </div>
                 </motion.div>)}
             </motion.div>
           </motion.div>
@@ -376,8 +378,94 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
         </motion.div>
       </section>
 
+      {/* Welcome Article Section */}
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-white relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
+              In Financial Distress, Timing Changes Everything
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-8"></div>
+          </motion.div>
 
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100"
+          >
+            <div className="prose prose-lg max-w-none">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl font-bold text-slate-900 mb-6">
+                  Tailored Legal & Strategic Support for Borrowers, MSMEs & Companies
+                </h3>
+              </div>
 
+              <div className="space-y-8 text-slate-700 leading-relaxed">
+                <p className="text-xl">
+                  When a business enters financial distress, what you do—and when you do it—can determine whether you survive or sink.
+                </p>
+
+                <p>
+                  At NPA Solutions, we've seen one thing time and again: borrowers lose their best opportunities not because they lack options, but because they act too late.
+                </p>
+
+                <p>
+                  Whether you're an MSME, a company, or an individual borrower, the earlier you act, the more choices you have. The law offers powerful safeguards and avenues—but only if they're used timely and correctly.
+                </p>
+
+                <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-600">
+                  <p className="text-blue-900 font-medium">
+                    If you're already in default or nearing NPA classification, it's not the end. But just requesting time from the bank without a strategy may cost you the golden window to restructure, revive operations, or negotiate better terms. By the time physical possession is initiated or auction is scheduled, most viable options may have closed.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-2xl font-bold text-slate-900 mb-6">What We Help You With</h4>
+                  <p className="mb-4">
+                    At NPA Solutions, we don't offer generic advice. We help you make strategic legal and compliance decisions based on your actual circumstances—before it's too late.
+                  </p>
+
+                  <div className="bg-slate-50 p-6 rounded-xl">
+                    <p className="mb-4">
+                      Whether it's legal response under SARFAESI, resolution planning, debt restructuring, OTS strategy, or borrower representation before DRT/NCLT, our approach is always the same:
+                    </p>
+                    <p className="text-blue-700 font-semibold">
+                      👉 We study the facts. We tailor the strategy. We guide or represent you legally with clarity and focus.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-2xl font-bold text-slate-900 mb-6">You Still Have a Window. Don't Let It Close.</h4>
+                  <p className="mb-4">
+                    If you're facing NPA pressure, don't just wait for notices to pile up. Act with intention. Respond with strategy. And seek guidance that looks at the full picture—from your rights, your financials, to the bank's own conduct.
+                  </p>
+                  <p className="text-lg font-medium text-slate-900">
+                    We're here to assist you at any stage—before the bank escalates or the matter becomes irreversible.
+                  </p>
+                </div>
+
+                <div className="text-center pt-8">
+                  <Link to="/expert-help">
+                    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300">
+                      <Phone className="mr-2" size={20} />
+                      Get Strategic Legal Guidance Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Why Choose Us Section */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative">
