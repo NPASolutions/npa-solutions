@@ -195,7 +195,6 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               {[
                 { name: 'Home', href: '/' },
                 { name: 'Services', href: '/services' },
-                { name: 'FAQs', href: '/faqs' },
                 { name: 'Contact', href: '/contact' }
               ].map((item, index) => (
                 <motion.div
@@ -251,7 +250,6 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               {[
                 { name: 'Home', href: '/' },
                 { name: 'Services', href: '/services' },
-                { name: 'FAQs', href: '/faqs' },
                 { name: 'Contact', href: '/contact' }
               ].map(item => (
                 <Link 
