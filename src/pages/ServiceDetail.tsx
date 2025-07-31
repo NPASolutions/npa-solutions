@@ -400,7 +400,7 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             duration: 0.8,
             delay: 0.3
           }} className="prose prose-lg max-w-none">
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6">{service.subtitle}
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 text-center sm:text-left">{service.subtitle}
             </h2>
               <div className="text-slate-600 leading-relaxed whitespace-pre-line text-base sm:text-lg text-justify">
                 {service.fullDescription}
@@ -418,7 +418,7 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             duration: 0.8,
             delay: 0.4
           }} className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 sm:p-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6">Why Choose NPA Solutions</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 text-center sm:text-left">Why Choose NPA Solutions</h2>
               <div className="text-slate-600 leading-relaxed whitespace-pre-line text-base sm:text-lg text-justify">
                 {service.whyChooseUs}
               </div>
@@ -435,7 +435,7 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             duration: 0.8,
             delay: 0.5
           }}>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6">Our Approach</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 text-center sm:text-left">Our Approach</h2>
               <div className="text-slate-600 leading-relaxed whitespace-pre-line text-base sm:text-lg text-justify">
                 {service.approach}
               </div>
@@ -453,7 +453,7 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             delay: 0.6
           }} className={`bg-gradient-to-r ${service.buttonGradient} rounded-2xl p-6 sm:p-8 text-white text-center`}>
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Take Action Now</h2>
-              <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 opacity-90 text-justify">{service.callToAction}</p>
+              <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 opacity-90 text-justify sm:text-center">{service.callToAction}</p>
               <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
                 <Phone className="mr-2" size={18} />
                 Contact Us
