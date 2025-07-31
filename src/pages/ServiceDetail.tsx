@@ -280,8 +280,8 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link to="/" className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="flex justify-between items-center h-16 sm:h-20">
+            <Link to="/" className="font-bold text-xl sm:text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               NPA Solutions
             </Link>
             
@@ -305,25 +305,27 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
               </Link>
             </div>
 
-            <div className="hidden md:flex">
-              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+            <div className="hidden sm:flex">
+              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 text-sm sm:text-base">
                 Get Expert Help
               </Button>
             </div>
 
-            {/* Back to Services for mobile */}
-            <Link to="/" className="md:hidden">
-              <Button variant="ghost" className="text-slate-600 hover:text-slate-900">
-                <ArrowLeft className="mr-2" size={16} />
-                Back
-              </Button>
-            </Link>
+            {/* Mobile Navigation */}
+            <div className="flex items-center space-x-2 sm:hidden">
+              <Link to="/">
+                <Button variant="ghost" size="sm" className="text-slate-600 hover:text-slate-900 px-2">
+                  <ArrowLeft className="mr-1" size={14} />
+                  <span className="text-xs">Back</span>
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{
           opacity: 0,
@@ -334,23 +336,21 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
         }} transition={{
           duration: 0.8
         }} className="text-center">
-            <div className={`w-20 h-20 rounded-3xl ${service.color} flex items-center justify-center mb-8 mx-auto`}>
-              <ServiceIcon size={40} className={service.iconColor} />
+            <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-3xl ${service.color} flex items-center justify-center mb-6 sm:mb-8 mx-auto`}>
+              <ServiceIcon size={32} className={`${service.iconColor} sm:w-10 sm:h-10`} />
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 px-4 leading-tight">
               {service.title}
             </h1>
             
-            
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className={`bg-gradient-to-r ${service.gradient} text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg`}>
-                <Phone className="mr-2" size={20} />
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
+              <Button size="lg" className={`bg-gradient-to-r ${service.gradient} text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-lg w-full sm:w-auto`}>
+                <Phone className="mr-2" size={18} />
                 Schedule Consultation
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 rounded-xl text-lg font-semibold">
-                <Mail className="mr-2" size={20} />
+              <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
+                <Mail className="mr-2" size={18} />
                 Send Query
               </Button>
             </div>
@@ -359,9 +359,9 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
       </section>
 
       {/* Content Section */}
-      <section className="py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
+          <div className="space-y-12 sm:space-y-16">
             {/* Features */}
             <motion.div initial={{
             opacity: 0,
@@ -373,20 +373,17 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             duration: 0.8,
             delay: 0.2
           }}>
-              <div className="text-center mb-12">
-                
+              <div className="text-center mb-8 sm:mb-12">
                 <div className="flex flex-wrap justify-center gap-4">
-                  
-                  
                   
                 </div>
               </div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Key Features</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {service.features.map((feature, index) => <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 sm:mb-8 text-center">Key Features</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                {service.features.map((feature, index) => <Card key={index} className="text-center p-4 sm:p-6 hover:shadow-lg transition-shadow">
                     <CardContent className="p-0">
-                      <CheckCircle className={`${service.iconColor} mx-auto mb-3`} size={24} />
-                      <p className="text-sm font-medium text-slate-700">{feature}</p>
+                      <CheckCircle className={`${service.iconColor} mx-auto mb-3`} size={20} />
+                      <p className="text-xs sm:text-sm font-medium text-slate-700 leading-tight">{feature}</p>
                     </CardContent>
                   </Card>)}
               </div>
@@ -403,9 +400,9 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             duration: 0.8,
             delay: 0.3
           }} className="prose prose-lg max-w-none">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">{service.subtitle}
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6">{service.subtitle}
             </h2>
-              <div className="text-slate-600 leading-relaxed whitespace-pre-line text-lg">
+              <div className="text-slate-600 leading-relaxed whitespace-pre-line text-base sm:text-lg text-justify">
                 {service.fullDescription}
               </div>
             </motion.div>
@@ -420,9 +417,9 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
           }} transition={{
             duration: 0.8,
             delay: 0.4
-          }} className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose NPA Solutions</h2>
-              <div className="text-slate-600 leading-relaxed whitespace-pre-line text-lg">
+          }} className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6">Why Choose NPA Solutions</h2>
+              <div className="text-slate-600 leading-relaxed whitespace-pre-line text-base sm:text-lg text-justify">
                 {service.whyChooseUs}
               </div>
             </motion.div>
@@ -438,8 +435,8 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             duration: 0.8,
             delay: 0.5
           }}>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Approach</h2>
-              <div className="text-slate-600 leading-relaxed whitespace-pre-line text-lg">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6">Our Approach</h2>
+              <div className="text-slate-600 leading-relaxed whitespace-pre-line text-base sm:text-lg text-justify">
                 {service.approach}
               </div>
             </motion.div>
@@ -454,11 +451,11 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
           }} transition={{
             duration: 0.8,
             delay: 0.6
-          }} className={`bg-gradient-to-r ${service.buttonGradient} rounded-2xl p-8 text-white text-center`}>
-              <h2 className="text-3xl font-bold mb-6">Take Action Now</h2>
-              <p className="text-lg leading-relaxed mb-8 opacity-90">{service.callToAction}</p>
-              <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-xl text-lg font-semibold">
-                <Phone className="mr-2" size={20} />
+          }} className={`bg-gradient-to-r ${service.buttonGradient} rounded-2xl p-6 sm:p-8 text-white text-center`}>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Take Action Now</h2>
+              <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 opacity-90 text-justify">{service.callToAction}</p>
+              <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
+                <Phone className="mr-2" size={18} />
                 Contact Us
               </Button>
             </motion.div>
@@ -474,12 +471,12 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             duration: 0.8,
             delay: 0.7
           }} className="text-center">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Moving Forward</h2>
-              <div className="text-slate-600 leading-relaxed whitespace-pre-line text-lg mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6">Moving Forward</h2>
+              <div className="text-slate-600 leading-relaxed whitespace-pre-line text-base sm:text-lg mb-6 sm:mb-8 text-justify">
                 {service.conclusion}
               </div>
               <Link to="/services">
-                <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50">
+                <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-6 py-3 text-sm sm:text-base">
                   <ArrowLeft className="mr-2" size={16} />
                   View All Services
                 </Button>
@@ -490,7 +487,7 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
       </section>
 
       {/* FAQ Section */}
-      <section id="faqs" className="py-20 bg-slate-50">
+      <section id="faqs" className="py-12 sm:py-16 lg:py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{
           opacity: 0,
@@ -501,14 +498,14 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
         }} transition={{
           duration: 0.8,
           delay: 0.8
-        }} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+        }} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 sm:mb-6">
               Frequently Asked
               <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Questions
               </span>
             </h2>
-            <p className="text-xl text-slate-600">
+            <p className="text-lg sm:text-xl text-slate-600">
               Common questions about {service.title.toLowerCase()}
             </p>
           </motion.div>
@@ -523,12 +520,12 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
           duration: 0.8,
           delay: 0.9
         }}>
-            <Accordion type="single" collapsible className="w-full space-y-6">
-              {getServiceFAQs(serviceId as string).map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="border border-slate-200 rounded-2xl px-8 py-2 shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
-                  <AccordionTrigger className="text-left font-bold text-slate-900 hover:no-underline text-lg py-6">
+            <Accordion type="single" collapsible className="w-full space-y-4 sm:space-y-6">
+              {getServiceFAQs(serviceId as string).map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="border border-slate-200 rounded-2xl px-4 sm:px-8 py-2 shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
+                  <AccordionTrigger className="text-left font-bold text-slate-900 hover:no-underline text-base sm:text-lg py-4 sm:py-6 leading-tight">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-slate-600 leading-relaxed pb-6 text-base">
+                  <AccordionContent className="text-slate-600 leading-relaxed pb-4 sm:pb-6 text-sm sm:text-base text-justify">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>)}
