@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, Shield, Scale, FileText, Building, TrendingUp, Users, ArrowRight, Menu, X, CheckCircle, Star, Quote, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { ChevronDown, Shield, Scale, FileText, Building, TrendingUp, Users, ArrowRight, Menu, X, CheckCircle, Star, Quote, Phone, Mail, MapPin, Clock, Linkedin, Instagram, Youtube, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -213,6 +213,26 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                 </motion.div>
               ))}
             </div>
+
+            {/* Social Media Icons */}
+            <motion.div 
+              initial={{ opacity: 0, x: 10 }} 
+              animate={{ opacity: 1, x: 0 }} 
+              className="hidden md:flex items-center space-x-3 mr-6"
+            >
+              <a href="https://linkedin.com/company/npa-solutions" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-slate-600 hover:text-blue-600 transition-colors duration-300">
+                <Linkedin size={18} />
+              </a>
+              <a href="https://instagram.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-slate-600 hover:text-pink-600 transition-colors duration-300">
+                <Instagram size={18} />
+              </a>
+              <a href="https://youtube.com/@npasolutions" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-slate-600 hover:text-red-600 transition-colors duration-300">
+                <Youtube size={18} />
+              </a>
+              <a href="https://facebook.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-slate-600 hover:text-blue-700 transition-colors duration-300">
+                <Facebook size={18} />
+              </a>
+            </motion.div>
 
             <motion.div initial={{
             opacity: 0,

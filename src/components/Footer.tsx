@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Linkedin, Instagram, Youtube, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -14,15 +14,18 @@ const Footer = () => {
               India's premier legal consultancy specializing in financial distress resolution. We provide strategic legal support for MSMEs, borrowers & entrepreneurs navigating complex financial situations.
             </p>
             <div className="flex space-x-4">
-              <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer">
-                <Mail size={20} />
-              </div>
-              <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer">
-                <Phone size={20} />
-              </div>
-              <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-slate-700 transition-colors cursor-pointer">
-                <MapPin size={20} />
-              </div>
+              <a href="https://linkedin.com/company/npa-solutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition-all duration-300 cursor-pointer group">
+                <Linkedin size={20} className="group-hover:text-white" />
+              </a>
+              <a href="https://instagram.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 cursor-pointer group">
+                <Instagram size={20} className="group-hover:text-white" />
+              </a>
+              <a href="https://youtube.com/@npasolutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-red-600 transition-all duration-300 cursor-pointer group">
+                <Youtube size={20} className="group-hover:text-white" />
+              </a>
+              <a href="https://facebook.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-blue-700 transition-all duration-300 cursor-pointer group">
+                <Facebook size={20} className="group-hover:text-white" />
+              </a>
             </div>
           </div>
           
