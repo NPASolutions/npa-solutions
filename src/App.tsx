@@ -36,11 +36,11 @@ const App = () => (
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50 group"
         >
-          <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 border border-white/20">
-            <MessageCircle className="w-6 h-6 text-white" />
+          <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 border border-white/20 animate-pulse">
+            <MessageCircle className="w-6 h-6 text-white fill-white" />
           </div>
-          <div className="absolute -top-12 right-0 bg-slate-800 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-            Chat with us on WhatsApp
+          <div className="absolute -top-12 right-0 bg-slate-800 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+            Hey, Connect with us
           </div>
         </a>
       </BrowserRouter>
