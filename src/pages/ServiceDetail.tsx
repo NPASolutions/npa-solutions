@@ -19,85 +19,67 @@ const ServiceDetail = () => {
 
   // Function to get service-specific FAQs
   const getServiceFAQs = (serviceId: string) => {
-    const serviceFAQs: { [key: string]: Array<{ question: string; answer: string }> } = {
-      "npa-resolution-sarfaesi-compliance": [
-        {
-          question: "What is the SARFAESI Act and how does it affect borrowers?",
-          answer: "The Securitisation and Reconstruction of Financial Assets and Enforcement of Security Interest Act, 2002 (SARFAESI) empowers banks and financial institutions to recover their non-performing assets without court intervention. However, borrowers have specific rights including proper notice, representation opportunities, and the right to appeal within 45 days."
-        },
-        {
-          question: "What immediate steps should I take after receiving a SARFAESI notice?",
-          answer: "Upon receiving a SARFAESI notice, immediately: 1) Verify the notice authenticity and timeline, 2) Gather all loan documentation, 3) Assess your legal position, 4) Consider filing a representation or appeal to DRT within 45 days, 5) Consult with legal experts for strategic guidance."
-        },
-        {
-          question: "Can banks declare my account as NPA without proper process?",
-          answer: "No, banks must follow RBI guidelines before declaring any account as NPA. The account becomes NPA only after 90 days of overdue payments. Banks must also provide proper notice and opportunity for regularization before taking enforcement action."
-        }
-      ],
-      "drt-sarfaesi-litigation": [
-        {
-          question: "Where and when can I file a challenge to SARFAESI proceedings?",
-          answer: "SARFAESI challenges must be filed at the Debt Recovery Tribunal (DRT) having jurisdiction over the area where the security interest is enforced, strictly within 45 days of receiving the enforcement notice. Late filing requires strong grounds for condonation of delay."
-        },
-        {
-          question: "What's the difference between OA and SA in DRT proceedings?",
-          answer: "Original Application (OA) is filed by banks to recover dues under RDDB Act, while Securitisation Application (SA) is filed by borrowers under Section 17 of SARFAESI Act to challenge enforcement actions. Both can run simultaneously and require different strategies."
-        },
-        {
-          question: "Can I file a counter-claim in DRT proceedings?",
-          answer: "Yes, borrowers can file counter-claims in OA proceedings if they have suffered damages due to illegal recovery measures, procedural violations, or documentation gaps by the bank. This can be an effective defense strategy."
-        }
-      ],
-      "ots-support-negotiation": [
-        {
-          question: "What are my options for legal loan restructuring?",
-          answer: "Legal loan restructuring options include: OTS negotiations under RBI guidelines, CDR (Corporate Debt Restructuring) schemes, strategic debt restructuring, and asset reconstruction through ARCs, all requiring proper legal documentation and lender approval."
-        },
-        {
-          question: "When is the right time to consider OTS?",
-          answer: "OTS should be considered when you have proper leverage - either through procedural violations by the bank, strong legal positions, or when restructuring options have been exhausted. Never rush into OTS under pressure without proper assessment."
-        },
-        {
-          question: "Will OTS affect my credit score permanently?",
-          answer: "OTS will be reported to credit bureaus and may impact your credit score. However, it's generally better than continued defaults or legal recovery. The impact duration and severity depend on various factors including the settlement terms and your overall credit history."
-        }
-      ],
-      "nclt-ibc-litigation-corporate-insolvency": [
-        {
-          question: "Can promoters submit resolution plans under IBC proceedings?",
-          answer: "Yes, under certain conditions promoters can submit resolution plans, but they must meet specific eligibility criteria under Section 29A of the IBC. The plan must demonstrate viability, adequate funding, and compliance with regulatory requirements."
-        },
-        {
-          question: "What's the difference between CIRP and liquidation processes?",
-          answer: "CIRP (Corporate Insolvency Resolution Process) aims to revive the company through resolution plans within 180-270 days, while liquidation involves selling assets to pay creditors when revival is not possible. CIRP focuses on business continuity; liquidation on asset realization."
-        },
-        {
-          question: "What happens to employees during IBC proceedings?",
-          answer: "During CIRP, the resolution professional takes control and existing management is suspended. Employee dues have priority in liquidation waterfall. Successful resolution plans typically retain employees, while liquidation may result in job losses."
-        }
-      ],
-      "debt-restructuring-msme-revival": [
-        {
-          question: "What special benefits do MSME borrowers have under RBI guidelines?",
-          answer: "MSMEs have special restructuring frameworks under RBI guidelines, including the MSME Restructuring Framework 2023, which allows restructuring without classifying accounts as NPA, provided certain conditions are met and the account is viable."
-        },
-        {
-          question: "How do I prove my MSME status for restructuring benefits?",
-          answer: "You need valid Udyam/Udyog Aadhaar registration effective on the date of default. The registration should be current and the business should meet MSME criteria as defined under MSMED Act for investment and turnover limits."
-        },
-        {
-          question: "Can I get restructuring after my account becomes NPA?",
-          answer: "Yes, restructuring is possible even after NPA classification, but the terms and approval process may be different. Banks have specific guidelines for NPA restructuring, and expert legal guidance is crucial for successful negotiation."
-        }
-      ]
+    const serviceFAQs: {
+      [key: string]: Array<{
+        question: string;
+        answer: string;
+      }>;
+    } = {
+      "npa-resolution-sarfaesi-compliance": [{
+        question: "What is the SARFAESI Act and how does it affect borrowers?",
+        answer: "The Securitisation and Reconstruction of Financial Assets and Enforcement of Security Interest Act, 2002 (SARFAESI) empowers banks and financial institutions to recover their non-performing assets without court intervention. However, borrowers have specific rights including proper notice, representation opportunities, and the right to appeal within 45 days."
+      }, {
+        question: "What immediate steps should I take after receiving a SARFAESI notice?",
+        answer: "Upon receiving a SARFAESI notice, immediately: 1) Verify the notice authenticity and timeline, 2) Gather all loan documentation, 3) Assess your legal position, 4) Consider filing a representation or appeal to DRT within 45 days, 5) Consult with legal experts for strategic guidance."
+      }, {
+        question: "Can banks declare my account as NPA without proper process?",
+        answer: "No, banks must follow RBI guidelines before declaring any account as NPA. The account becomes NPA only after 90 days of overdue payments. Banks must also provide proper notice and opportunity for regularization before taking enforcement action."
+      }],
+      "drt-sarfaesi-litigation": [{
+        question: "Where and when can I file a challenge to SARFAESI proceedings?",
+        answer: "SARFAESI challenges must be filed at the Debt Recovery Tribunal (DRT) having jurisdiction over the area where the security interest is enforced, strictly within 45 days of receiving the enforcement notice. Late filing requires strong grounds for condonation of delay."
+      }, {
+        question: "What's the difference between OA and SA in DRT proceedings?",
+        answer: "Original Application (OA) is filed by banks to recover dues under RDDB Act, while Securitisation Application (SA) is filed by borrowers under Section 17 of SARFAESI Act to challenge enforcement actions. Both can run simultaneously and require different strategies."
+      }, {
+        question: "Can I file a counter-claim in DRT proceedings?",
+        answer: "Yes, borrowers can file counter-claims in OA proceedings if they have suffered damages due to illegal recovery measures, procedural violations, or documentation gaps by the bank. This can be an effective defense strategy."
+      }],
+      "ots-support-negotiation": [{
+        question: "What are my options for legal loan restructuring?",
+        answer: "Legal loan restructuring options include: OTS negotiations under RBI guidelines, CDR (Corporate Debt Restructuring) schemes, strategic debt restructuring, and asset reconstruction through ARCs, all requiring proper legal documentation and lender approval."
+      }, {
+        question: "When is the right time to consider OTS?",
+        answer: "OTS should be considered when you have proper leverage - either through procedural violations by the bank, strong legal positions, or when restructuring options have been exhausted. Never rush into OTS under pressure without proper assessment."
+      }, {
+        question: "Will OTS affect my credit score permanently?",
+        answer: "OTS will be reported to credit bureaus and may impact your credit score. However, it's generally better than continued defaults or legal recovery. The impact duration and severity depend on various factors including the settlement terms and your overall credit history."
+      }],
+      "nclt-ibc-litigation-corporate-insolvency": [{
+        question: "Can promoters submit resolution plans under IBC proceedings?",
+        answer: "Yes, under certain conditions promoters can submit resolution plans, but they must meet specific eligibility criteria under Section 29A of the IBC. The plan must demonstrate viability, adequate funding, and compliance with regulatory requirements."
+      }, {
+        question: "What's the difference between CIRP and liquidation processes?",
+        answer: "CIRP (Corporate Insolvency Resolution Process) aims to revive the company through resolution plans within 180-270 days, while liquidation involves selling assets to pay creditors when revival is not possible. CIRP focuses on business continuity; liquidation on asset realization."
+      }, {
+        question: "What happens to employees during IBC proceedings?",
+        answer: "During CIRP, the resolution professional takes control and existing management is suspended. Employee dues have priority in liquidation waterfall. Successful resolution plans typically retain employees, while liquidation may result in job losses."
+      }],
+      "debt-restructuring-msme-revival": [{
+        question: "What special benefits do MSME borrowers have under RBI guidelines?",
+        answer: "MSMEs have special restructuring frameworks under RBI guidelines, including the MSME Restructuring Framework 2023, which allows restructuring without classifying accounts as NPA, provided certain conditions are met and the account is viable."
+      }, {
+        question: "How do I prove my MSME status for restructuring benefits?",
+        answer: "You need valid Udyam/Udyog Aadhaar registration effective on the date of default. The registration should be current and the business should meet MSME criteria as defined under MSMED Act for investment and turnover limits."
+      }, {
+        question: "Can I get restructuring after my account becomes NPA?",
+        answer: "Yes, restructuring is possible even after NPA classification, but the terms and approval process may be different. Banks have specific guidelines for NPA restructuring, and expert legal guidance is crucial for successful negotiation."
+      }]
     };
-
-    return serviceFAQs[serviceId] || [
-      {
-        question: "How can I get expert legal help for my financial distress?",
-        answer: "Contact NPA Solutions for a consultation. We provide comprehensive legal support for all types of financial distress situations, from early intervention to complex litigation matters."
-      }
-    ];
+    return serviceFAQs[serviceId] || [{
+      question: "How can I get expert legal help for my financial distress?",
+      answer: "Contact NPA Solutions for a consultation. We provide comprehensive legal support for all types of financial distress situations, from early intervention to complex litigation matters."
+    }];
   };
   const services = {
     "npa-resolution-sarfaesi-compliance": {
@@ -294,8 +276,7 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
       </div>;
   }
   const ServiceIcon = service.icon;
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -393,13 +374,11 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             delay: 0.2
           }}>
               <div className="text-center mb-12">
-                <p className="text-lg text-slate-600 mb-4">
-                  Our comprehensive litigation support covers three critical areas:
-                </p>
+                
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Badge variant="outline" className="text-sm px-4 py-2">OA - Original Applications</Badge>
-                  <Badge variant="outline" className="text-sm px-4 py-2">SA - Securitisation Applications</Badge>
-                  <Badge variant="outline" className="text-sm px-4 py-2">Counter Claims</Badge>
+                  
+                  
+                  
                 </div>
               </div>
               <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Key Features</h2>
@@ -513,12 +492,16 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
       {/* FAQ Section */}
       <section id="faqs" className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8, delay: 0.8 }} 
-            className="text-center mb-16"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.8
+        }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Frequently Asked
               <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -530,33 +513,31 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             </p>
           </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8, delay: 0.9 }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.9
+        }}>
             <Accordion type="single" collapsible className="w-full space-y-6">
-              {getServiceFAQs(serviceId as string).map((faq, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index}`} 
-                  className="border border-slate-200 rounded-2xl px-8 py-2 shadow-lg hover:shadow-xl transition-all duration-300 bg-white"
-                >
+              {getServiceFAQs(serviceId as string).map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="border border-slate-200 rounded-2xl px-8 py-2 shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
                   <AccordionTrigger className="text-left font-bold text-slate-900 hover:no-underline text-lg py-6">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-slate-600 leading-relaxed pb-6 text-base">
                     {faq.answer}
                   </AccordionContent>
-                </AccordionItem>
-              ))}
+                </AccordionItem>)}
             </Accordion>
           </motion.div>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
 export default ServiceDetail;
