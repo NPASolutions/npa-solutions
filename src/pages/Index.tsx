@@ -220,16 +220,16 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               animate={{ opacity: 1, x: 0 }} 
               className="hidden md:flex items-center space-x-3 mr-6"
             >
-              <a href="https://linkedin.com/company/npa-solutions" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-slate-600 hover:text-blue-600 transition-colors duration-300">
+              <a href="https://linkedin.com/company/npa-solutions" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center text-slate-600 hover:from-blue-500 hover:to-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-md hover:shadow-lg">
                 <Linkedin size={18} />
               </a>
-              <a href="https://instagram.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-slate-600 hover:text-pink-600 transition-colors duration-300">
+              <a href="https://instagram.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center text-slate-600 hover:from-pink-500 hover:to-purple-600 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-md hover:shadow-lg">
                 <Instagram size={18} />
               </a>
-              <a href="https://youtube.com/@npasolutions" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-slate-600 hover:text-red-600 transition-colors duration-300">
+              <a href="https://youtube.com/@npasolutions" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center text-slate-600 hover:from-red-500 hover:to-red-600 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-md hover:shadow-lg">
                 <Youtube size={18} />
               </a>
-              <a href="https://facebook.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-slate-600 hover:text-blue-700 transition-colors duration-300">
+              <a href="https://facebook.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center text-slate-600 hover:from-blue-600 hover:to-blue-800 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-md hover:shadow-lg">
                 <Facebook size={18} />
               </a>
             </motion.div>

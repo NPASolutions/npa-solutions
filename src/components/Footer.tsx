@@ -14,17 +14,17 @@ const Footer = () => {
               India's premier legal consultancy specializing in financial distress resolution. We provide strategic legal support for MSMEs, borrowers & entrepreneurs navigating complex financial situations.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/npa-solutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-blue-600 transition-all duration-300 cursor-pointer group">
-                <Linkedin size={20} className="group-hover:text-white" />
+              <a href="https://linkedin.com/company/npa-solutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl flex items-center justify-center hover:from-blue-600 hover:to-blue-700 transition-all duration-300 cursor-pointer group transform hover:scale-110 shadow-lg hover:shadow-xl">
+                <Linkedin size={20} className="text-slate-300 group-hover:text-white transition-colors duration-300" />
               </a>
-              <a href="https://instagram.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 cursor-pointer group">
-                <Instagram size={20} className="group-hover:text-white" />
+              <a href="https://instagram.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl flex items-center justify-center hover:from-pink-500 hover:to-purple-600 transition-all duration-300 cursor-pointer group transform hover:scale-110 shadow-lg hover:shadow-xl">
+                <Instagram size={20} className="text-slate-300 group-hover:text-white transition-colors duration-300" />
               </a>
-              <a href="https://youtube.com/@npasolutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-red-600 transition-all duration-300 cursor-pointer group">
-                <Youtube size={20} className="group-hover:text-white" />
+              <a href="https://youtube.com/@npasolutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl flex items-center justify-center hover:from-red-500 hover:to-red-600 transition-all duration-300 cursor-pointer group transform hover:scale-110 shadow-lg hover:shadow-xl">
+                <Youtube size={20} className="text-slate-300 group-hover:text-white transition-colors duration-300" />
               </a>
-              <a href="https://facebook.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-blue-700 transition-all duration-300 cursor-pointer group">
-                <Facebook size={20} className="group-hover:text-white" />
+              <a href="https://facebook.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl flex items-center justify-center hover:from-blue-600 hover:to-blue-800 transition-all duration-300 cursor-pointer group transform hover:scale-110 shadow-lg hover:shadow-xl">
+                <Facebook size={20} className="text-slate-300 group-hover:text-white transition-colors duration-300" />
               </a>
             </div>
           </div>
