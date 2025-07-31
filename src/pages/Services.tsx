@@ -75,8 +75,8 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link to="/" className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="flex justify-between items-center h-16 sm:h-20">
+            <Link to="/" className="font-bold text-xl sm:text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               NPA Solutions
             </Link>
             
@@ -95,10 +95,19 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               </Link>
             </div>
 
-            <div className="hidden md:flex">
+            <div className="hidden sm:flex">
               <Link to="/expert-help">
-                <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base">
                   Get Expert Help
+                </Button>
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="sm:hidden">
+              <Link to="/expert-help">
+                <Button size="sm" className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 py-2 rounded-lg text-xs">
+                  Expert Help
                 </Button>
               </Link>
             </div>
@@ -107,26 +116,26 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       </nav>
 
       {/* Services Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 30 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8 }} 
-            className="text-center mb-20"
+            className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
               Our Legal & Compliance
               <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Services
               </span>
             </h1>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
               Comprehensive legal solutions tailored to your specific financial distress situation with proven expertise
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <motion.div 
                 key={index}
@@ -144,24 +153,24 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                 
                 <Card className="h-full hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden group">
                   <div className={`h-2 bg-gradient-to-r ${service.gradient}`}></div>
-                  <CardContent className="p-8">
-                    <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon size={32} className={service.iconColor} />
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl ${service.color} flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <service.icon size={24} className={`${service.iconColor} sm:w-7 sm:h-7 lg:w-8 lg:h-8`} />
                     </div>
                     
-                    <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 sm:mb-4 group-hover:text-blue-600 transition-colors duration-300 leading-tight">
                       {service.title}
                     </h3>
                     
-                    <p className="text-slate-600 mb-6 leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 leading-relaxed">
                       {service.description}
                     </p>
 
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2 mb-4 sm:mb-6">
                       {service.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-slate-600">
-                          <CheckCircle size={14} className="text-green-500 mr-2" />
-                          {feature}
+                        <div key={idx} className="flex items-center text-xs sm:text-sm text-slate-600">
+                          <CheckCircle size={12} className="text-green-500 mr-2 flex-shrink-0 sm:w-3.5 sm:h-3.5" />
+                          <span className="leading-tight">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -170,8 +179,8 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                       to={`/service/${service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
                       className="inline-flex items-center"
                     >
-                      <Button variant="ghost" className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 p-0 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                        More <ArrowRight size={16} className="ml-2" />
+                      <Button variant="ghost" className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 p-0 font-semibold group-hover:translate-x-2 transition-transform duration-300 text-sm sm:text-base">
+                        More <ArrowRight size={14} className="ml-1 sm:ml-2 sm:w-4 sm:h-4" />
                       </Button>
                     </Link>
                   </CardContent>
