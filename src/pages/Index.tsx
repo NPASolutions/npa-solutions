@@ -17,7 +17,6 @@ const Index = () => {
   const {
     scrollYProgress
   } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
