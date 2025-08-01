@@ -188,13 +188,19 @@ const ExpertHelp = () => {
               <p className="text-lg text-slate-600 mb-6">
                 If you need any clarification or guidance to choose the type of consultation that best fits your needs, submit a query or reach us on WhatsApp for instant assistance.
               </p>
-              <Button 
-                size="lg" 
-                className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              <a 
+                href="https://wa.me/919666993228"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <MessageCircle className="mr-2" size={20} />
-                Chat on WhatsApp
-              </Button>
+                <Button 
+                  size="lg" 
+                  className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <MessageCircle className="mr-2" size={20} />
+                  Chat on WhatsApp
+                </Button>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -219,10 +225,16 @@ const ExpertHelp = () => {
                 <Phone className="mr-2" size={20} />
                 Call Us Now
               </Button>
-              <Button size="lg" variant="outline" className="bg-green-500 text-white border-green-500 hover:bg-green-600">
-                <MessageCircle className="mr-2" size={20} />
-                WhatsApp
-              </Button>
+              <a 
+                href="https://wa.me/919666993228"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" variant="outline" className="bg-green-500 text-white border-green-500 hover:bg-green-600">
+                  <MessageCircle className="mr-2" size={20} />
+                  WhatsApp
+                </Button>
+              </a>
               <Button size="lg" variant="outline" className="bg-white text-blue-600 border-white hover:bg-blue-50">
                 <Mail className="mr-2" size={20} />
                 Email Us
