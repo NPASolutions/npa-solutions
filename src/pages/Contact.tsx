@@ -132,7 +132,7 @@ const Contact = () => {
                         type="text" 
                         name="fullName"
                         required 
-                        className="w-full px-6 py-4 border-2 border-cyan-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-400 transition-all duration-300 text-lg bg-gradient-to-r from-cyan-50 to-blue-50" 
+                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300 transition-all duration-300 text-lg bg-white hover:border-slate-300" 
                         placeholder="Enter your full name" 
                       />
                     </div>
@@ -146,7 +146,7 @@ const Contact = () => {
                         required 
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         title="Please enter a valid email address"
-                        className="w-full px-6 py-4 border-2 border-orange-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-400 transition-all duration-300 text-lg bg-gradient-to-r from-orange-50 to-yellow-50" 
+                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300 transition-all duration-300 text-lg bg-white hover:border-slate-300" 
                         placeholder="your.email@company.com" 
                       />
                     </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                       name="phone"
                       required
                       pattern="[+]?[0-9\s\-]+"
-                      className="w-full px-6 py-4 border-2 border-green-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-400 transition-all duration-300 text-lg bg-gradient-to-r from-green-50 to-emerald-50" 
+                      className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300 transition-all duration-300 text-lg bg-white hover:border-slate-300" 
                       placeholder="+91 98765 43210" 
                     />
                   </div>
@@ -174,7 +174,7 @@ const Contact = () => {
                         value={borrowerType}
                         onChange={(e) => setBorrowerType(e.target.value)}
                         required
-                        className={`w-full px-6 py-4 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400 transition-all duration-300 text-lg bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200 ${borrowerType ? 'text-slate-900 bg-gradient-to-r from-blue-100 to-indigo-100 border-blue-300' : 'text-slate-500'}`}
+                        className={`w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300 transition-all duration-300 text-lg bg-white hover:border-slate-300 ${borrowerType ? 'text-slate-900' : 'text-slate-500'}`}
                       >
                         <option value="">Select borrower type</option>
                         <option value="individual">Individual</option>
@@ -252,8 +252,7 @@ const Contact = () => {
                     <select 
                       name="service"
                       required
-                      onChange={(e) => e.target.classList.toggle('text-slate-900', !!e.target.value)}
-                      className="w-full px-6 py-4 border-2 border-purple-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300 text-lg bg-gradient-to-r from-purple-50 to-pink-50 text-slate-500 [&:has(option:checked:not(:first-child))]:text-slate-900 [&:has(option:checked:not(:first-child))]:bg-gradient-to-r [&:has(option:checked:not(:first-child))]:from-purple-100 [&:has(option:checked:not(:first-child))]:to-pink-100 [&:has(option:checked:not(:first-child))]:border-purple-300"
+                      className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300 transition-all duration-300 text-lg bg-white hover:border-slate-300 text-slate-500"
                     >
                       <option value="">Select a service</option>
                       <option value="360-analysis">360° Analysis</option>
