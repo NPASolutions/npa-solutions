@@ -130,6 +130,23 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       fullDescription: `When borrowers face legal action from banks, they are often drawn into proceedings before the Debt Recovery Tribunal (DRT). Under the SARFAESI Act 2002, banks can bypass the courts and directly enforce recovery through SARFAESI proceedings, such as taking physical possession and initiating auction of secured assets. Borrowers, however, have the right to defend themselves by filing a Securitisation Application (SA) before the DRT under Section 17 of the Act.
 
 Simultaneously, banks also initiate Original Applications (OA) under the RDDB Act, 1993 to recover dues through a judicial process. These parallel proceedings require careful strategy, especially when banks overstep legal procedures or when borrower assets are at risk. Timely intervention and legal scrutiny play a critical role in safeguarding borrower rights.`,
+      litigationAreas: {
+        title: "Our comprehensive litigation support covers three critical areas:",
+        areas: [
+          {
+            title: "OA - Original Applications",
+            description: "Defense against bank recovery suits under RDDB Act"
+          },
+          {
+            title: "SA - Securitisation Applications", 
+            description: "Challenging SARFAESI enforcement actions"
+          },
+          {
+            title: "Counter Claims",
+            description: "Filing damages claims for procedural violations"
+          }
+        ]
+      },
       whyChooseUs: `At NPA Solutions, we specialize in handling complex DRT and SARFAESI matters. Our clients—be they individuals, MSMEs, or corporate entities—often approach us at a stage when banks have either taken possession of assets or initiated legal proceedings. We excel in identifying procedural violations, statutory non-compliance under SARFAESI, and opportunities to file Counter Claims in OA proceedings.
 
 Our team ensures that borrowers are not left vulnerable due to lack of awareness or delay. With deep insight into the SARFAESI Act, RDDB Act, RBI norms, and DRT practices, we bring a proactive, rights-based legal approach to every case.`,
@@ -402,6 +419,38 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
                 {service.fullDescription}
               </div>
             </motion.div>
+
+            {/* Litigation Areas - DRT & SARFAESI only */}
+            {serviceId === "drt-sarfaesi-litigation" && 'litigationAreas' in service && (
+              <motion.div initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.35
+              }} className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-6 sm:p-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 sm:mb-8 text-center">
+                  {service.litigationAreas.title}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {service.litigationAreas.areas.map((area, index) => (
+                    <Card key={index} className="bg-white/70 backdrop-blur-sm border-slate-200 hover:shadow-lg transition-all duration-300">
+                      <CardContent className="p-6 text-center">
+                        <h3 className="text-lg font-bold text-slate-900 mb-3">
+                          {area.title}
+                        </h3>
+                        <p className="text-sm text-slate-600 leading-relaxed">
+                          {area.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </motion.div>
+            )}
 
             {/* Why Choose Us */}
             <motion.div initial={{
