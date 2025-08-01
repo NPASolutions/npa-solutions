@@ -19,9 +19,9 @@ const ExpertHelp = () => {
         "Strategic recommendations"
       ],
       icon: Scale,
-      color: "bg-gradient-to-br from-gray-50 to-blue-50",
-      iconColor: "text-gray-600",
-      gradient: "from-gray-400 to-blue-500"
+      color: "bg-gradient-to-br from-slate-50 to-slate-100",
+      iconColor: "text-slate-600",
+      gradient: "from-slate-600 to-slate-700"
     },
     {
       title: "Virtual Consultation",
@@ -36,9 +36,9 @@ const ExpertHelp = () => {
         "Document templates provided"
       ],
       icon: Users,
-      color: "bg-gradient-to-br from-yellow-50 to-yellow-100", 
-      iconColor: "text-yellow-600",
-      gradient: "from-yellow-500 to-yellow-600",
+      color: "bg-gradient-to-br from-blue-50 to-blue-100", 
+      iconColor: "text-blue-600",
+      gradient: "from-blue-600 to-blue-700",
       popular: true
     },
     {
@@ -54,9 +54,9 @@ const ExpertHelp = () => {
         "Interactive Q&A session"
       ],
       icon: BookOpen,
-      color: "bg-gradient-to-br from-amber-50 to-amber-100",
-      iconColor: "text-amber-600", 
-      gradient: "from-amber-600 to-amber-700"
+      color: "bg-gradient-to-br from-purple-50 to-purple-100",
+      iconColor: "text-purple-600", 
+      gradient: "from-purple-600 to-purple-700"
     }
   ];
 
