@@ -147,7 +147,7 @@ const Contact = () => {
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         title="Please enter a valid email address"
                         className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300 transition-all duration-300 text-lg bg-white hover:border-slate-300" 
-                        placeholder="your.email@company.com" 
+                        placeholder="Enter your email address" 
                       />
                     </div>
                   </div>
