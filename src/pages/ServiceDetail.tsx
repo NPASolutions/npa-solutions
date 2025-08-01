@@ -375,6 +375,33 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12 sm:space-y-16">
+            {/* Litigation Areas - DRT & SARFAESI only */}
+            {serviceId === "drt-sarfaesi-litigation" && 'litigationAreas' in service && (
+              <motion.div initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.1
+              }} className="text-center">
+                <h2 className="text-xl sm:text-2xl text-slate-600 mb-8 sm:mb-12">
+                  {service.litigationAreas.title}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {service.litigationAreas.areas.map((area, index) => (
+                    <div key={index} className="bg-slate-100 rounded-2xl px-6 py-4 border border-slate-200">
+                      <h3 className="text-lg font-bold text-slate-900">
+                        {area.title}
+                      </h3>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+
             {/* Features */}
             <motion.div initial={{
             opacity: 0,
@@ -420,37 +447,6 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
               </div>
             </motion.div>
 
-            {/* Litigation Areas - DRT & SARFAESI only */}
-            {serviceId === "drt-sarfaesi-litigation" && 'litigationAreas' in service && (
-              <motion.div initial={{
-                opacity: 0,
-                y: 30
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8,
-                delay: 0.35
-              }} className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 sm:mb-8 text-center">
-                  {service.litigationAreas.title}
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {service.litigationAreas.areas.map((area, index) => (
-                    <Card key={index} className="bg-white/70 backdrop-blur-sm border-slate-200 hover:shadow-lg transition-all duration-300">
-                      <CardContent className="p-6 text-center">
-                        <h3 className="text-lg font-bold text-slate-900 mb-3">
-                          {area.title}
-                        </h3>
-                        <p className="text-sm text-slate-600 leading-relaxed">
-                          {area.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </motion.div>
-            )}
 
             {/* Why Choose Us */}
             <motion.div initial={{
