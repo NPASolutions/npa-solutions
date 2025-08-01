@@ -440,8 +440,8 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
 
                 <div className="text-center pt-8">
                   <Link to="/expert-help">
-                    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300">
-                      <Phone className="mr-2" size={20} />
+                    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 sm:px-10 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 mx-auto">
+                      <Phone className="mr-2" size={18} />
                       Get Strategic Legal Guidance Now
                     </Button>
                   </Link>
