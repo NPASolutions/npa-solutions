@@ -340,33 +340,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             </div>
 
             {/* Stats Section */}
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            delay: 0.6,
-            duration: 0.8
-          }} className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {stats.map((stat, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              scale: 0.8
-            }} animate={{
-              opacity: 1,
-              scale: 1
-            }} transition={{
-              delay: 0.8 + index * 0.1,
-              duration: 0.5
-            }} className="text-center">
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
-                    <stat.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-slate-900 mb-2">{stat.value}</div>
-                    <div className="text-slate-600 font-medium">{stat.label}</div>
-                  </div>
-                </motion.div>)}
-            </motion.div>
+            
           </motion.div>
         </div>
 
