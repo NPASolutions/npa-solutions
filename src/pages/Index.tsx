@@ -191,26 +191,29 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              {[
-                { name: 'Home', href: '/' },
-                { name: 'Services', href: '/services' },
-                { name: 'Contact', href: '/contact' }
-              ].map((item, index) => (
-                <motion.div
-                  key={item.name}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Link 
-                    to={item.href} 
-                    className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group"
-                  >
+              {[{
+              name: 'Home',
+              href: '/'
+            }, {
+              name: 'Services',
+              href: '/services'
+            }, {
+              name: 'Contact',
+              href: '/contact'
+            }].map((item, index) => <motion.div key={item.name} initial={{
+              opacity: 0,
+              y: -10
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              delay: index * 0.1
+            }}>
+                  <Link to={item.href} className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
                     {item.name}
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
                   </Link>
-                </motion.div>
-              ))}
+                </motion.div>)}
             </div>
 
 
@@ -247,19 +250,18 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
         height: 0
       }} className="md:hidden bg-white border-t">
             <div className="px-4 pt-4 pb-6 space-y-3">
-              {[
-                { name: 'Home', href: '/' },
-                { name: 'Services', href: '/services' },
-                { name: 'Contact', href: '/contact' }
-              ].map(item => (
-                <Link 
-                  key={item.name} 
-                  to={item.href} 
-                  className="block px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors"
-                >
+              {[{
+            name: 'Home',
+            href: '/'
+          }, {
+            name: 'Services',
+            href: '/services'
+          }, {
+            name: 'Contact',
+            href: '/contact'
+          }].map(item => <Link key={item.name} to={item.href} className="block px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors">
                   {item.name}
-                </Link>
-              ))}
+                </Link>)}
               <Link to="/expert-help">
                 <Button className="mx-3 my-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white w-full">
                   Get Expert Help
@@ -381,26 +383,35 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       {/* Welcome Article Section */}
       <section className="py-20 bg-gradient-to-b from-slate-50 to-white relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 50
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} viewport={{
+          once: true
+        }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
               In Financial Distress, Timing Changes Everything
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-8"></div>
           </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.2
+        }} viewport={{
+          once: true
+        }} className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100">
             <div className="prose prose-lg max-w-none">
               <div className="text-center mb-12">
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">
@@ -471,12 +482,17 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-            <motion.div 
-              initial={{ opacity: 0, x: -50 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              transition={{ duration: 0.8 }} 
-              viewport={{ once: true }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            x: -50
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-12">
                 Why Choose
                 <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -490,9 +506,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Deep Legal Insight</h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      Comprehensive expertise across SARFAESI, DRT, IBC regulations with 15+ years experience
-                    </p>
+                    <p className="text-slate-600 leading-relaxed">Comprehensive expertise across SARFAESI, DRT, IBC regulations with rich experience</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -531,22 +545,29 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               </div>
             </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              transition={{ duration: 0.8 }} 
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              {testimonials.slice(0, 4).map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100"
-                >
+            <motion.div initial={{
+            opacity: 0,
+            x: 50
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }} className="space-y-6">
+              {testimonials.slice(0, 4).map((testimonial, index) => <motion.div key={index} initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: index * 0.1
+            }} viewport={{
+              once: true
+            }} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
                   <div className="flex items-start space-x-3 mb-4">
                     <Quote className="text-blue-400 flex-shrink-0 mt-1" size={20} />
                     <p className="text-slate-600 italic leading-relaxed">
@@ -565,8 +586,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                       </div>
                     </div>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>)}
             </motion.div>
           </div>
         </div>
@@ -603,11 +623,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             }} whileTap={{
               scale: 0.95
             }}>
-                <Button 
-                  size="lg" 
-                  className="bg-white text-slate-900 hover:bg-slate-100 px-10 py-4 rounded-xl text-lg font-semibold shadow-xl"
-                  onClick={() => window.location.href = '/expert-help'}
-                >
+                <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-10 py-4 rounded-xl text-lg font-semibold shadow-xl" onClick={() => window.location.href = '/expert-help'}>
                   <Phone className="mr-2" size={20} />
                   Consultation
                 </Button>
@@ -617,12 +633,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             }} whileTap={{
               scale: 0.95
             }}>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-10 py-4 rounded-xl text-lg font-semibold"
-                  onClick={() => window.location.href = '/contact'}
-                >
+                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-10 py-4 rounded-xl text-lg font-semibold" onClick={() => window.location.href = '/contact'}>
                   <Mail className="mr-2" size={20} />
                   Submit a Query
                 </Button>
