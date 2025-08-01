@@ -574,8 +574,8 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
 
 
       {/* Contact CTA Banner */}
-      <section className="py-24 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+      <section className="py-24 bg-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div initial={{
           opacity: 0,
