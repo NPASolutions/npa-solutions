@@ -173,7 +173,7 @@ const Contact = () => {
                         value={borrowerType}
                         onChange={(e) => setBorrowerType(e.target.value)}
                         required
-                        className={`w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white ${borrowerType ? 'text-slate-900 bg-blue-50' : 'text-slate-500'}`}
+                        className={`w-full px-6 py-4 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400 transition-all duration-300 text-lg bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200 ${borrowerType ? 'text-slate-900 bg-gradient-to-r from-blue-100 to-indigo-100 border-blue-300' : 'text-slate-500'}`}
                       >
                         <option value="">Select borrower type</option>
                         <option value="individual">Individual</option>
@@ -246,7 +246,7 @@ const Contact = () => {
                       name="service"
                       required
                       onChange={(e) => e.target.classList.toggle('text-slate-900', !!e.target.value)}
-                      className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white text-slate-500 [&:has(option:checked:not(:first-child))]:text-slate-900 [&:has(option:checked:not(:first-child))]:bg-blue-50"
+                      className="w-full px-6 py-4 border-2 border-purple-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300 text-lg bg-gradient-to-r from-purple-50 to-pink-50 text-slate-500 [&:has(option:checked:not(:first-child))]:text-slate-900 [&:has(option:checked:not(:first-child))]:bg-gradient-to-r [&:has(option:checked:not(:first-child))]:from-purple-100 [&:has(option:checked:not(:first-child))]:to-pink-100 [&:has(option:checked:not(:first-child))]:border-purple-300"
                     >
                       <option value="">Select a service</option>
                       <option value="360-analysis">360° Analysis</option>
