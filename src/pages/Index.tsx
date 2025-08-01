@@ -355,7 +355,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       </section>
 
       {/* Welcome Article Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white relative">
+      <section className="py-12 bg-gradient-to-b from-slate-50 to-white relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{
           opacity: 0,
