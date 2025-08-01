@@ -597,20 +597,24 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             }} whileTap={{
               scale: 0.95
             }}>
-                <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-10 py-4 rounded-xl text-lg font-semibold shadow-xl" onClick={() => window.location.href = '/expert-help'}>
-                  <Phone className="mr-2" size={20} />
-                  Consultation
-                </Button>
+                <Link to="/expert-help">
+                  <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-10 py-4 rounded-xl text-lg font-semibold shadow-xl">
+                    <Phone className="mr-2" size={20} />
+                    Consultation
+                  </Button>
+                </Link>
               </motion.div>
               <motion.div whileHover={{
               scale: 1.05
             }} whileTap={{
               scale: 0.95
             }}>
-                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-10 py-4 rounded-xl text-lg font-semibold" onClick={() => window.location.href = '/contact'}>
-                  <Mail className="mr-2" size={20} />
-                  Submit a Query
-                </Button>
+                <Link to="/contact">
+                  <Button variant="outline" size="lg" className="border-2 border-white/80 text-white hover:bg-white/10 hover:border-white px-10 py-4 rounded-xl text-lg font-semibold backdrop-blur-sm">
+                    <Mail className="mr-2" size={20} />
+                    Submit a Query
+                  </Button>
+                </Link>
               </motion.div>
             </div>
           </motion.div>
