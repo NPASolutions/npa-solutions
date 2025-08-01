@@ -208,16 +208,18 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
             duration: 0.8,
             delay: 0.2
           }}>
-              <div className="text-center mb-12">
-                <p className="text-lg text-slate-600 mb-4">
-                  Our comprehensive litigation support covers three critical areas:
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Badge variant="outline" className="text-sm px-4 py-2">OA - Original Applications</Badge>
-                  <Badge variant="outline" className="text-sm px-4 py-2">SA - Securitisation Applications</Badge>
-                  <Badge variant="outline" className="text-sm px-4 py-2">Counter Claims</Badge>
+              {serviceId === "drt-sarfaesi-litigation" && (
+                <div className="text-center mb-12">
+                  <p className="text-lg text-slate-600 mb-4">
+                    Our comprehensive litigation support covers three critical areas:
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <Badge variant="outline" className="text-sm px-4 py-2">OA - Original Applications</Badge>
+                    <Badge variant="outline" className="text-sm px-4 py-2">SA - Securitisation Applications</Badge>
+                    <Badge variant="outline" className="text-sm px-4 py-2">Counter Claims</Badge>
+                  </div>
                 </div>
-              </div>
+              )}
               <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Key Features</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {service.features.map((feature, index) => <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
