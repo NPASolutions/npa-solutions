@@ -192,11 +192,17 @@ const Contact = () => {
                         type="text" 
                         name="loanValue"
                         required
-                        pattern="[0-9,]+"
+                        onKeyPress={(e) => {
+                          if (!/[0-9]/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') {
+                            e.preventDefault();
+                          }
+                        }}
                         onInput={(e) => {
-                          const value = e.currentTarget.value.replace(/[^0-9]/g, '');
+                          let value = e.currentTarget.value.replace(/[^0-9]/g, '');
                           if (value) {
                             e.currentTarget.value = new Intl.NumberFormat('en-IN').format(parseInt(value));
+                          } else {
+                            e.currentTarget.value = '';
                           }
                         }}
                         className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
