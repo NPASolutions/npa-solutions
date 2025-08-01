@@ -144,6 +144,8 @@ const Contact = () => {
                         type="email" 
                         name="email"
                         required 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        title="Please enter a valid email address"
                         className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
                         placeholder="your.email@company.com" 
                       />
@@ -151,7 +153,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-3">
-                      Phone Number (WhatsApp) *
+                      Phone Number *
                     </label>
                     <input 
                       type="tel" 
@@ -171,7 +173,7 @@ const Contact = () => {
                         value={borrowerType}
                         onChange={(e) => setBorrowerType(e.target.value)}
                         required
-                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white"
+                        className={`w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white ${borrowerType ? 'text-slate-900 bg-blue-50' : 'text-slate-500'}`}
                       >
                         <option value="">Select borrower type</option>
                         <option value="individual">Individual</option>
@@ -187,9 +189,16 @@ const Contact = () => {
                         Value of Loan *
                       </label>
                       <input 
-                        type="number" 
+                        type="text" 
                         name="loanValue"
                         required
+                        pattern="[0-9,]+"
+                        onInput={(e) => {
+                          const value = e.currentTarget.value.replace(/[^0-9]/g, '');
+                          if (value) {
+                            e.currentTarget.value = new Intl.NumberFormat('en-IN').format(parseInt(value));
+                          }
+                        }}
                         className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
                         placeholder="Enter loan amount (₹)" 
                       />
@@ -236,7 +245,8 @@ const Contact = () => {
                     <select 
                       name="service"
                       required
-                      className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white"
+                      onChange={(e) => e.target.classList.toggle('text-slate-900', !!e.target.value)}
+                      className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg bg-white text-slate-500 [&:has(option:checked:not(:first-child))]:text-slate-900 [&:has(option:checked:not(:first-child))]:bg-blue-50"
                     >
                       <option value="">Select a service</option>
                       <option value="360-analysis">360° Analysis</option>
