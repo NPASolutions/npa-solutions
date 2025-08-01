@@ -132,7 +132,7 @@ const Contact = () => {
                         type="text" 
                         name="fullName"
                         required 
-                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
+                        className="w-full px-6 py-4 border-2 border-cyan-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-400 transition-all duration-300 text-lg bg-gradient-to-r from-cyan-50 to-blue-50" 
                         placeholder="Enter your full name" 
                       />
                     </div>
@@ -146,7 +146,7 @@ const Contact = () => {
                         required 
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         title="Please enter a valid email address"
-                        className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
+                        className="w-full px-6 py-4 border-2 border-orange-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-400 transition-all duration-300 text-lg bg-gradient-to-r from-orange-50 to-yellow-50" 
                         placeholder="your.email@company.com" 
                       />
                     </div>
@@ -159,7 +159,8 @@ const Contact = () => {
                       type="tel" 
                       name="phone"
                       required
-                      className="w-full px-6 py-4 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-lg" 
+                      pattern="[+]?[0-9\s\-]+"
+                      className="w-full px-6 py-4 border-2 border-green-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-400 transition-all duration-300 text-lg bg-gradient-to-r from-green-50 to-emerald-50" 
                       placeholder="+91 98765 43210" 
                     />
                   </div>
