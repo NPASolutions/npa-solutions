@@ -319,9 +319,11 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             </div>
 
             <div className="hidden sm:flex">
-              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 text-sm sm:text-base">
-                Get Expert Help
-              </Button>
+              <Link to="/expert-help">
+                <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 text-sm sm:text-base">
+                  Get Expert Help
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Navigation */}
@@ -358,14 +360,18 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             </h1>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
-              <Button size="lg" className={`bg-gradient-to-r ${service.gradient} text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-lg w-full sm:w-auto`}>
-                <Phone className="mr-2" size={18} />
-                Schedule Consultation
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
-                <Mail className="mr-2" size={18} />
-                Send Query
-              </Button>
+              <Link to="/expert-help">
+                <Button size="lg" className={`bg-gradient-to-r ${service.gradient} text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-lg w-full sm:w-auto`}>
+                  <Phone className="mr-2" size={18} />
+                  Schedule Consultation
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
+                  <Mail className="mr-2" size={18} />
+                  Send Query
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -495,10 +501,12 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
           }} className={`bg-gradient-to-r ${service.buttonGradient} rounded-2xl p-6 sm:p-8 text-white text-center`}>
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Take Action Now</h2>
               <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 opacity-90 text-justify sm:text-center">{service.callToAction}</p>
-              <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
-                <Phone className="mr-2" size={18} />
-                Contact Us
-              </Button>
+              <Link to="/contact">
+                <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
+                  <Phone className="mr-2" size={18} />
+                  Contact Us
+                </Button>
+              </Link>
             </motion.div>
 
             {/* Conclusion */}
