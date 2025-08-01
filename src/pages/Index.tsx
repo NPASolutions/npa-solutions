@@ -440,10 +440,11 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
 
                 <div className="text-center pt-8 px-4">
                   <Link to="/expert-help">
-                    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 py-3 sm:px-10 sm:py-4 rounded-xl text-sm sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full max-w-xs sm:max-w-none sm:w-auto mx-auto">
+                    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 py-3 md:px-8 md:py-4 lg:px-10 lg:py-4 rounded-xl text-sm md:text-base lg:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full max-w-xs md:max-w-sm lg:max-w-none lg:w-auto mx-auto">
                       <Phone className="mr-2" size={16} />
-                      <span className="block sm:hidden">Get Legal Guidance</span>
-                      <span className="hidden sm:block">Get Strategic Legal Guidance Now</span>
+                      <span className="block md:hidden">Get Legal Guidance</span>
+                      <span className="hidden md:block lg:hidden">Get Strategic Guidance</span>
+                      <span className="hidden lg:block">Get Strategic Legal Guidance Now</span>
                     </Button>
                   </Link>
                 </div>
