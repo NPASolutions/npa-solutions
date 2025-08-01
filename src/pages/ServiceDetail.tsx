@@ -358,6 +358,48 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12 sm:space-y-16">
+            {/* Application Types - Only for DRT & SARFAESI Litigation */}
+            {serviceId === "drt-sarfaesi-litigation" && (
+              <motion.div initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.2
+              }} className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 sm:p-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 text-center">Application Types We Handle</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <Card className="p-6 hover:shadow-lg transition-shadow border-l-4 border-purple-500">
+                    <CardContent className="p-0">
+                      <h3 className="text-lg font-semibold text-slate-900 mb-3">Original Application (OA)</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        Filed by banks under RDDB Act to recover dues through judicial process. We provide strategic defense and counter-claim opportunities.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card className="p-6 hover:shadow-lg transition-shadow border-l-4 border-purple-500">
+                    <CardContent className="p-0">
+                      <h3 className="text-lg font-semibold text-slate-900 mb-3">Securitisation Application (SA)</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        Filed by borrowers under Section 17 of SARFAESI Act to challenge enforcement actions and protect assets from wrongful seizure.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card className="p-6 hover:shadow-lg transition-shadow border-l-4 border-purple-500">
+                    <CardContent className="p-0">
+                      <h3 className="text-lg font-semibold text-slate-900 mb-3">Counter Claim</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        Filed in OA proceedings when borrowers suffer damages due to illegal recovery measures or procedural violations by banks.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </motion.div>
+            )}
+
             {/* Features */}
             <motion.div initial={{
             opacity: 0,
@@ -367,7 +409,7 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             y: 0
           }} transition={{
             duration: 0.8,
-            delay: 0.2
+            delay: serviceId === "drt-sarfaesi-litigation" ? 0.3 : 0.2
           }}>
               <div className="text-center mb-8 sm:mb-12">
                 <div className="flex flex-wrap justify-center gap-4">
