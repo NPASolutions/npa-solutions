@@ -610,7 +610,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               scale: 0.95
             }}>
                 <Link to="/contact">
-                  <Button variant="outline" size="lg" className="border-2 border-white/80 text-white hover:bg-white/10 hover:border-white px-10 py-4 rounded-xl text-lg font-semibold backdrop-blur-sm">
+                  <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-10 py-4 rounded-xl text-lg font-semibold shadow-xl">
                     <Mail className="mr-2" size={20} />
                     Submit a Query
                   </Button>
