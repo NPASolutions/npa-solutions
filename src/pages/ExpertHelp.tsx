@@ -175,17 +175,17 @@ const ExpertHelp = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
+      <section className="relative py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
               Get <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Expert Help</span>
             </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600 mb-6 max-w-3xl mx-auto">
               Choose the right service package for your specific needs. From quick legal reviews to comprehensive consultation and educational workshops.
             </p>
           </motion.div>
@@ -193,9 +193,9 @@ const ExpertHelp = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -211,25 +211,25 @@ const ExpertHelp = () => {
                     </div>
                   )}
                   
-                  <CardContent className="p-8">
-                    <div className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className={`${service.iconColor} h-8 w-8`} />
+                  <CardContent className="p-6">
+                    <div className={`w-12 h-12 ${service.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <service.icon className={`${service.iconColor} h-6 w-6`} />
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2">{service.title}</h3>
-                    <div className="flex items-baseline mb-4">
-                      <span className={`text-3xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">{service.title}</h3>
+                    <div className="flex items-baseline mb-3">
+                      <span className={`text-2xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
                         {service.price}
                       </span>
                     </div>
                     
-                    <p className="text-slate-600 mb-6">{service.description}</p>
+                    <p className="text-slate-600 mb-4 text-sm">{service.description}</p>
                     
-                    <div className="space-y-3 mb-8">
+                    <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
-                          <span className="text-slate-600">{feature}</span>
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          <span className="text-slate-600 text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
