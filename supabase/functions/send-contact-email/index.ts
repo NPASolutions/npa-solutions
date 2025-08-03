@@ -97,7 +97,12 @@ const handler = async (req: Request): Promise<Response> => {
       html: htmlContent,
     });
 
-    console.log("Email sent successfully:", emailResult);
+    console.log("Email result from Resend:", JSON.stringify(emailResult, null, 2));
+
+    if (emailResult.error) {
+      console.error("Resend error:", emailResult.error);
+      throw new Error(`Email failed: ${emailResult.error.message}`);
+    }
 
     return new Response(
       JSON.stringify({ 
