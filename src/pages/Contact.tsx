@@ -28,7 +28,7 @@ const Contact = () => {
       loanValue: formData.get('loanValue'),
       service: formData.get('service'),
       query: formData.get('query'),
-      to_email: 'npasolutions.in@gmail.com'
+      to_email: 'npasolutions.team@gmail.com'
     };
 
     try {
