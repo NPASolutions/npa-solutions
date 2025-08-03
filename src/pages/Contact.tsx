@@ -45,7 +45,7 @@ const Contact = () => {
       });
 
       // Reset form
-      e.currentTarget.reset();
+      (e.target as HTMLFormElement).reset();
       setBorrowerType("");
       setOtherBorrowerType("");
     } catch (error: any) {
