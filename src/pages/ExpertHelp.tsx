@@ -74,44 +74,44 @@ const ExpertHelp = () => {
     description: "One-on-one expert consultation with personalized legal strategy and guidance",
     features: ["60-minute consultation session", "Case-specific strategic planning", "Expert legal advice on proceedings", "Q&A session for your concerns", "Follow-up action plan", "Document templates provided"],
     icon: Users,
-    color: "bg-gradient-to-br from-primary/10 to-primary/20",
-    iconColor: "text-primary",
-    gradient: "from-primary to-primary/80"
+    color: "bg-gradient-to-br from-blue-50 to-blue-100",
+    iconColor: "text-blue-600",
+    gradient: "from-blue-600 to-blue-700"
   }, {
     title: "E-SHIELD by NPA Solutions",
     price: "₹10,000/-",
     description: "Comprehensive subscription-based protection service designed specifically for Startups & MSMEs. Stay ahead of financial challenges with continuous monitoring, expert guidance, and priority crisis support.",
     features: ["Continuous business health monitoring & assessment", "Priority assistance during financial crisis situations", "Pre-emptive NPA safeguarding strategies & consultation", "Expert guidance for additional finance structuring", "Complete restructuring & business revival program support", "Direct access to our specialized expert team", "Customized protection plans based on your business scale"],
     icon: Shield,
-    color: "bg-gradient-to-br from-secondary/10 to-secondary/20",
-    iconColor: "text-secondary",
-    gradient: "from-secondary to-secondary/80"
+    color: "bg-gradient-to-br from-emerald-50 to-emerald-100",
+    iconColor: "text-emerald-600",
+    gradient: "from-emerald-600 to-emerald-700"
   }];
   return <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Link to="/" className="font-bold text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <Link to="/" className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               NPA Solutions
             </Link>
             
             <div className="hidden md:flex space-x-8">
               <Link to="/" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
                 Home
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
               <Link to="/services" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
                 Services
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
               <Link to="/contact" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
                 Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
-              <Link to="/expert-help" className="text-primary font-medium relative group">
+              <Link to="/expert-help" className="text-blue-600 font-medium relative group">
                 Expert Help
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary"></span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600"></span>
               </Link>
             </div>
 
@@ -170,7 +170,7 @@ const ExpertHelp = () => {
           duration: 0.8
         }}>
             <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-              Get <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Expert Help</span>
+              Get <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Expert Help</span>
             </h1>
             <p className="text-lg text-slate-600 mb-6 max-w-3xl mx-auto">
               Choose the right service package for your specific needs. From quick legal reviews to comprehensive consultation and educational workshops.
@@ -193,7 +193,7 @@ const ExpertHelp = () => {
             delay: index * 0.1,
             duration: 0.6
           }} className="w-full">
-                <Card className="relative overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 hover:shadow-xl group border-slate-200">
+                <Card className="relative overflow-hidden border-2 hover:border-blue-200 transition-all duration-300 hover:shadow-xl group border-slate-200">
                   <CardContent className="p-8">
                     <div className="flex flex-col lg:flex-row gap-8 items-start">
                       {/* Left side - Icon and Title */}
