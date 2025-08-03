@@ -85,23 +85,6 @@ const ExpertHelp = () => {
       iconColor: "text-blue-600",
       gradient: "from-blue-600 to-blue-700",
       popular: true
-    },
-    {
-      title: "Workshop for Entrepreneurs",
-      price: "₹500/-",
-      description: "Educational workshop on recovery laws and safe business practices",
-      features: [
-        "Understanding SARFAESI & IBC laws",
-        "Risk mitigation strategies",
-        "Best practices for loan agreements",
-        "Early warning signs identification",
-        "Compliance guidelines for MSMEs",
-        "Interactive Q&A session"
-      ],
-      icon: BookOpen,
-      color: "bg-gradient-to-br from-purple-50 to-purple-100",
-      iconColor: "text-purple-600", 
-      gradient: "from-purple-600 to-purple-700"
     }
   ];
 
