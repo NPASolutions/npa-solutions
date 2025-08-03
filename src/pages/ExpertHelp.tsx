@@ -83,21 +83,20 @@ const ExpertHelp = () => {
       icon: Users,
       color: "bg-gradient-to-br from-blue-50 to-blue-100", 
       iconColor: "text-blue-600",
-      gradient: "from-blue-600 to-blue-700",
-      popular: true
+      gradient: "from-blue-600 to-blue-700"
     },
     {
       title: "E-SHIELD by NPA Solutions",
       price: "₹10,000/-",
-      description: "Subscription-based protection service for Startups & MSMEs with regular monitoring and priority assistance",
+      description: "Comprehensive subscription-based protection service designed specifically for Startups & MSMEs. Stay ahead of financial challenges with continuous monitoring, expert guidance, and priority crisis support.",
       features: [
-        "Regular business health monitoring",
-        "Priority assistance in crisis situations",
-        "Pre-emptive NPA safeguarding assessment",
-        "Additional finance guidance & structuring",
-        "Restructuring & revival program support",
-        "Direct access to expert team",
-        "Customized service based on business scale"
+        "Continuous business health monitoring & assessment",
+        "Priority assistance during financial crisis situations", 
+        "Pre-emptive NPA safeguarding strategies & consultation",
+        "Expert guidance for additional finance structuring",
+        "Complete restructuring & business revival program support",
+        "Direct access to our specialized expert team",
+        "Customized protection plans based on your business scale"
       ],
       icon: Shield,
       color: "bg-gradient-to-br from-emerald-50 to-emerald-100",
@@ -205,13 +204,7 @@ const ExpertHelp = () => {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="w-full"
               >
-                <Card className={`relative overflow-hidden border-2 hover:border-blue-200 transition-all duration-300 hover:shadow-xl group ${service.popular ? 'border-blue-300 shadow-lg' : 'border-slate-200'}`}>
-                  {service.popular && (
-                    <div className="absolute top-6 right-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-full text-base font-semibold z-10">
-                      Most Popular
-                    </div>
-                  )}
-                  
+                <Card className="relative overflow-hidden border-2 hover:border-blue-200 transition-all duration-300 hover:shadow-xl group border-slate-200">
                   <CardContent className="p-8">
                     <div className="flex flex-col lg:flex-row gap-8 items-start">
                       {/* Left side - Icon and Title */}
