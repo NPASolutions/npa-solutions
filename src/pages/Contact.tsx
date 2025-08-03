@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
-import emailjs from '@emailjs/browser';
+import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -19,26 +19,25 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    const templateParams = {
-      fullName: formData.get('fullName'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
+    const contactData = {
+      fullName: formData.get('fullName') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
       borrowerType: borrowerType === 'other' ? otherBorrowerType : borrowerType,
-      enterpriseName: formData.get('enterpriseName') || 'N/A',
-      loanValue: formData.get('loanValue'),
-      service: formData.get('service'),
-      query: formData.get('query'),
-      to_email: 'npasolutions.team@gmail.com'
+      enterpriseName: formData.get('enterpriseName') as string || undefined,
+      loanValue: formData.get('loanValue') as string,
+      service: formData.get('service') as string,
+      query: formData.get('query') as string,
     };
 
     try {
-      // You'll need to set up EmailJS with your service ID, template ID, and public key
-      await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        templateParams,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
-      );
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: contactData
+      });
+
+      if (error) {
+        throw error;
+      }
 
       toast({
         title: "Query Submitted Successfully!",
@@ -49,7 +48,7 @@ const Contact = () => {
       e.currentTarget.reset();
       setBorrowerType("");
       setOtherBorrowerType("");
-    } catch (error) {
+    } catch (error: any) {
       console.error('Email sending failed:', error);
       toast({
         title: "Submission Failed",
