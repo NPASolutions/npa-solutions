@@ -1,11 +1,56 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { CheckCircle, Scale, Users, BookOpen, ArrowRight, Phone, Mail, MessageCircle } from "lucide-react";
+import { CheckCircle, Scale, Users, BookOpen, ArrowRight, Phone, Mail, MessageCircle, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { LoginButton } from "@/components/auth/LoginButton";
+import { AuthDialog } from "@/components/auth/AuthDialog";
+import { useAuth } from "@/contexts/AuthContext";
+import { useBooking } from "@/hooks/useBooking";
+import { useToast } from "@/hooks/use-toast";
 
 const ExpertHelp = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showAuthDialog, setShowAuthDialog] = useState(false);
+  const [selectedService, setSelectedService] = useState<{title: string, price: string} | null>(null);
+  const { user } = useAuth();
+  const { createBooking, loading } = useBooking();
+  const { toast } = useToast();
+
+  const handleBookNow = async (service: {title: string, price: string}) => {
+    if (!user) {
+      setSelectedService(service);
+      setShowAuthDialog(true);
+      return;
+    }
+
+    try {
+      await createBooking({
+        serviceName: service.title,
+        servicePrice: service.price
+      });
+    } catch (error) {
+      console.error('Booking failed:', error);
+    }
+  };
+
+  const handleAuthSuccess = async () => {
+    setShowAuthDialog(false);
+    if (selectedService && user) {
+      try {
+        await createBooking({
+          serviceName: selectedService.title,
+          servicePrice: selectedService.price
+        });
+        setSelectedService(null);
+      } catch (error) {
+        console.error('Booking failed:', error);
+      }
+    }
+  };
+
   const services = [
     {
       title: "Review of Legal Position",
@@ -89,14 +134,48 @@ const ExpertHelp = () => {
               </Link>
             </div>
 
-            <div className="hidden md:flex">
+            <div className="hidden md:flex items-center space-x-4">
+              <LoginButton />
               <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <Phone className="mr-2" size={16} />
                 Contact Us
               </Button>
             </div>
+
+            {/* Mobile menu button */}
+            <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white border-t"
+          >
+            <div className="px-4 pt-4 pb-6 space-y-3">
+              <Link to="/" className="block px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors">
+                Home
+              </Link>
+              <Link to="/services" className="block px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors">
+                Services
+              </Link>
+              <Link to="/contact" className="block px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors">
+                Contact
+              </Link>
+              <Link to="/expert-help" className="block px-3 py-2 text-blue-600 font-medium">
+                Expert Help
+              </Link>
+              <div className="mx-3 my-2">
+                <LoginButton />
+              </div>
+            </div>
+          </motion.div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -161,8 +240,10 @@ const ExpertHelp = () => {
                     
                     <Button 
                       className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300`}
+                      onClick={() => handleBookNow(service)}
+                      disabled={loading}
                     >
-                      Book Now
+                      {loading ? 'Processing...' : 'Book Now'}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </CardContent>
@@ -245,6 +326,12 @@ const ExpertHelp = () => {
       </section>
 
       <Footer />
+      
+      <AuthDialog
+        open={showAuthDialog}
+        onOpenChange={setShowAuthDialog}
+        onSuccess={handleAuthSuccess}
+      />
     </div>
   );
 };

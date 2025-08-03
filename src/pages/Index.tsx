@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Footer from "@/components/Footer";
+import { LoginButton } from "@/components/auth/LoginButton";
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -223,7 +224,8 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
           }} animate={{
             opacity: 1,
             x: 0
-          }} className="hidden md:flex">
+          }} className="hidden md:flex items-center space-x-4">
+              <LoginButton />
               <Link to="/expert-help">
                 <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
                   Get Expert Help
@@ -262,6 +264,9 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
           }].map(item => <Link key={item.name} to={item.href} className="block px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors">
                   {item.name}
                 </Link>)}
+              <div className="mx-3 my-2">
+                <LoginButton />
+              </div>
               <Link to="/expert-help">
                 <Button className="mx-3 my-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white w-full">
                   Get Expert Help
