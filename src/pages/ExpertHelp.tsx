@@ -266,40 +266,23 @@ const ExpertHelp = () => {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
+      {/* Urgent Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Need a Custom Solution?
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              "Time is Critical in NPA Cases"
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Contact us for personalized packages tailored to your specific legal requirements.
+            <p className="text-2xl md:text-3xl text-orange-400 font-semibold mb-4">
+              Act Now Before It's Too Late
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="bg-white text-blue-600 border-white hover:bg-blue-50">
-                <Phone className="mr-2" size={20} />
-                Call Us Now
-              </Button>
-              <a 
-                href="https://wa.me/919666993228"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button size="lg" variant="outline" className="bg-green-500 text-white border-green-500 hover:bg-green-600">
-                  <MessageCircle className="mr-2" size={20} />
-                  WhatsApp
-                </Button>
-              </a>
-              <Button size="lg" variant="outline" className="bg-white text-blue-600 border-white hover:bg-blue-50">
-                <Mail className="mr-2" size={20} />
-                Email Us
-              </Button>
-            </div>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+              Every day of delay weakens your legal position. The window for effective remedies is closing fast.
+            </p>
           </motion.div>
         </div>
       </section>
