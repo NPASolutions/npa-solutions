@@ -196,75 +196,79 @@ const ExpertHelp = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 justify-items-center max-w-6xl mx-auto">
-            {services.map((service, index) => {
-              // Arrange services: Basic (left), Popular (center), Premium (right)
-              let orderClass = "";
-              if (service.popular) orderClass = "lg:order-2"; // Popular in center
-              else if (service.price === "₹1,000/-") orderClass = "lg:order-1"; // Basic on left  
-              else orderClass = "lg:order-3"; // Premium on right
-
-              return (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className={`w-full max-w-sm ${orderClass}`}
-                >
-                  <Card className={`h-full relative overflow-hidden border-2 hover:border-blue-200 transition-all duration-300 hover:shadow-xl group ${service.popular ? 'border-blue-300 shadow-lg scale-105' : 'border-slate-200'}`}>
-                    {service.popular && (
-                      <div className="absolute top-6 right-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-full text-base font-semibold">
-                        Most Popular
-                      </div>
-                    )}
-                    
-                    <CardContent className="p-8">
-                      <div className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                        <service.icon className={`${service.iconColor} h-8 w-8`} />
+          <div className="space-y-8 max-w-6xl mx-auto">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="w-full"
+              >
+                <Card className={`relative overflow-hidden border-2 hover:border-blue-200 transition-all duration-300 hover:shadow-xl group ${service.popular ? 'border-blue-300 shadow-lg' : 'border-slate-200'}`}>
+                  {service.popular && (
+                    <div className="absolute top-6 right-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-full text-base font-semibold z-10">
+                      Most Popular
+                    </div>
+                  )}
+                  
+                  <CardContent className="p-8">
+                    <div className="flex flex-col lg:flex-row gap-8 items-start">
+                      {/* Left side - Icon and Title */}
+                      <div className="flex flex-col items-center lg:items-start lg:min-w-[250px]">
+                        <div className={`w-20 h-20 ${service.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                          <service.icon className={`${service.iconColor} h-10 w-10`} />
+                        </div>
+                        
+                        <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center lg:text-left">{service.title}</h3>
+                        
+                        <div className="flex items-baseline mb-4">
+                          <span className={`text-3xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
+                            {service.price}
+                          </span>
+                          {service.title === "E-SHIELD by NPA Solutions" && (
+                            <span className="text-sm text-slate-500 ml-2">starting*</span>
+                          )}
+                        </div>
                       </div>
                       
-                      <h3 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
-                      <div className="flex items-baseline mb-4">
-                        <span className={`text-3xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
-                          {service.price}
-                        </span>
+                      {/* Middle - Description and Features */}
+                      <div className="flex-1">
+                        <p className="text-slate-600 mb-6 text-base leading-relaxed">{service.description}</p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                          {service.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center">
+                              <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                              <span className="text-slate-600 text-base">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                        
                         {service.title === "E-SHIELD by NPA Solutions" && (
-                          <span className="text-sm text-slate-500 ml-2">starting*</span>
+                          <p className="text-sm text-slate-500 mb-4 italic">
+                            *Pricing varies based on enterprise scale and business size. Customized packages available.
+                          </p>
                         )}
                       </div>
                       
-                      <p className="text-slate-600 mb-6 text-base leading-relaxed">{service.description}</p>
-                      
-                      <div className="space-y-3 mb-8">
-                        {service.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center">
-                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                            <span className="text-slate-600 text-base">{feature}</span>
-                          </div>
-                        ))}
+                      {/* Right side - CTA Button */}
+                      <div className="flex flex-col items-center lg:items-end lg:min-w-[200px] w-full lg:w-auto">
+                        <Button 
+                          size="lg"
+                          className={`w-full lg:w-auto bg-gradient-to-r ${service.gradient} hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 text-base py-3 px-8`}
+                          onClick={() => handleBookNow(service)}
+                          disabled={loading}
+                        >
+                          {loading ? 'Processing...' : 'Book Now'}
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </Button>
                       </div>
-                      
-                      {service.title === "E-SHIELD by NPA Solutions" && (
-                        <p className="text-sm text-slate-500 mb-6 italic">
-                          *Pricing varies based on enterprise scale and business size. Customized packages available.
-                        </p>
-                      )}
-                      
-                      <Button 
-                        size="lg"
-                        className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 text-base py-3`}
-                        onClick={() => handleBookNow(service)}
-                        disabled={loading}
-                      >
-                        {loading ? 'Processing...' : 'Book Now'}
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
