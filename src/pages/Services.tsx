@@ -93,24 +93,23 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
                 Contact
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
+              <Link to="/expert-help" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+                Get Expert Help
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </Link>
             </div>
 
-
-            <div className="hidden sm:flex">
-              <Link to="/expert-help">
-                <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base">
-                  Get Expert Help
-                </Button>
-              </Link>
+            <div className="hidden md:flex">
+              <Button variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-50">
+                Login
+              </Button>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="sm:hidden">
-              <Link to="/expert-help">
-                <Button size="sm" className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 py-2 rounded-lg text-xs">
-                  Expert Help
-                </Button>
-              </Link>
+            <div className="md:hidden">
+              <Button variant="outline" size="sm" className="border-slate-300 text-slate-700 text-xs">
+                Login
+              </Button>
             </div>
           </div>
         </div>

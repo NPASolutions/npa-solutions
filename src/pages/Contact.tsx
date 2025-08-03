@@ -83,14 +83,23 @@ const Contact = () => {
                 Contact
                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600"></span>
               </Link>
+              <Link to="/expert-help" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
+                Get Expert Help
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </Link>
             </div>
 
             <div className="hidden md:flex">
-              <Link to="/expert-help">
-                <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                  Get Expert Help
-                </Button>
-              </Link>
+              <Button variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-50">
+                Login
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <Button variant="outline" size="sm" className="border-slate-300 text-slate-700 text-xs">
+                Login
+              </Button>
             </div>
           </div>
         </div>
