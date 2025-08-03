@@ -29,6 +29,12 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     console.log("Processing contact form submission...");
     
+    const apiKey = Deno.env.get("RESEND_API_KEY");
+    if (!apiKey) {
+      throw new Error("RESEND_API_KEY environment variable is not set");
+    }
+    console.log("API key exists:", apiKey.substring(0, 10) + "...");
+    
     const formData: ContactFormData = await req.json();
     console.log("Form data received:", { ...formData, email: "***@***" });
 
