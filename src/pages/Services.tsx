@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Shield, Scale, FileText, Building, TrendingUp, CheckCircle, ArrowRight, Linkedin, Instagram, Youtube, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { LoginButton } from "@/components/auth/LoginButton";
 
 const Services = () => {
   const services = [{
@@ -73,43 +74,43 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100">
+      <nav className="bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 sm:h-20">
-            <Link to="/" className="font-bold text-xl sm:text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="flex justify-between items-center h-20">
+            <Link to="/" className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               NPA Solutions
             </Link>
             
+            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              <Link to="/" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
-                Home
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              <Link to="/services" className="text-blue-600 font-medium relative group">
-                Services
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600"></span>
-              </Link>
-              <Link to="/contact" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
-                Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              <Link to="/expert-help" className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
-                Get Expert Help
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </Link>
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'Services', href: '/services' },
+                { name: 'Contact', href: '/contact' },
+                { name: 'Expert Help', href: '/expert-help' }
+              ].map((item) => (
+                <Link 
+                  key={item.name}
+                  to={item.href} 
+                  className={`text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group ${
+                    item.href === '/services' ? 'text-blue-600' : ''
+                  }`}
+                >
+                  {item.name}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${
+                    item.href === '/services' ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}></span>
+                </Link>
+              ))}
             </div>
 
             <div className="hidden md:flex">
-              <Button variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-50">
-                Login
-              </Button>
+              <LoginButton />
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile menu button */}
             <div className="md:hidden">
-              <Button variant="outline" size="sm" className="border-slate-300 text-slate-700 text-xs">
-                Login
-              </Button>
+              <LoginButton />
             </div>
           </div>
         </div>
