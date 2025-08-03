@@ -208,7 +208,7 @@ const ExpertHelp = () => {
                           <span className={`text-3xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
                             {service.price}
                           </span>
-                          {service.title === "E-SHIELD by NPA Solutions" && <span className="text-sm text-slate-500 ml-2">starting*</span>}
+                          {service.title === "E-SHIELD by NPA Solutions" && <span className="text-sm text-slate-500 ml-2">starting*/year</span>}
                         </div>
                       </div>
                       
