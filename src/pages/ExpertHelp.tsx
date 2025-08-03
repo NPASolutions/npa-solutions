@@ -227,7 +227,16 @@ const ExpertHelp = () => {
                       
                       {/* Middle - Description and Features */}
                       <div className="flex-1">
-                        <p className="text-slate-600 mb-6 text-base leading-relaxed">{service.description}</p>
+                        <p className="text-slate-600 mb-6 text-base leading-relaxed text-justify">{service.description}</p>
+                        
+                        {service.title === "E-SHIELD by NPA Solutions" && (
+                          <div className="mb-6 p-4 bg-emerald-50 rounded-lg border border-emerald-200">
+                            <p className="text-emerald-700 font-semibold text-sm mb-2">💡 Yearly Subscription Benefits:</p>
+                            <p className="text-emerald-600 text-sm text-justify">
+                              Subscribe annually and save up to 20% on your protection plan. Get extended coverage, quarterly business reviews, and priority support for the entire year.
+                            </p>
+                          </div>
+                        )}
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                           {service.features.map((feature, featureIndex) => (
