@@ -106,8 +106,13 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Email result from Resend:", JSON.stringify(emailResult, null, 2));
 
     if (emailResult.error) {
-      console.error("Resend error:", emailResult.error);
-      throw new Error(`Email failed: ${emailResult.error.message}`);
+      console.error("Resend API error:", JSON.stringify(emailResult.error, null, 2));
+      throw new Error(`Resend API error: ${JSON.stringify(emailResult.error)}`);
+    }
+
+    if (!emailResult.data) {
+      console.error("No data returned from Resend:", emailResult);
+      throw new Error("Email sending failed - no response data from Resend");
     }
 
     return new Response(
