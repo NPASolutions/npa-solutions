@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { CheckCircle, Scale, Users, BookOpen, ArrowRight, Phone, Mail, MessageCircle, Menu, X } from "lucide-react";
+import { CheckCircle, Scale, Users, BookOpen, ArrowRight, Phone, Mail, MessageCircle, Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { LoginButton } from "@/components/auth/LoginButton";
@@ -85,6 +85,24 @@ const ExpertHelp = () => {
       iconColor: "text-blue-600",
       gradient: "from-blue-600 to-blue-700",
       popular: true
+    },
+    {
+      title: "E-SHIELD by NPA Solutions",
+      price: "₹10,000/-",
+      description: "Subscription-based protection service for Startups & MSMEs with regular monitoring and priority assistance",
+      features: [
+        "Regular business health monitoring",
+        "Priority assistance in crisis situations",
+        "Pre-emptive NPA safeguarding assessment",
+        "Additional finance guidance & structuring",
+        "Restructuring & revival program support",
+        "Direct access to expert team",
+        "Customized service based on business scale"
+      ],
+      icon: Shield,
+      color: "bg-gradient-to-br from-emerald-50 to-emerald-100",
+      iconColor: "text-emerald-600",
+      gradient: "from-emerald-600 to-emerald-700"
     }
   ];
 
