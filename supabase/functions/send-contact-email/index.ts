@@ -91,7 +91,7 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     const emailResult = await resend.emails.send({
-      from: "NPA Solutions <onboarding@resend.dev>",
+      from: "NPA Solutions Contact <noreply@resend.dev>",
       to: ["npasolutions.team@gmail.com"],
       subject: `New Contact Form Submission - ${formData.service}`,
       html: htmlContent,
