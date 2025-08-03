@@ -207,41 +207,51 @@ const ExpertHelp = () => {
               >
                 <Card className={`h-full relative overflow-hidden border-2 hover:border-blue-200 transition-all duration-300 hover:shadow-xl group ${service.popular ? 'border-blue-300 shadow-lg' : 'border-slate-200'}`}>
                   {service.popular && (
-                    <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute top-6 right-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-full text-base font-semibold">
                       Most Popular
                     </div>
                   )}
                   
-                  <CardContent className="p-6">
-                    <div className={`w-12 h-12 ${service.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className={`${service.iconColor} h-6 w-6`} />
+                  <CardContent className="p-8">
+                    <div className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <service.icon className={`${service.iconColor} h-8 w-8`} />
                     </div>
                     
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">{service.title}</h3>
-                    <div className="flex items-baseline mb-3">
-                      <span className={`text-2xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
+                    <div className="flex items-baseline mb-4">
+                      <span className={`text-3xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
                         {service.price}
                       </span>
+                      {service.title === "E-SHIELD by NPA Solutions" && (
+                        <span className="text-sm text-slate-500 ml-2">starting*</span>
+                      )}
                     </div>
                     
-                    <p className="text-slate-600 mb-4 text-sm">{service.description}</p>
+                    <p className="text-slate-600 mb-6 text-base leading-relaxed">{service.description}</p>
                     
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-3 mb-8">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-slate-600 text-sm">{feature}</span>
+                          <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-slate-600 text-base">{feature}</span>
                         </div>
                       ))}
                     </div>
                     
+                    {service.title === "E-SHIELD by NPA Solutions" && (
+                      <p className="text-sm text-slate-500 mb-6 italic">
+                        *Pricing varies based on enterprise scale and business size. Customized packages available.
+                      </p>
+                    )}
+                    
                     <Button 
-                      className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300`}
+                      size="lg"
+                      className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 text-base py-3`}
                       onClick={() => handleBookNow(service)}
                       disabled={loading}
                     >
                       {loading ? 'Processing...' : 'Book Now'}
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </CardContent>
                 </Card>
