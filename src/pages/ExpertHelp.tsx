@@ -134,12 +134,8 @@ const ExpertHelp = () => {
               </Link>
             </div>
 
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden md:flex">
               <LoginButton />
-              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <Phone className="mr-2" size={16} />
-                Contact Us
-              </Button>
             </div>
 
             {/* Mobile menu button */}
