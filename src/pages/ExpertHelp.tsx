@@ -78,7 +78,7 @@ const ExpertHelp = () => {
     iconColor: "text-blue-600",
     gradient: "from-blue-600 to-blue-700"
   }, {
-    title: "E-SHIELD by NPA Solutions",
+    title: "E-SHIELD",
     price: "₹10,000/-",
     description: "Comprehensive subscription-based protection service designed specifically for Startups & MSMEs. Stay ahead of financial challenges with continuous monitoring, expert guidance, and priority crisis support.",
     features: ["Continuous business health monitoring & assessment", "Priority assistance during financial crisis situations", "Pre-emptive NPA safeguarding strategies & consultation", "Expert guidance for additional finance structuring", "Complete restructuring & business revival program support", "Direct access to our specialized expert team", "Customized protection plans based on your business scale"],
@@ -204,7 +204,7 @@ const ExpertHelp = () => {
                         
                         <div className="text-center lg:text-left mb-4">
                           <h3 className="text-2xl font-bold text-slate-900">{service.title}</h3>
-                          {service.title === "E-SHIELD by NPA Solutions" && (
+                          {service.title === "E-SHIELD" && (
                             <p className="text-xs text-slate-500 mt-1">By NPA Solutions</p>
                           )}
                         </div>
@@ -213,7 +213,7 @@ const ExpertHelp = () => {
                           <span className={`text-3xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
                             {service.price}
                           </span>
-                          {service.title === "E-SHIELD by NPA Solutions" && <span className="text-sm text-slate-500 ml-2">starting*/year</span>}
+                          {service.title === "E-SHIELD" && <span className="text-sm text-slate-500 ml-2">starting*/year</span>}
                         </div>
                       </div>
                       
@@ -230,7 +230,7 @@ const ExpertHelp = () => {
                             </div>)}
                         </div>
                         
-                        {service.title === "E-SHIELD by NPA Solutions" && <p className="text-sm text-slate-500 mb-4 italic">
+                        {service.title === "E-SHIELD" && <p className="text-sm text-slate-500 mb-4 italic">
                             *Pricing varies based on enterprise scale and business size. Customized packages available.
                           </p>}
                       </div>
