@@ -165,7 +165,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     rating: 5,
     image: "/placeholder.svg"
   }];
-  return <div className="min-h-screen bg-background relative overflow-hidden">
+  return <div className="min-h-screen bg-white relative overflow-hidden">
       {/* Animated background elements */}
       <div className="fixed inset-0 z-0">
         <div className="absolute w-96 h-96 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full opacity-20 blur-3xl" style={{
@@ -186,7 +186,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
           }} animate={{
             opacity: 1,
             x: 0
-          }} className="font-bold text-2xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+          }} className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               NPA Solutions
             </motion.div>
             
@@ -213,9 +213,9 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             }} transition={{
               delay: index * 0.1
             }}>
-                  <Link to={item.href} className="text-muted-foreground hover:text-foreground transition-all duration-300 font-medium relative group">
+                  <Link to={item.href} className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
                     {item.name}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
                   </Link>
                 </motion.div>)}
             </div>
@@ -274,7 +274,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
 
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-background"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -301,16 +301,16 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               
             </motion.div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-foreground mb-6 sm:mb-8 leading-tight px-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-slate-900 mb-6 sm:mb-8 leading-tight px-2">
               Navigating Financial Distress with{" "}
-              <span className="bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent">
                 Strategic Clarity
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-600 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
               Empowering MSME, Entrepreneurs & Borrowers with Expert Legal guidance through 
-              <span className="font-semibold text-foreground"> SARFAESI, DRT, IBC & Financial Restructuring</span>
+              <span className="font-semibold text-slate-800"> SARFAESI, DRT, IBC & Financial Restructuring</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 px-4">
@@ -320,7 +320,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               scale: 0.95
             }}>
                 <Link to="/expert-help">
-                  <Button size="lg" className="bg-gradient-to-r from-secondary to-secondary/90 hover:from-secondary/90 hover:to-secondary text-secondary-foreground px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto">
+                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto">
                     <Phone className="mr-2" size={18} />
                     Schedule Consultation
                   </Button>
@@ -332,7 +332,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               scale: 0.95
             }}>
                 <Link to="/services">
-                  <Button variant="outline" size="lg" className="border-2 border-border text-foreground hover:bg-muted px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
+                  <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
                     <ArrowRight className="mr-2" size={18} />
                     Explore Services
                   </Button>
