@@ -202,7 +202,12 @@ const ExpertHelp = () => {
                           <service.icon className={`${service.iconColor} h-10 w-10`} />
                         </div>
                         
-                        <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center lg:text-left">{service.title}</h3>
+                        <div className="text-center lg:text-left mb-4">
+                          <h3 className="text-2xl font-bold text-slate-900">{service.title}</h3>
+                          {service.title === "E-SHIELD by NPA Solutions" && (
+                            <p className="text-xs text-slate-500 mt-1">By NPA Solutions</p>
+                          )}
+                        </div>
                         
                         <div className="flex items-baseline mb-4">
                           <span className={`text-3xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
