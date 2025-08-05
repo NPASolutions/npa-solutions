@@ -14,6 +14,9 @@ const Footer = () => {
               India's premier legal consultancy specializing in financial distress resolution. We provide strategic legal support for MSMEs, borrowers & entrepreneurs navigating complex financial situations.
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg">
+                <Linkedin size={18} className="text-slate-300" />
+              </div>
               <a href="https://instagram.com/npasolutions" target="_blank" rel="noopener noreferrer" className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl flex items-center justify-center hover:from-pink-500 hover:to-purple-600 transition-all duration-300 cursor-pointer group transform hover:scale-110 shadow-lg hover:shadow-xl">
                 <Instagram size={18} className="text-slate-300 group-hover:text-white transition-colors duration-300" />
               </a>
