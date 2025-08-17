@@ -107,6 +107,7 @@ export default {
 			},
 			backgroundImage: {
 				'grid-pattern': 'radial-gradient(circle at 1px 1px, rgba(0,0,0,0.1) 1px, transparent 0)',
+				'theme-gradient': 'linear-gradient(to right, hsl(var(--theme-gradient-start)), hsl(var(--theme-gradient-end)))',
 			}
 		}
 	},

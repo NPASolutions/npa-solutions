@@ -303,7 +303,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-slate-900 mb-6 sm:mb-8 leading-tight px-2">
               Navigating Financial Distress with{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent">
+              <span className="bg-theme-gradient bg-clip-text text-transparent">
                 Strategic Clarity
               </span>
             </h1>
