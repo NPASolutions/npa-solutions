@@ -467,8 +467,15 @@ Let's work together to rebuild—strategically, lawfully, and on your terms.`
             delay: 0.4
           }} className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 sm:p-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 text-center sm:text-left">Why Choose <span className="bg-theme-gradient bg-clip-text text-transparent">NPA Solutions</span></h2>
-              <div className="text-slate-600 leading-relaxed whitespace-pre-line text-base sm:text-lg text-justify">
-                {service.whyChooseUs}
+              <div className="text-slate-600 leading-relaxed text-base sm:text-lg text-justify">
+                {service.whyChooseUs.split('NPA Solutions').map((part, index, array) => (
+                  <span key={index}>
+                    {part}
+                    {index < array.length - 1 && (
+                      <span className="bg-theme-gradient bg-clip-text text-transparent font-semibold">NPA Solutions</span>
+                    )}
+                  </span>
+                ))}
               </div>
             </motion.div>
 
