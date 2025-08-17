@@ -117,7 +117,7 @@ const Contact = () => {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
               Get in
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Touch</span>
+              <span className="bg-theme-gradient bg-clip-text text-transparent"> Touch</span>
             </h1>
             <p className="text-xl text-slate-600">
               Ready to discuss your legal requirements? Contact our experts today for personalized guidance.

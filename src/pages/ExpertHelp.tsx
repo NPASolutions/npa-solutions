@@ -170,7 +170,7 @@ const ExpertHelp = () => {
           duration: 0.8
         }}>
             <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-              Get <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Expert Help</span>
+              Get <span className="bg-theme-gradient bg-clip-text text-transparent">Expert Help</span>
             </h1>
             <p className="text-lg text-slate-600 mb-6 max-w-3xl mx-auto">
               Choose the right service package for your specific needs. From quick legal reviews to comprehensive consultation and educational workshops.

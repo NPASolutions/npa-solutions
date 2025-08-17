@@ -127,7 +127,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
               Our Legal & Compliance
-              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="block bg-theme-gradient bg-clip-text text-transparent">
                 Services
               </span>
             </h1>
