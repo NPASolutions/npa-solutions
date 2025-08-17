@@ -37,8 +37,8 @@
     --radius: 0.5rem;
 
     /* Theme gradient colors */
-    --theme-gradient-start: 26 50% 27%; /* Dark Indigo */
-    --theme-gradient-end: 207 63% 43%; /* Royal Blue */
+    --theme-gradient-start: 235 65% 30%; /* Dark Indigo #1A237E */
+    --theme-gradient-end: 207 63% 43%; /* Royal Blue #1565C0 */
 
     --sidebar-background: 215 25% 27%;
     --sidebar-foreground: 0 0% 98%;
