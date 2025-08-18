@@ -55,9 +55,9 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     title: "NCLT / IBC Litigation & Corporate Insolvency",
     description: "Navigate CIRP, liquidation, or resolution proceedings with precision before NCLT.",
     icon: Building,
-    color: "bg-gradient-to-br from-navy-50 to-navy-100",
-    iconColor: "text-navy-600",
-    gradient: "from-navy-500 to-navy-600",
+    color: "bg-gradient-to-br from-slate-50 to-slate-100",
+    iconColor: "text-slate-600",
+    gradient: "from-slate-500 to-slate-600",
     features: ["NCLT Representation", "Resolution Planning", "Asset Protection"],
     popular: false
   }, {

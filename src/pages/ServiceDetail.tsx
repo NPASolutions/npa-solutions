@@ -198,10 +198,10 @@ At NPA Solutions, we stand with borrowers—not just to close a loan, but to clo
       title: "NCLT / IBC Litigation & Corporate Insolvency",
       subtitle: "NCLT Proceedings and Resolution Planning",
       icon: Building,
-      color: "bg-gradient-to-br from-navy-50 to-navy-100",
-      iconColor: "text-navy-600",
-      gradient: "from-navy-600 to-navy-700",
-      buttonGradient: "from-navy-500 to-navy-600",
+      color: "bg-gradient-to-br from-slate-50 to-slate-100",
+      iconColor: "text-slate-600",
+      gradient: "from-slate-600 to-slate-700",
+      buttonGradient: "from-slate-500 to-slate-600",
       features: ["NCLT Representation", "Resolution Planning", "Asset Protection", "CIRP Support"],
       fullDescription: `IBC Proceedings Before NCLT: Legal Remedies for Distressed Corporates
 
