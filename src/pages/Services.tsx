@@ -46,27 +46,27 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     title: "Debt Restructuring & MSME Revival",
     description: "Revive, restructure & reposition your business for sustainable growth and survival.",
     icon: TrendingUp,
-    color: "bg-gradient-to-br from-cyan-50 to-cyan-100",
-    iconColor: "text-cyan-600",
-    gradient: "from-cyan-500 to-cyan-600",
+    color: "bg-gradient-to-br from-teal-50 to-teal-100",
+    iconColor: "text-teal-600",
+    gradient: "from-teal-500 to-teal-600",
     features: ["Business Revival", "Debt Restructuring", "Growth Strategy"],
     popular: false
   }, {
     title: "NCLT / IBC Litigation & Corporate Insolvency",
     description: "Navigate CIRP, liquidation, or resolution proceedings with precision before NCLT.",
     icon: Building,
-    color: "bg-gradient-to-br from-slate-50 to-slate-100",
-    iconColor: "text-slate-600",
-    gradient: "from-slate-500 to-slate-600",
+    color: "bg-gradient-to-br from-navy-50 to-navy-100",
+    iconColor: "text-navy-600",
+    gradient: "from-navy-500 to-navy-600",
     features: ["NCLT Representation", "Resolution Planning", "Asset Protection"],
     popular: false
   }, {
     title: "OTS Support & Negotiation",
     description: "Achieve favorable One-Time Settlement terms with expert-backed negotiation strategies.",
     icon: FileText,
-    color: "bg-gradient-to-br from-indigo-50 to-indigo-100",
-    iconColor: "text-indigo-600",
-    gradient: "from-indigo-500 to-indigo-600",
+    color: "bg-gradient-to-br from-sky-50 to-sky-100",
+    iconColor: "text-sky-600",
+    gradient: "from-sky-500 to-sky-600",
     features: ["Negotiation Support", "Settlement Strategy", "Documentation"],
     popular: false
   }];

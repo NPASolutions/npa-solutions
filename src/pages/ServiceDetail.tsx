@@ -163,10 +163,10 @@ Our strategic intent is twofold: to stall or reverse flawed SARFAESI actions and
       title: "OTS Support & Negotiation",
       subtitle: "Strategic Guidance for Fair & Legally Sound One-Time Settlements",
       icon: FileText,
-      color: "bg-gradient-to-br from-indigo-50 to-indigo-100",
-      iconColor: "text-indigo-600",
-      gradient: "from-indigo-600 to-indigo-700",
-      buttonGradient: "from-indigo-500 to-indigo-600",
+      color: "bg-gradient-to-br from-sky-50 to-sky-100",
+      iconColor: "text-sky-600",
+      gradient: "from-sky-600 to-sky-700",
+      buttonGradient: "from-sky-500 to-sky-600",
       features: ["Strategic OTS Guidance", "Legal Review", "Negotiation Leverage", "Fair Settlement Terms"],
       fullDescription: `A One Time Settlement (OTS) is not something a bank readily offers—it's something you earn the right to negotiate. For borrowers under financial distress, especially those facing SARFAESI enforcement or legal notices, the idea of "settling the loan" may seem like a relief. But in reality, OTS is a legal and strategic outcome, not a shortcut.
 
@@ -198,10 +198,10 @@ At NPA Solutions, we stand with borrowers—not just to close a loan, but to clo
       title: "NCLT / IBC Litigation & Corporate Insolvency",
       subtitle: "NCLT Proceedings and Resolution Planning",
       icon: Building,
-      color: "bg-gradient-to-br from-slate-50 to-slate-100",
-      iconColor: "text-slate-600",
-      gradient: "from-slate-600 to-slate-700",
-      buttonGradient: "from-slate-500 to-slate-600",
+      color: "bg-gradient-to-br from-navy-50 to-navy-100",
+      iconColor: "text-navy-600",
+      gradient: "from-navy-600 to-navy-700",
+      buttonGradient: "from-navy-500 to-navy-600",
       features: ["NCLT Representation", "Resolution Planning", "Asset Protection", "CIRP Support"],
       fullDescription: `IBC Proceedings Before NCLT: Legal Remedies for Distressed Corporates
 
@@ -242,10 +242,10 @@ Our methodology combines legal expertise with business acumen:
       title: "Debt Restructuring & MSME Revival",
       subtitle: "Revival-Focused Legal Support for MSMEs & Distressed Borrowers",
       icon: TrendingUp,
-      color: "bg-gradient-to-br from-cyan-50 to-cyan-100",
-      iconColor: "text-cyan-600",
-      gradient: "from-cyan-600 to-cyan-700",
-      buttonGradient: "from-cyan-500 to-cyan-600",
+      color: "bg-gradient-to-br from-teal-50 to-teal-100",
+      iconColor: "text-teal-600",
+      gradient: "from-teal-600 to-teal-700",
+      buttonGradient: "from-teal-500 to-teal-600",
       features: ["MSME Revival Support", "RBI Framework Compliance", "Strategic Restructuring", "Legal Advocacy"],
       fullDescription: `Financial stress in a business doesn't always mean failure—it often just means timely restructuring is needed. For MSMEs in particular, the Reserve Bank of India (RBI) has issued several guidelines that allow for restructuring of viable accounts without waiting for the account to become an NPA.
 
