@@ -186,7 +186,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
           }} animate={{
             opacity: 1,
             x: 0
-          }} className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          }} className="font-bold text-2xl bg-theme-gradient bg-clip-text text-transparent">
               NPA Solutions
             </motion.div>
             
