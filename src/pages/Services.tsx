@@ -28,45 +28,45 @@ There is a common myth that borrowers are entirely at fault once they default—
 
 If you're struggling with a Non-Performing Asset, our team is here to help you move forward with confidence, clarity, and legal strength.`,
     icon: Shield,
-    color: "bg-gradient-to-br from-blue-50 to-blue-100",
-    iconColor: "text-blue-600",
-    gradient: "from-blue-500 to-blue-600",
+    color: "bg-gradient-to-br from-primary/10 to-primary/20",
+    iconColor: "text-primary",
+    gradient: "from-primary to-primary/80",
     features: ["Early Intervention", "Compliance Audit", "Strategic Defense", "RBI Guidelines Review"],
     popular: true
   }, {
     title: "DRT & SARFAESI Litigation",
     description: "Fight unfair bank actions with simultaneous RDDB Act and SARFAESI proceedings for maximum protection.",
     icon: Scale,
-    color: "bg-gradient-to-br from-purple-50 to-purple-100",
-    iconColor: "text-purple-600",
-    gradient: "from-purple-500 to-purple-600",
+    color: "bg-gradient-to-br from-primary/5 to-primary/15",
+    iconColor: "text-primary/90",
+    gradient: "from-primary/90 to-primary/70",
     features: ["Expert Litigation", "Dual Protection", "Court Representation"],
     popular: true
   }, {
     title: "Debt Restructuring & MSME Revival",
     description: "Revive, restructure & reposition your business for sustainable growth and survival.",
     icon: TrendingUp,
-    color: "bg-gradient-to-br from-teal-50 to-teal-100",
-    iconColor: "text-teal-600",
-    gradient: "from-teal-500 to-teal-600",
+    color: "bg-gradient-to-br from-primary/8 to-primary/18",
+    iconColor: "text-primary/85",
+    gradient: "from-primary/85 to-primary/65",
     features: ["Business Revival", "Debt Restructuring", "Growth Strategy"],
     popular: false
   }, {
     title: "NCLT / IBC Litigation & Corporate Insolvency",
     description: "Navigate CIRP, liquidation, or resolution proceedings with precision before NCLT.",
     icon: Building,
-    color: "bg-gradient-to-br from-slate-50 to-slate-100",
-    iconColor: "text-slate-600",
-    gradient: "from-slate-500 to-slate-600",
+    color: "bg-gradient-to-br from-primary/6 to-primary/16",
+    iconColor: "text-primary/80",
+    gradient: "from-primary/80 to-primary/60",
     features: ["NCLT Representation", "Resolution Planning", "Asset Protection"],
     popular: false
   }, {
     title: "OTS Support & Negotiation",
     description: "Achieve favorable One-Time Settlement terms with expert-backed negotiation strategies.",
     icon: FileText,
-    color: "bg-gradient-to-br from-sky-50 to-sky-100",
-    iconColor: "text-sky-600",
-    gradient: "from-sky-500 to-sky-600",
+    color: "bg-gradient-to-br from-primary/7 to-primary/17",
+    iconColor: "text-primary/75",
+    gradient: "from-primary/75 to-primary/55",
     features: ["Negotiation Support", "Settlement Strategy", "Documentation"],
     popular: false
   }];
