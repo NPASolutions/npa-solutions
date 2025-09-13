@@ -15,7 +15,6 @@ const ExpertHelp = () => {
   const [showAuthDialog, setShowAuthDialog] = useState(false);
   const [selectedService, setSelectedService] = useState<{
     title: string;
-    price: string;
   } | null>(null);
   const {
     user
@@ -29,7 +28,6 @@ const ExpertHelp = () => {
   } = useToast();
   const handleBookNow = async (service: {
     title: string;
-    price: string;
   }) => {
     if (!user) {
       setSelectedService(service);
@@ -39,7 +37,7 @@ const ExpertHelp = () => {
     try {
       await createBooking({
         serviceName: service.title,
-        servicePrice: service.price
+        servicePrice: "Contact for pricing"
       });
     } catch (error) {
       console.error('Booking failed:', error);
@@ -51,7 +49,7 @@ const ExpertHelp = () => {
       try {
         await createBooking({
           serviceName: selectedService.title,
-          servicePrice: selectedService.price
+          servicePrice: "Contact for pricing"
         });
         setSelectedService(null);
       } catch (error) {
@@ -60,32 +58,13 @@ const ExpertHelp = () => {
     }
   };
   const services = [{
-    title: "Review of Legal Position",
-    price: "₹1,000/-",
-    description: "Comprehensive analysis of your current legal standing in NPA/SARFAESI proceedings",
-    features: ["Document review and verification", "Compliance audit of bank proceedings", "Assessment of legal remedies available", "Written legal opinion report", "Strategic recommendations"],
-    icon: Scale,
-    color: "bg-gradient-to-br from-slate-50 to-slate-100",
-    iconColor: "text-slate-600",
-    gradient: "from-slate-600 to-slate-700"
-  }, {
     title: "Virtual Consultation",
-    price: "₹5,000/-",
     description: "One-on-one expert consultation with personalized legal strategy and guidance",
     features: ["60-minute consultation session", "Case-specific strategic planning", "Expert legal advice on proceedings", "Q&A session for your concerns", "Follow-up action plan", "Document templates provided"],
     icon: Users,
     color: "bg-gradient-to-br from-blue-50 to-blue-100",
     iconColor: "text-blue-600",
     gradient: "from-blue-600 to-blue-700"
-  }, {
-    title: "E-SHIELD",
-    price: "₹10,000/-",
-    description: "Comprehensive subscription-based protection service designed specifically for Startups & MSMEs. Stay ahead of financial challenges with continuous monitoring, expert guidance, and priority crisis support.",
-    features: ["Continuous business health monitoring & assessment", "Priority assistance during financial crisis situations", "Pre-emptive NPA safeguarding strategies & consultation", "Expert guidance for additional finance structuring", "Complete restructuring & business revival program support", "Direct access to our specialized expert team", "Customized protection plans based on your business scale"],
-    icon: Shield,
-    color: "bg-gradient-to-br from-emerald-50 to-emerald-100",
-    iconColor: "text-emerald-600",
-    gradient: "from-emerald-600 to-emerald-700"
   }];
   return <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -204,24 +183,13 @@ const ExpertHelp = () => {
                         
                         <div className="text-center lg:text-left mb-4">
                           <h3 className="text-2xl font-bold text-slate-900">{service.title}</h3>
-                          {service.title === "E-SHIELD" && (
-                            <p className="text-xs text-slate-500 mt-1">By NPA Solutions</p>
-                          )}
                         </div>
                         
-                        <div className="flex items-baseline mb-4">
-                          <span className={`text-3xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
-                            {service.price}
-                          </span>
-                          {service.title === "E-SHIELD" && <span className="text-sm text-slate-500 ml-2">starting*/year</span>}
-                        </div>
                       </div>
                       
                       {/* Middle - Description and Features */}
                       <div className="flex-1">
                         <p className="text-slate-600 mb-6 text-base leading-relaxed text-justify">{service.description}</p>
-                        
-                        {service.title === "E-SHIELD by NPA Solutions"}
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                           {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center">
@@ -229,10 +197,6 @@ const ExpertHelp = () => {
                               <span className="text-slate-600 text-base">{feature}</span>
                             </div>)}
                         </div>
-                        
-                        {service.title === "E-SHIELD" && <p className="text-sm text-slate-500 mb-4 italic">
-                            *Pricing varies based on enterprise scale and business size. Customized packages available.
-                          </p>}
                       </div>
                       
                       {/* Right side - CTA Button */}
