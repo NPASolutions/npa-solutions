@@ -28,45 +28,45 @@ There is a common myth that borrowers are entirely at fault once they default—
 
 If you're struggling with a Non-Performing Asset, our team is here to help you move forward with confidence, clarity, and legal strength.`,
     icon: Shield,
-    color: "bg-gradient-to-br from-primary/10 to-primary/20",
-    iconColor: "text-primary",
-    gradient: "from-primary to-primary/80",
+    color: "bg-gradient-to-br from-[hsl(235_65%_30%_/_0.1)] to-[hsl(235_65%_30%_/_0.2)]",
+    iconColor: "text-[hsl(235_65%_30%)]",
+    gradient: "from-[hsl(235_65%_30%)] to-[hsl(235_65%_40%)]",
     features: ["Early Intervention", "Compliance Audit", "Strategic Defense", "RBI Guidelines Review"],
     popular: true
   }, {
     title: "DRT & SARFAESI Litigation",
     description: "Fight unfair bank actions with simultaneous RDDB Act and SARFAESI proceedings for maximum protection.",
     icon: Scale,
-    color: "bg-gradient-to-br from-primary/5 to-primary/15",
-    iconColor: "text-primary/90",
-    gradient: "from-primary/90 to-primary/70",
+    color: "bg-gradient-to-br from-[hsl(207_63%_43%_/_0.1)] to-[hsl(207_63%_43%_/_0.2)]",
+    iconColor: "text-[hsl(207_63%_43%)]",
+    gradient: "from-[hsl(207_63%_43%)] to-[hsl(207_63%_53%)]",
     features: ["Expert Litigation", "Dual Protection", "Court Representation"],
     popular: true
   }, {
     title: "Debt Restructuring & MSME Revival",
     description: "Revive, restructure & reposition your business for sustainable growth and survival.",
     icon: TrendingUp,
-    color: "bg-gradient-to-br from-primary/8 to-primary/18",
-    iconColor: "text-primary/85",
-    gradient: "from-primary/85 to-primary/65",
+    color: "bg-gradient-to-br from-[hsl(220_60%_35%_/_0.1)] to-[hsl(220_60%_35%_/_0.2)]",
+    iconColor: "text-[hsl(220_60%_35%)]",
+    gradient: "from-[hsl(220_60%_35%)] to-[hsl(220_60%_45%)]",
     features: ["Business Revival", "Debt Restructuring", "Growth Strategy"],
     popular: false
   }, {
     title: "NCLT / IBC Litigation & Corporate Insolvency",
     description: "Navigate CIRP, liquidation, or resolution proceedings with precision before NCLT.",
     icon: Building,
-    color: "bg-gradient-to-br from-primary/6 to-primary/16",
-    iconColor: "text-primary/80",
-    gradient: "from-primary/80 to-primary/60",
+    color: "bg-gradient-to-br from-[hsl(215_70%_25%_/_0.1)] to-[hsl(215_70%_25%_/_0.2)]",
+    iconColor: "text-[hsl(215_70%_25%)]",
+    gradient: "from-[hsl(215_70%_25%)] to-[hsl(215_70%_35%)]",
     features: ["NCLT Representation", "Resolution Planning", "Asset Protection"],
     popular: false
   }, {
     title: "OTS Support & Negotiation",
     description: "Achieve favorable One-Time Settlement terms with expert-backed negotiation strategies.",
     icon: FileText,
-    color: "bg-gradient-to-br from-primary/7 to-primary/17",
-    iconColor: "text-primary/75",
-    gradient: "from-primary/75 to-primary/55",
+    color: "bg-gradient-to-br from-[hsl(200_55%_50%_/_0.1)] to-[hsl(200_55%_50%_/_0.2)]",
+    iconColor: "text-[hsl(200_55%_50%)]",
+    gradient: "from-[hsl(200_55%_50%)] to-[hsl(200_55%_60%)]",
     features: ["Negotiation Support", "Settlement Strategy", "Documentation"],
     popular: false
   }];
