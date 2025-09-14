@@ -60,7 +60,7 @@ const ExpertHelp = () => {
   const services = [{
     title: "Virtual Consultation",
     description: "One-on-one expert consultation with personalized legal strategy and guidance",
-    features: ["60-minute consultation session", "Case-specific strategic planning", "Expert legal advice on proceedings", "Q&A session for your concerns", "Follow-up action plan", "Document templates provided"],
+    features: ["Up to 60-minute consultation (starts at 30 mins)", "Case-specific strategic planning", "Expert legal advice on proceedings", "Q&A session for your concerns", "Follow-up action plan"],
     icon: Users,
     color: "bg-gradient-to-br from-blue-50 to-blue-100",
     iconColor: "text-blue-600",
