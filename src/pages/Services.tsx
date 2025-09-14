@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Shield, Scale, FileText, Building, TrendingUp, CheckCircle, ArrowRight, Linkedin, Instagram, Youtube, Facebook } from "lucide-react";
+import { Shield, Scale, FileText, Building, TrendingUp, CheckCircle, ArrowRight, Linkedin, Instagram, Youtube, Facebook, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { LoginButton } from "@/components/auth/LoginButton";
@@ -68,6 +68,27 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
     iconColor: "text-[hsl(200_55%_50%)]",
     gradient: "from-[hsl(200_55%_50%)] to-[hsl(200_55%_60%)]",
     features: ["Negotiation Support", "Settlement Strategy", "Documentation"],
+    popular: false
+  }, {
+    title: "Advocates Partnership Support",
+    description: "Back-end litigation and drafting support for advocates in DRT & NCLT proceedings.",
+    fullDescription: `At NPA Solutions, we understand that many advocates, especially those practicing in local civil courts, may not always be able to allocate time or resources for highly technical litigation before the Debt Recovery Tribunal (DRT) or the National Company Law Tribunal (NCLT). These forums demand specialized drafting, statutory knowledge, and compliance with strict procedural timelines.
+
+That is where we step in.
+
+We offer back-end litigation and drafting support to fellow advocates who want to represent their clients effectively in financial recovery and insolvency disputes. Whether you require assistance with preparing a Securitisation Application (SA) under the SARFAESI Act 2002, drafting a Counterclaim or Written Statement in an Original Application (OA), or finalizing Written Arguments, our team can provide precise, legally sound drafts tailored to the facts of the case.
+
+For advocates who prefer to remain front-facing with their clients, we remain in the background, ensuring you get strong documentation and strategy support. Alternatively, if you would like us to co-counsel or directly appear along with you in DRT & NCLT litigation, we are flexible to work in collaboration.`,
+    whyChooseUs: `At NPA Solutions, we believe in collaboration over competition. Together, we can ensure that clients get the best representation across the DRT and NCLT Forums.
+
+Our aim is simple: To empower advocates with the right tools, knowledge, and case support to succeed in specialized forums. With our technical expertise in SARFAESI, RDDB Acts, and Insolvency Bankruptcy Code matters, you can continue to serve your clients without worrying about time, bandwidth, or lack of exposure to tribunal practice.`,
+    callToAction: "Ready to collaborate and strengthen your practice? Contact us to discuss how we can support your DRT & NCLT cases with expert back-end assistance.",
+    conclusion: `Partnership over competition is our philosophy. Whether you need complete back-end support or collaborative representation, we're here to ensure your clients receive the best possible advocacy in specialized financial recovery forums.`,
+    icon: Handshake,
+    color: "bg-gradient-to-br from-[hsl(225_55%_45%_/_0.1)] to-[hsl(225_55%_45%_/_0.2)]",
+    iconColor: "text-[hsl(225_55%_45%)]",
+    gradient: "from-[hsl(225_55%_45%)] to-[hsl(225_55%_55%)]",
+    features: ["Tailored Drafting Support", "Procedural Expertise", "Flexible Engagement", "Focus on Your Strength"],
     popular: false
   }];
 
