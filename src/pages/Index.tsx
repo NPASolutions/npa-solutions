@@ -289,271 +289,119 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
           ease: "easeOut"
         }}>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 sm:mb-8 leading-tight px-2">
-              Identify Your Business Challenge
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight">
+              Which Stage Describes Your Business?
             </h1>
             
-            <p className="text-lg sm:text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed px-4">
-              Navigate your specific financial situation with our expert guidance
+            <p className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto">
+              Get targeted solutions based on your current financial situation
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* User Journey Flow Section */}
-      <section className="py-20 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Journey Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             
-            {/* Step 1: Early Warning */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              <Card className="h-full border-orange-200 hover:border-orange-300 transition-all duration-300 hover:shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center">
-                      <TrendingUp className="h-6 w-6 text-orange-600" />
-                    </div>
-                    <Badge variant="secondary" className="ml-3 bg-orange-100 text-orange-700">Early Stage</Badge>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-slate-900">Business Under Stress</h3>
-                  <p className="text-slate-600 mb-4">Cash flow issues, delayed payments, or approaching 90-day overdue threshold</p>
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="h-4 w-4 text-orange-500 mr-2" />
-                      Pre-NPA intervention
-                    </div>
-                    <div className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="h-4 w-4 text-orange-500 mr-2" />
-                      Restructuring options
-                    </div>
-                  </div>
-                  <Link to="/services">
-                    <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
-                      Get Early Help
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Step 2: NPA Classification */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative"
-            >
-              <Card className="h-full border-red-200 hover:border-red-300 transition-all duration-300 hover:shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-red-100 to-red-200 rounded-full flex items-center justify-center">
-                      <Shield className="h-6 w-6 text-red-600" />
-                    </div>
-                    <Badge variant="destructive" className="ml-3">Critical</Badge>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-slate-900">NPA Classification</h3>
-                  <p className="text-slate-600 mb-4">Account classified as NPA, demand notice received under SARFAESI Act</p>
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="h-4 w-4 text-red-500 mr-2" />
-                      45-day response window
-                    </div>
-                    <div className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="h-4 w-4 text-red-500 mr-2" />
-                      Rights protection
-                    </div>
-                  </div>
-                  <Link to="/services">
-                    <Button className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700">
-                      Defend Your Rights
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Step 3: Legal Proceedings */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
-            >
-              <Card className="h-full border-purple-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center">
-                      <Scale className="h-6 w-6 text-purple-600" />
-                    </div>
-                    <Badge variant="secondary" className="ml-3 bg-purple-100 text-purple-700">Litigation</Badge>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-slate-900">DRT / NCLT Proceedings</h3>
-                  <p className="text-slate-600 mb-4">Active litigation in Debt Recovery Tribunal or National Company Law Tribunal</p>
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="h-4 w-4 text-purple-500 mr-2" />
-                      Expert representation
-                    </div>
-                    <div className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="h-4 w-4 text-purple-500 mr-2" />
-                      Strategic defense
-                    </div>
-                  </div>
-                  <Link to="/services">
-                    <Button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700">
-                      Expert Litigation
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-
-          {/* Process Flow Diagram */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 mb-16"
-          >
-            <h2 className="text-3xl font-bold text-center mb-8 text-slate-900">Your Business Recovery Journey</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
-              {/* Stage 1 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Building className="h-8 w-8 text-green-600" />
-                </div>
-                <h4 className="font-semibold text-sm text-slate-900">Healthy Business</h4>
-                <p className="text-xs text-slate-600 mt-1">Regular operations</p>
-              </div>
+            {/* Professional Business Stages Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               
-              <ArrowRight className="h-6 w-6 text-slate-400 mx-auto hidden md:block" />
-              
-              {/* Stage 2 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <TrendingUp className="h-8 w-8 text-yellow-600" />
-                </div>
-                <h4 className="font-semibold text-sm text-slate-900">Financial Stress</h4>
-                <p className="text-xs text-slate-600 mt-1">Cash flow issues</p>
-              </div>
-              
-              <ArrowRight className="h-6 w-6 text-slate-400 mx-auto hidden md:block" />
-              
-              {/* Stage 3 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Shield className="h-8 w-8 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-sm text-slate-900">NPA & SARFAESI</h4>
-                <p className="text-xs text-slate-600 mt-1">Legal notices</p>
-              </div>
-            </div>
-            
-            <div className="text-center mt-8">
-              <Link to="/expert-help">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-                  <Phone className="mr-2" />
-                  Get Expert Guidance Now
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-
-          {/* Quick Assessment Tool */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-white rounded-2xl shadow-xl border border-slate-200 p-8"
-          >
-            <h2 className="text-3xl font-bold text-center mb-8 text-slate-900">Find Your Solution Path</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              
-              {/* Early Intervention */}
-              <Card className="border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-lg">
+              {/* Stage 1: Pre-NPA */}
+              <Card className="border-2 border-green-200 hover:border-green-400 transition-all duration-300 hover:shadow-xl bg-white">
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="h-6 w-6 text-green-600" />
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="h-8 w-8 text-green-600" />
                   </div>
-                  <h3 className="font-semibold mb-2">Prevent NPA</h3>
-                  <p className="text-sm text-slate-600 mb-4">Approaching 90-day overdue?</p>
+                  <h3 className="text-lg font-semibold mb-3 text-slate-900">Cash Flow Stress</h3>
+                  <p className="text-sm text-slate-600 mb-4">• Delayed payments<br/>• Approaching 90-day overdue<br/>• Need restructuring</p>
                   <Link to="/services">
-                    <Button variant="outline" size="sm" className="border-green-200 text-green-700 hover:bg-green-50">
-                      Early Help
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                      Prevent NPA
                     </Button>
                   </Link>
                 </CardContent>
               </Card>
 
-              {/* SARFAESI Defense */}
-              <Card className="border-blue-200 hover:border-blue-300 transition-all duration-300 hover:shadow-lg">
+              {/* Stage 2: SARFAESI Notice */}
+              <Card className="border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl bg-white">
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-6 w-6 text-blue-600" />
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-8 w-8 text-blue-600" />
                   </div>
-                  <h3 className="font-semibold mb-2">SARFAESI Notice</h3>
-                  <p className="text-sm text-slate-600 mb-4">Received demand notice?</p>
+                  <h3 className="text-lg font-semibold mb-3 text-slate-900">SARFAESI Notice</h3>
+                  <p className="text-sm text-slate-600 mb-4">• Demand notice received<br/>• Asset seizure threat<br/>• 45-day response window</p>
                   <Link to="/services">
-                    <Button variant="outline" size="sm" className="border-blue-200 text-blue-700 hover:bg-blue-50">
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                       Defend Rights
                     </Button>
                   </Link>
                 </CardContent>
               </Card>
 
-              {/* DRT Litigation */}
-              <Card className="border-purple-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg">
+              {/* Stage 3: DRT Proceedings */}
+              <Card className="border-2 border-purple-200 hover:border-purple-400 transition-all duration-300 hover:shadow-xl bg-white">
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Scale className="h-6 w-6 text-purple-600" />
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Scale className="h-8 w-8 text-purple-600" />
                   </div>
-                  <h3 className="font-semibold mb-2">DRT Case</h3>
-                  <p className="text-sm text-slate-600 mb-4">Active tribunal proceedings?</p>
+                  <h3 className="text-lg font-semibold mb-3 text-slate-900">DRT Case Filed</h3>
+                  <p className="text-sm text-slate-600 mb-4">• Legal proceedings active<br/>• Court appearances<br/>• Need representation</p>
                   <Link to="/services">
-                    <Button variant="outline" size="sm" className="border-purple-200 text-purple-700 hover:bg-purple-50">
-                      Get Representation
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                      Expert Defense
                     </Button>
                   </Link>
                 </CardContent>
               </Card>
 
-              {/* NCLT/IBC */}
-              <Card className="border-orange-200 hover:border-orange-300 transition-all duration-300 hover:shadow-lg">
+              {/* Stage 4: NCLT/IBC */}
+              <Card className="border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 hover:shadow-xl bg-white">
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Building className="h-6 w-6 text-orange-600" />
+                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Building className="h-8 w-8 text-orange-600" />
                   </div>
-                  <h3 className="font-semibold mb-2">NCLT/IBC</h3>
-                  <p className="text-sm text-slate-600 mb-4">Insolvency proceedings?</p>
+                  <h3 className="text-lg font-semibold mb-3 text-slate-900">NCLT/IBC Process</h3>
+                  <p className="text-sm text-slate-600 mb-4">• Insolvency petition<br/>• CIRP proceedings<br/>• Resolution planning</p>
                   <Link to="/services">
-                    <Button variant="outline" size="sm" className="border-orange-200 text-orange-700 hover:bg-orange-50">
-                      Corporate Help
+                    <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                      NCLT Support
                     </Button>
                   </Link>
                 </CardContent>
               </Card>
             </div>
+
+            {/* Stats Section */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 + 0.5 }}
+                  className="text-center"
+                >
+                  <div className="flex justify-center mb-2">
+                    <stat.icon className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-slate-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/expert-help">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-xl text-lg font-semibold shadow-xl">
+                  <Phone className="mr-2" size={18} />
+                  Get Expert Consultation
+                </Button>
+              </Link>
+              <Link to="/services">
+                <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-10 py-4 rounded-xl text-lg font-semibold">
+                  <ArrowRight className="mr-2" size={18} />
+                  View All Services
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
-
-        <motion.div animate={{
-        y: [0, 10, 0]
-      }} transition={{
-        duration: 2,
-        repeat: Infinity
-      }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <ChevronDown className="text-slate-400" size={32} />
-        </motion.div>
       </section>
 
       {/* Welcome Article Section */}
