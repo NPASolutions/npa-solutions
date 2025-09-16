@@ -178,7 +178,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       </div>
 
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100' : 'bg-transparent'}`}>
+      <nav className="fixed top-0 w-full z-50 bg-white shadow-lg border-b border-slate-100">{/* Navigation */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center h-20">
             <motion.div initial={{
@@ -275,7 +275,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
+      <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 mt-20">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBackground})` }}
