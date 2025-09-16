@@ -15,17 +15,17 @@
     --popover: 0 0% 100%;
     --popover-foreground: 200 15% 8%;
 
-    --primary: 232 27% 62%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 215 25% 27%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 232 20% 85%;
-    --secondary-foreground: 232 27% 25%;
+    --secondary: 45 93% 47%;
+    --secondary-foreground: 200 15% 8%;
 
-    --muted: 232 15% 92%;
-    --muted-foreground: 232 10% 45%;
+    --muted: 220 13% 91%;
+    --muted-foreground: 200 10% 40%;
 
-    --accent: 232 20% 85%;
-    --accent-foreground: 232 27% 25%;
+    --accent: 45 93% 47%;
+    --accent-foreground: 200 15% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -37,8 +37,8 @@
     --radius: 0.5rem;
 
     /* Theme gradient colors */
-    --theme-gradient-start: 232 27% 62%; /* Soft Lavender Blue */
-    --theme-gradient-end: 232 27% 72%; /* Lighter variant for glow */
+    --theme-gradient-start: 235 65% 30%; /* Dark Indigo #1A237E */
+    --theme-gradient-end: 207 63% 43%; /* Royal Blue #1565C0 */
 
     --sidebar-background: 215 25% 27%;
     --sidebar-foreground: 0 0% 98%;

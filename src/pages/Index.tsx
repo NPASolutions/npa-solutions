@@ -169,10 +169,10 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
   return <div className="min-h-screen bg-white relative overflow-hidden">
       {/* Animated background elements */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute w-96 h-96 bg-gradient-to-r from-[hsl(var(--primary)/0.15)] to-[hsl(var(--primary)/0.05)] rounded-full opacity-20 blur-3xl" style={{
+        <div className="absolute w-96 h-96 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full opacity-20 blur-3xl" style={{
         transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`
       }} />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-[hsl(var(--primary)/0.10)] to-[hsl(var(--primary)/0.20)] rounded-full opacity-20 blur-3xl" style={{
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-green-100 to-blue-100 rounded-full opacity-20 blur-3xl" style={{
         transform: `translate(${mousePosition.x * -0.02}px, ${mousePosition.y * -0.02}px)`
       }} />
       </div>
@@ -215,9 +215,9 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               }} transition={{
                 delay: index * 0.1
               }}>
-                    <Link to={item.href} className="text-slate-600 hover:text-primary transition-all duration-300 font-medium relative group">
+                    <Link to={item.href} className="text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium relative group">
                       {item.name}
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
                     </Link>
                   </motion.div>)}
               </div>
@@ -280,7 +280,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBackground})` }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--primary)/0.85)] via-[hsl(var(--primary)/0.75)] to-[hsl(var(--primary)/0.85)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-slate-800/60 to-slate-900/70"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -309,14 +309,14 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight px-2 drop-shadow-lg">
               Navigating Financial Distress with{" "}
-              <span className="bg-theme-gradient bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
                 Strategic Clarity
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4 drop-shadow-md">
               Empowering MSME, Entrepreneurs & Borrowers with Expert Legal guidance through 
-              <span className="font-semibold text-primary/80"> SARFAESI, DRT, IBC & Financial Restructuring</span>
+              <span className="font-semibold text-blue-200"> SARFAESI, DRT, IBC & Financial Restructuring</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 px-4">
@@ -326,7 +326,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               scale: 0.95
             }}>
                 <Link to="/expert-help">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto border border-primary/20">
+                  <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto border border-blue-400/20">
                     <Phone className="mr-2" size={18} />
                     Schedule Consultation
                   </Button>
