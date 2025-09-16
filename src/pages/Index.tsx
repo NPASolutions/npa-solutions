@@ -275,8 +275,10 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
 
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100"></div>
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-800 to-blue-950"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-blue-600/10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)] bg-[radial-gradient(circle_at_80%_80%,rgba(120,119,198,0.2),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <motion.div initial={{
@@ -302,16 +304,16 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               
             </motion.div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-slate-900 mb-6 sm:mb-8 leading-tight px-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight px-2">
               Navigating Financial Distress with{" "}
-              <span className="bg-theme-gradient bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
                 Strategic Clarity
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-slate-600 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
               Empowering MSME, Entrepreneurs & Borrowers with Expert Legal guidance through 
-              <span className="font-semibold text-slate-800"> SARFAESI, DRT, IBC & Financial Restructuring</span>
+              <span className="font-semibold text-blue-200"> SARFAESI, DRT, IBC & Financial Restructuring</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 px-4">
@@ -321,7 +323,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               scale: 0.95
             }}>
                 <Link to="/expert-help">
-                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto">
+                  <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto border border-blue-400/20">
                     <Phone className="mr-2" size={18} />
                     Schedule Consultation
                   </Button>
@@ -333,7 +335,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               scale: 0.95
             }}>
                 <Link to="/services">
-                  <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
+                  <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto">
                     <ArrowRight className="mr-2" size={18} />
                     Explore Services
                   </Button>
@@ -352,7 +354,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
         duration: 2,
         repeat: Infinity
       }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <ChevronDown className="text-slate-400" size={32} />
+          <ChevronDown className="text-white/60" size={32} />
         </motion.div>
       </section>
 
