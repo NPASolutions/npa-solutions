@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Footer from "@/components/Footer";
 import { LoginButton } from "@/components/auth/LoginButton";
+import heroBackground from "@/assets/hero-background.jpg";
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -275,9 +276,11 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
 
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-800 to-blue-950"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-blue-600/10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)] bg-[radial-gradient(circle_at_80%_80%,rgba(120,119,198,0.2),transparent_50%)]"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBackground})` }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-slate-800/60 to-slate-900/70"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -304,14 +307,14 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               
             </motion.div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight px-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight px-2 drop-shadow-lg">
               Navigating Financial Distress with{" "}
               <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
                 Strategic Clarity
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4 drop-shadow-md">
               Empowering MSME, Entrepreneurs & Borrowers with Expert Legal guidance through 
               <span className="font-semibold text-blue-200"> SARFAESI, DRT, IBC & Financial Restructuring</span>
             </p>
