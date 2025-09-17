@@ -326,7 +326,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               scale: 0.95
             }}>
                 <Link to="/expert-help">
-                  <Button size="lg" className="bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/30 px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto">
+                  <Button size="lg" className="bg-white/10 backdrop-blur-md border border-blue-300/40 text-white hover:bg-white/20 hover:border-blue-200/60 px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto">
                     <Phone className="mr-2" size={18} />
                     Schedule Consultation
                   </Button>
@@ -338,7 +338,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
               scale: 0.95
             }}>
                 <Link to="/services">
-                  <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/40 px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto transition-all duration-300">
+                  <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-md border-2 border-blue-300/40 text-white hover:bg-white/20 hover:border-blue-200/60 px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold w-full sm:w-auto transition-all duration-300">
                     <ArrowRight className="mr-2" size={18} />
                     Explore Services
                   </Button>
