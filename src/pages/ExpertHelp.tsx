@@ -71,7 +71,7 @@ const ExpertHelp = () => {
       <nav className="bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Link to="/" className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+            <Link to="/" className="font-bold text-2xl bg-theme-gradient bg-clip-text text-transparent">
               NPA Solutions
             </Link>
             

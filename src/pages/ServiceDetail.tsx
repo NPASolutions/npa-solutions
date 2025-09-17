@@ -342,7 +342,7 @@ Our aim is simple: To empower advocates with the right tools, knowledge, and cas
       <nav className="bg-white/90 backdrop-blur-xl shadow-lg border-b border-slate-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Link to="/" className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+            <Link to="/" className="font-bold text-2xl bg-theme-gradient bg-clip-text text-transparent">
               NPA Solutions
             </Link>
             
