@@ -303,15 +303,15 @@ NPA Solutions offers specialized support to legal professionals navigating the c
 Our firm provides comprehensive back-end litigation and drafting assistance, enabling you to effectively represent your clients in financial recovery and insolvency matters. Our services are tailored to your specific needs, whether you require assistance in preparing a Securitisation Application under the SARFAESI Act, 2002, drafting a Counterclaim or Written Statement in an Original Application, or finalizing comprehensive Written Arguments. Our team delivers precise, legally robust documents meticulously crafted to the unique facts of each case.
 
 We offer flexible engagement models to suit your professional preferences. You may choose to remain the primary client-facing advocate while we provide discreet, behind-the-scenes support, ensuring you have a foundation of strong documentation and strategic insight. Alternatively, we are prepared to act as co-counsel or directly appear in DRT & NCLT litigation alongside you, fostering a collaborative approach to case management.`,
-      whyChooseUs: `*Why Partner with Us?*
+      whyChooseUs: `Why Partner with NPA Solutions?
 
-*Customized Drafting*: We provide bespoke drafting for all key documents, including Securitisation Applications, Counterclaims, Written Statements, and Arguments, meticulously tailored to individual case facts and legal strategy.
+• Customized Drafting: We provide bespoke drafting for all key documents, including Securitisation Applications, Counterclaims, Written Statements, and Arguments, meticulously tailored to individual case facts and legal strategy.
 
-*Procedural Compliance*: Our expertise ensures all filings adhere to the specific procedural requirements of the SARFAESI Act, 2002, the RDDBFI Act, and the Insolvency and Bankruptcy Code (IBC).
+• Procedural Compliance: Our expertise ensures all filings adhere to the specific procedural requirements of the SARFAESI Act, 2002, the RDDBFI Act, and the Insolvency and Bankruptcy Code (IBC).
 
-*Flexible Engagement*: We offer a range of partnership options, from comprehensive back-end support to full co-counseling, allowing you to choose the level of collaboration that best serves your practice.
+• Flexible Engagement: We offer a range of partnership options, from comprehensive back-end support to full co-counseling, allowing you to choose the level of collaboration that best serves your practice.
 
-*Enhanced Focus*: By entrusting us with the intricate aspects of tribunal practice, you can maintain your focus on your core civil practice while providing your clients with exceptional representation in specialized forums.
+• Enhanced Focus: By entrusting us with the intricate aspects of tribunal practice, you can maintain your focus on your core civil practice while providing your clients with exceptional representation in specialized forums.
 
 At NPA Solutions, we are committed to the principle of collaboration over competition. By partnering, we can collectively ensure that clients receive unparalleled legal representation across all forums, from civil courts to the DRT and NCLT.`,
       approach: `For advocates who prefer to remain front-facing with their clients, we remain in the background, ensuring you get strong documentation and strategy support. Alternatively, if you would like us to co-counsel or directly appear along with you in DRT & NCLT litigation, we are flexible to work in collaboration.
