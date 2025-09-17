@@ -187,7 +187,7 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
           }} animate={{
             opacity: 1,
             x: 0
-          }} className="font-bold text-2xl bg-theme-gradient bg-clip-text text-transparent">
+          }} className="font-bold text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               NPA Solutions
             </motion.div>
             
@@ -309,14 +309,14 @@ If you're struggling with a Non-Performing Asset, our team is here to help you m
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight px-2 drop-shadow-lg">
               Navigating Financial Distress with{" "}
-              <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-indigo-300 bg-clip-text text-transparent">
                 Strategic Clarity
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4 drop-shadow-md">
               Empowering MSME, Entrepreneurs & Borrowers with Expert Legal guidance through 
-              <span className="font-semibold text-blue-200"> SARFAESI, DRT, IBC & Financial Restructuring</span>
+              <span className="font-semibold bg-gradient-to-r from-blue-200 via-cyan-200 to-teal-200 bg-clip-text text-transparent"> SARFAESI, DRT, IBC & Financial Restructuring</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 px-4">
